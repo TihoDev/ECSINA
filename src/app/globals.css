@@ -1,1 +1,106 @@
 @import "tailwindcss";
+
+
+
+@font-face {
+    font-family: "Yekan";
+    src: url("/fonts/YekanBakh-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Yekan";
+    src: url("/fonts/YekanBakh-SemiBold.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Yekan";
+    src: url("/fonts/YekanBakh-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Yekan";
+    src: url("/fonts/YekanBakh-ExtraBold.woff2") format("woff2");
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+body{
+    @apply font-yekan font-semibold
+}
+
+@theme {
+    /* colors */
+    --color-title : #000000;
+    --color-description : #2A2A2A;
+    /* bg-colors */
+    --color-main-background : #FEFCFE;
+    --color-Section-background : #F8FFFC;
+    --color-help-download : #FFF6FE;
+    /* shadow */
+    --shadow-product-card : 0px 2px 4px #1E132840;
+    --shadow-detail-shadow : 0px 0px 16px #00000040;
+    /* font */
+    --font-yekan : "yekan";
+
+}
+
+@utility container {
+    padding-inline: 1rem;
+    margin-inline: auto;
+  
+    @variant sm {
+      width: 640px;
+      padding-inline: 2rem;
+    }
+    @variant md {
+        width: 768px;
+      padding-inline: 3rem;
+    }
+    @variant lg {
+        width: 1024px;
+      padding-inline: 4rem;
+    }
+    @variant xl {
+        width: 1280px;
+      padding-inline: 5rem;
+    }
+    @variant 2xl {
+        width: 1536px;
+      padding-inline: 6rem;
+    }
+  }
+
+@layer utilities {
+    /* shadows */
+    .shadow-gradient {
+        position: relative;
+    }
+    .shadow-gradient::before {
+        content: "";
+        position: absolute;
+        top: -30%;
+        left: -30%;
+        width: 160%;
+        height: 160%;
+        background: linear-gradient(to bottom right, #FFC4FA, #EFFFD8, #A4E7FC);
+        filter: blur(50px);
+        z-index: -1;
+        border-radius: 50%;
+        opacity: 0.7;
+    }
+    .bg-rainbow-gradient {
+        background: rgb(255,196,250);
+        background: linear-gradient(135deg, rgba(255,196,250,1) 0%, rgba(239,255,216,1) 50%, rgba(164,231,252,1) 100%);
+    }
+    .bg-purple-gradient {
+        background: rgb(0,0,0);
+        background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(113,65,109,1) 46%, rgba(164,95,158,1) 100%);
+    }
+}  
