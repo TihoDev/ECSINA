@@ -5,7 +5,7 @@ const BaseIcon = ({
   disableGradient = false,
   ...props
 }) => {
-  const fill = disableGradient ? "#000" : "url(#svgGradient)";
+  const fill = disableGradient ? "#fff" : "url(#svgGradient)";
   return (
     <svg className={className} style={{ width: size, height: size }} {...props}>
       {!disableGradient && (

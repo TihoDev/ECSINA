@@ -1,9 +1,5 @@
-import BaseIcon from "@/components/icon/BaseIcon";
+import { BelowMainPageBanner } from "@/components/BlowMainPageBanner";
 
 export default function Home() {
-  return (
-    <div className="text-6xl font-black">
-      <BaseIcon id="lamp" />
-    </div>
-  );
+  return <div className="text-6xl font-black">Hello world</div>;
 }
