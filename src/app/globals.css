@@ -44,6 +44,8 @@ body {
   /* shadow */
   --shadow-product-card: 0px 2px 4px #1e132840;
   --shadow-detail-shadow: 0px 0px 16px #00000040;
+  --shadow-border: 0px 8px 8px 0px #00000040;
+
   /* font */
   --font-yekan: "yekan";
 }
