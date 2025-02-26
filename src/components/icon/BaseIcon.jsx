@@ -2,10 +2,11 @@ const BaseIcon = ({
   id,
   size = 46,
   className = "",
+  fillColor = "#fff",
   disableGradient = false,
   ...props
 }) => {
-  const fill = disableGradient ? "#fff" : "url(#svgGradient)";
+  const fill = disableGradient ? fillColor : "url(#svgGradient)";
   return (
     <svg className={className} style={{ width: size, height: size }} {...props}>
       {!disableGradient && (

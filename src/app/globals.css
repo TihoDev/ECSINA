@@ -36,9 +36,11 @@ body {
 @theme {
   /* colors */
   --color-title: #000000;
+  --color-secondary-title: #1e1328;
   --color-description: #2a2a2a;
   /* bg-colors */
   --color-main-background: #fefcfe;
+  --color-secondary-background: #fafff4;
   --color-Section-background: #f8fffc;
   --color-help-download: #fff6fe;
   /* shadow */
