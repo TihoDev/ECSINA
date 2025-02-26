@@ -64,5 +64,10 @@
 </linearGradient>
 </defs>
 </symbol>
+<symbol viewBox="0 0 21 21" id="Menu">
+<path d="M2.625 6.125H18.375" stroke-linecap="round"></path>
+<path d="M2.625 10.5H18.375" stroke-linecap="round"></path>
+<path d="M2.625 14.875H18.375" stroke-linecap="round"></path>
+</symbol>
 </defs>
 </svg>
