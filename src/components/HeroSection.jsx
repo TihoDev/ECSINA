@@ -6,8 +6,8 @@ import Tag from "./UI/Tag";
 
 const HeroSection = () => {
   return (
-    <div className="relative bg-section-background  h-[650px] rounded-bl-[80px] rounded-br-[80px] lg:rounded-bl-[300px] lg:rounded-br-[300px] shadow-hero-section">
-      <div className="  container  grid grid-cols-12  mt-24 ">
+    <div className="relative bg-section-background  h-[650px] rounded-bl-[80px] rounded-br-[80px] lg:rounded-bl-[300px] lg:rounded-br-[300px] shadow-hero-section mt-36">
+      <div className="  container  grid grid-cols-12   ">
         <div className=" col-span-12 lg:col-span-5 flex flex-col items-start gap-y-8">
           <h2 className=" text-xs lg:text-5xl text-title font-extrabold leading-20  mx-auto ">
             با اکسین، اسناد تجاری را مثل حرفه‌ای‌ها بساز!
@@ -22,7 +22,7 @@ const HeroSection = () => {
           </div>
         </div>
         <div className=" col-span-12 lg:col-span-7 place-items-center lg:place-items-end  ">
-          <div>
+          <div className="2xl:-ml-[70px]">
             <BaseIcon
               className="hidden lg:block"
               id="ExinIcon2"
@@ -31,7 +31,7 @@ const HeroSection = () => {
               fillColor="#3E243C"
             />
             <BaseIcon
-              className="block lg:hidden mt-15"
+              className="block lg:hidden mt-15 "
               id="ExinIcon2"
               disableGradient={true}
               size={190}
@@ -56,20 +56,36 @@ const HeroSection = () => {
             </div>
           </div>
 
-          <div className=" block">
-            <div className="absolute left-1/10 translate">
+          <div className="invisible lg:visible">
+            <div className="absolute left-1/10  -top-1/6 ">
               <Tag iconId="CrossEyesLaugh" text="رایگان!" />
             </div>
-            {/* <div className="absolute">
+            <div className="absolute left-1/3   top-1/4 ">
               <Tag iconId="Download" text="قالب های آماده" />
             </div>
-            <div className="absolute">
+            <div className="absolute left-1/5 -translate-x-1/9 bottom-1/8 ">
               <Tag iconId="lamp" text="الهام بگیر و اجرا کن" />
             </div>
-            <div className="absolute">
+            <div className="absolute left-1/30 top-1/2 ">
               <Tag iconId="Grow" text="" />
-            </div> */}
+            </div>
           </div>
+
+          <div className="lg:invisible">
+            <div className="absolute -translate-y-7/2  -translate-x-5/2 ">
+              <Tag size={26} iconId="CrossEyesLaugh" text="رایگان!" />
+            </div>
+            <div className="absolute -translate-y-4/2  translate-x-5/2 ">
+              <Tag size={26} iconId="Download" text="قالب های آماده" />
+            </div>
+            <div className="absolute translate-y-2/5 translate-x-2/2   ">
+              <Tag size={26} iconId="lamp" text="الهام بگیر و اجرا کن" />
+            </div>
+            <div className="absolute -translate-y-4/5 -translate-x-3/1  ">
+              <Tag size={26} iconId="Grow" text="" />
+            </div>
+          </div>
+
           <div className="lg:hidden mt-28 flex flex-col items-center gap-y-4">
             <p className=" text-[10px] font-normal leading-3 lg:text-2xl text-description lg:font-semibold lg:leading-9">
               قالب‌های آماده، راهنمای کامل، همه‌چی اینجاست تا کارت سریع و
