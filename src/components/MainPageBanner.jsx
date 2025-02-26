@@ -5,7 +5,7 @@ import Button from "./UI/Button";
 
 const MainPageBanner = () => {
   return (
-    <div className="container relative  overflow-hidden flex justify-around gap-x-30 items-center  bg-secondary-background rounded-full mt-20 ">
+    <div className="container relative  overflow-hidden flex justify-around gap-x-20 items-center bg-secondary-background rounded-full mt-20 ">
       <div className="absolute -right-10">
         <Border size={700} />
       </div>
@@ -32,10 +32,10 @@ const MainPageBanner = () => {
       </div>
 
       <div className="flex flex-col items-end gap-y-10 min-w-[40%]">
-        <p className="text-3xl font-extrabold text-secondary-title">
+        <p className="text-xs lg:text-3xl font-extrabold text-secondary-title leading-12">
           قالب مورد نظرت رو پیدا نکردی ؟ <br /> ما اینجاییم تا کمکت کنیم .{" "}
         </p>
-        <Button text={"ارتباط با ما"} />{" "}
+        <Button text={"ارتباط با ما"} />
       </div>
     </div>
   );
