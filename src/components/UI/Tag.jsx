@@ -1,11 +1,11 @@
 import React from "react";
 import BaseIcon from "../icon/BaseIcon";
 
-const Tag = ({ iconId, text = "" }) => {
+const Tag = ({ iconId, text = "", size = 56 }) => {
   return (
-    <div className="flex flex-col items-center gap-y-4 bg-section-background px-6 py-4 rounded-xl shadow-hero-section ">
-      <BaseIcon id={iconId} />
-      <p className="text-xl font-bold">{text}</p>
+    <div className="flex flex-col items-center gap-y-4 bg-section-background px-2 lg:px-6 py-2 lg:py-4 rounded-xl shadow-hero-section ">
+      <BaseIcon id={iconId} size={size} />
+      <p className=" text-[8px] lg:text-xl  font-bold">{text}</p>
     </div>
   );
 };
