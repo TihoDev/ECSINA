@@ -16,7 +16,7 @@ async function main() {
       cwd: inputDir,
     })
     .sort((a, b) => a.localeCompare(b));
-  console.info(files);
+
   if (files.length === 0) {
     console.log(`No SVG files found in specified directory: ${inputDir}`);
     process.exit(0);
