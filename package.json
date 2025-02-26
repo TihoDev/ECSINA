@@ -3,14 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "npm run generate-svg && next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "generate-svg": "node src/scripts/svg-spritor.js"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.0.8",
+    "fs-extra": "^11.3.0",
+    "glob": "^11.0.1",
     "next": "15.1.7",
+    "node-html-parser": "^7.0.1",
     "postcss": "^8.5.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
