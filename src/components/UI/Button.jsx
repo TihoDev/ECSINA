@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 import BaseIcon from "../icon/BaseIcon";
 
 const Button = ({ text, disableIcon = false }) => {
@@ -12,10 +12,14 @@ const Button = ({ text, disableIcon = false }) => {
 
   const renderIcon = () => (
     <div>
-      <span className={`transition-transform duration-300 group-hover:rotate-45 ${!disableIcon ? 'hidden lg:block' : ''}`}>
+      <span
+        className={`transition-transform duration-300 group-hover:rotate-45 ${
+          !disableIcon ? "hidden lg:block" : ""
+        }`}
+      >
         <BaseIcon id="Arrow" size={15} disableGradient />
       </span>
-      <span className="lg:hidden">
+      <span className="lg:hidden ">
         <BaseIcon id="Arrow" size={8} disableGradient />
       </span>
     </div>
@@ -31,11 +35,11 @@ const Button = ({ text, disableIcon = false }) => {
 
 Button.propTypes = {
   text: PropTypes.string.isRequired,
-  disableIcon: PropTypes.bool
+  disableIcon: PropTypes.bool,
 };
 
 Button.defaultProps = {
-  disableIcon: false
+  disableIcon: false,
 };
 
 export default Button;
