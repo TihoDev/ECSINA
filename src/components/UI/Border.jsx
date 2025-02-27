@@ -7,11 +7,11 @@ const Border = ({ size = 515 }) => {
         <circle
           cx={size / 2}
           cy={size / 2}
-          r={(size / 2 - 10) * 0.8}
+          r={size / 2 - 10}
           fill="none"
           stroke="#3E243C"
           strokeWidth={2}
-          strokeDasharray="10 27"
+          strokeDasharray="8 15"
         />
       </svg>
     </span>
