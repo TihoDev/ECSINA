@@ -21,7 +21,7 @@ const MobileNavbar = () => {
   return (
     // <div className="relative">
     <>
-      <div className="bg-section-background h-[90px] rounded-b-[81px] shadow-2xl flex justify-between items-center px-12">
+      <div className="bg-section-background h-[90px] rounded-b-[81px] shadow-gradient shadow-hero-section flex justify-between items-center px-12 mb-2">
         <BaseIcon
           onClick={() => handleToggleMenu("open")}
           id="Burger"
