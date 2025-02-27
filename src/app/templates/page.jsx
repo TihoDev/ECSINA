@@ -1,10 +1,7 @@
-import SearchBar from "@/components/SearchBar"
-
 function page() {
     return (
         <div>
-            {/* لیست قالب ها */}
-            <SearchBar />
+            لیست قالب ها
         </div>
     )
 }
