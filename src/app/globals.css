@@ -30,7 +30,7 @@
 }
 
 body {
-  @apply font-yekan font-semibold;
+  @apply bg-main-background font-yekan font-semibold;
 }
 
 @theme {
