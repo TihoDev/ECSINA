@@ -48,6 +48,7 @@ body {
   --shadow-detail-shadow: 0px 0px 16px #00000040;
   --shadow-border: 0px 8px 8px 0px #00000040;
   --shadow-hero-section: 0px 4px 4px 0px #00000040;
+  --shadow-product-card-icon :0px 2px 4px #1E132840;
 
   /* font */
   --font-yekan: "yekan";
@@ -127,10 +128,10 @@ body {
   }
 
   .our-products-section {
-    @apply grid grid-cols-2 grid-rows-3 gap-y-4 gap-x-4 md:grid-cols-5 md:grid-rows-1 md:gap-y-0 md:gap-x-2;
+    @apply h-full lg:h-[500px] grid items-center grid-cols-2 grid-rows-3 gap-y-4 gap-x-4 lg:grid-cols-5 lg:grid-rows-1 lg:gap-y-0 lg:gap-x-6;
   }
 
   .product-card {
-    @apply bg-white rounded-lg shadow-product-card p-4;
+    @apply bg-white h-full lg:h-[412px] rounded-2xl shadow-product-card p-4;
   }
 }
