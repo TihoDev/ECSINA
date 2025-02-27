@@ -29,7 +29,7 @@ const HelpToDownloadCard  = () => {
             <br />
             6.پس از ویرایش، فایل را ذخیره کرده و در پروژه‌های خود استفاده کنید.
             </p>
-            <h2 className='text-[20px] leading-8 font-semibold text-[#B73131] mp-6'>نکات مهم</h2>
+            <h2 className='text-[20px] leading-8 font-semibold text-[#B73131] mb-6'>نکات مهم</h2>
             <p className="font-semibold text-[20px] leading-8">
             پوشش کامل تیترهای مهم اسناد تجاری:
             <span className='font-normal text-[20px] leading-8'> در طراحی این قالب‌ها تلاش شده تا تمام سرفصل‌های ضروری در اسناد تجاری گنجانده شود.</span>
