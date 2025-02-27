@@ -6,10 +6,13 @@ import Tag from "./UI/Tag";
 
 const HeroSection = () => {
   return (
-    <div className="relative bg-section-background  h-[650px] rounded-bl-[80px] rounded-br-[80px] lg:rounded-bl-[300px] lg:rounded-br-[300px] shadow-hero-section mt-36">
-      <div className="  container  grid grid-cols-12   ">
-        <div className=" col-span-12 lg:col-span-5 flex flex-col items-start gap-y-8">
-          <h2 className=" text-xs lg:text-5xl text-title font-extrabold leading-20  mx-auto ">
+    <div
+      className="relative bg-section-background h-[550px] lg:min-h-[650px] rounded-bl-[80px] rounded-br-[80px]
+     lg:rounded-bl-[300px] lg:rounded-br-[300px] shadow-hero-section lg:mt-64"
+    >
+      <div className="container grid grid-cols-12 lg:mx-0">
+        <div className="col-span-12 lg:col-span-5  flex flex-col items-start gap-y-8">
+          <h2 className=" text-xs  lg:text-5xl text-title font-extrabold leading-20  mx-auto ">
             با اکسین، اسناد تجاری را مثل حرفه‌ای‌ها بساز!
           </h2>
 
@@ -21,8 +24,8 @@ const HeroSection = () => {
             <Button text="رایگان دانلود کن" />
           </div>
         </div>
-        <div className=" col-span-12 lg:col-span-7 place-items-center lg:place-items-end  ">
-          <div className="2xl:-ml-[70px]">
+        <div className=" col-span-12 place-items-center lg:col-span-6 ">
+          <div className="lg:absolute  lg:left-1/8 xl:-translate-x-1/6 ">
             <BaseIcon
               className="hidden lg:block"
               id="ExinIcon2"
@@ -47,12 +50,13 @@ const HeroSection = () => {
               <Border size={750} />
             </div>
           </div>
+
           <div className=" lg:hidden">
+            <div className="absolute left-1/2 -translate-x-1/2 top-[15%]">
+              <Border size={300} />
+            </div>
             <div className="absolute left-1/2 -translate-x-1/2 top-[10%]">
               <Border size={350} />
-            </div>
-            <div className="absolute left-1/2 -translate-x-1/2 top-[6%]">
-              <Border size={400} />
             </div>
           </div>
 
