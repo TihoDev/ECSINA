@@ -1,4 +1,5 @@
 import React from 'react'
+import BaseIcon from './icon/BaseIcon';
 
 const HelpToDownloadCard  = () => {
     return(
@@ -8,7 +9,7 @@ const HelpToDownloadCard  = () => {
                 راهنمای دانلود و استفاده از قالب‌های رایگان
                 </h1>
                 <div>
-                    
+                <BaseIcon id="Cross" size={40}/>
                 </div>
             </div>
             <p className='font-normal text-[20px] leading-8 mb-8'>اکسین در این بخش، مجموعه‌ای از قالب‌های حرفه‌ای و استاندارد را برای دانلود رایگان در اختیار شما قرار می‌دهد تا بتوانید به‌راحتی و بدون هزینه از آن‌ها در پروژه‌های خود استفاده کنید.
