@@ -30,7 +30,7 @@
 }
 
 body {
-  @apply font-yekan font-semibold;
+  @apply bg-main-background font-yekan font-semibold;
 }
 
 @theme {
@@ -88,8 +88,8 @@ body {
   .shadow-gradient::before {
     content: "";
     position: absolute;
-    top: -15%;
-    left: 50%;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     background: linear-gradient(to bottom right, #ffc4fa, #efffd8, #a4e7fc);
@@ -130,8 +130,15 @@ body {
   .our-products-section {
     @apply h-full lg:h-[500px] grid items-center grid-cols-2 grid-rows-3 gap-y-4 gap-x-4 lg:grid-cols-5 lg:grid-rows-1 lg:gap-y-0 lg:gap-x-6;
   }
+  .our-futures-section{
+    @apply grid grid-cols-2 grid-rows-3 gap-8 lg:grid-cols-3 lg:grid-rows-2
+  }
 
   .product-card {
     @apply bg-white h-full lg:h-[412px] rounded-2xl shadow-product-card p-4;
+  }
+
+  .future-card {
+    @apply bg-white w-full h-fit lg:h-full rounded-2xl shadow-product-card p-4
   }
 }
