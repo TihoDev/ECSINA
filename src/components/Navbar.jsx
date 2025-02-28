@@ -1,4 +1,12 @@
+import Link from "next/link";
 import MobileNavbar from "./MobileNavbar";
+
+const navigationLinks = [
+  { id: 1, label: "محصولات ما", href: "/" },
+  { id: 2, label: "صفحه اصلی", href: "/" },
+  { id: 3, label: "درباره ما", href: "/" },
+  { id: 4, label: "تماس با ما", href: "/" },
+];
 
 function Navbar() {
   return (
@@ -10,10 +18,11 @@ function Navbar() {
         {" "}
         {/* Desctop navbar */}
         <ul className="text-lg border-2 border-[#3E243C] w-[550px] lg:w-[665px] h-16 lg:h-20 px-7 flex justify-around items-center rounded-2xl [&>li]:cursor-pointer">
-          <li>محصولات ما</li>
-          <li>صفحه اصلی</li>
-          <li>درباره ما</li>
-          <li>تماس با ما</li>
+          {navigationLinks.map((item) => (
+            <li key={item.id}>
+              <Link href={item.href}>{item.label}</Link>
+            </li>
+          ))}
         </ul>
       </nav>
     </>
