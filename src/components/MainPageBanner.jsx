@@ -17,13 +17,13 @@ const MainPageBanner = () => {
           />
         </div>
         <div className="hidden lg:flex justify-center items-center">
-          <div className="absolute -top-1/15 -right-1/6">
+          <div className="absolute -top-1/15 -right-1/6  rounded-full shadow-border">
             <Border size={480} />
           </div>
-          <div className="absolute -top-2/15 -right-7/32">
+          <div className="absolute -top-2/15 -right-7/32 rounded-full shadow-border">
             <Border size={530} />
           </div>
-          <div className="absolute -top-3/15 -right-8/32">
+          <div className="absolute -top-3/15 -right-8/32 rounded-full shadow-border">
             <Border size={570} />
           </div>
         </div>
