@@ -6,21 +6,21 @@ import BaseIcon from "./icon/BaseIcon";
 
 const FutureCard = ({title,text,svg,className}) => {
     return (
-      <div className={`${className} future-card flex flex-col justify-between`}>
-      <div>
-          <div className="flex flex-col justify-items-start">
-              <div className="mb-4 bg-white p-2 shadow-product-card-icon rounded-lg w-fit">
-                  <BaseIcon id={`${svg}`} size={32}/>
-              </div>
-              <div>
-                  <h1 className="font-bold text-right text-xl leading-[35px] mb-4 text-(0,0,0,1)]">{title}</h1>
-              </div>
-          </div>
-          <div>
-              <p className="font-normal text-right text-md leading-[31px] text-[rgba(0,0,0,1)]">{text}</p>
-          </div>
-      </div>
-  </div>
+      <div className={`${className} future-card`}>
+        <div>
+            <div className="flex flex-col justify-items-start">
+                <div className="mb-4 bg-white p-2 shadow-product-card-icon rounded-lg w-fit">
+                    <BaseIcon id={`${svg}`} size={32}/>
+                </div>
+                <div>
+                    <h1 className="font-bold text-right text-xl leading-[35px] mb-4 text-(0,0,0,1)]">{title}</h1>
+                </div>
+            </div>
+            <div>
+                <p className="font-normal text-right text-md leading-[31px] text-[rgba(0,0,0,1)]">{text}</p>
+            </div>
+        </div>
+    </div>
     );
   };
   

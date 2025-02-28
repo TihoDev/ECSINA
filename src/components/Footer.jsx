@@ -63,19 +63,24 @@ const Footer = () => {
           </div>
         </div>
         <div className="w-full">
-          <div className="flex items-center justify-center space-x-2 mb-3">
+          <div className="flex items-center justify-center space-x-2 mb-3 mt-8 lg:mt-0">
             <p className="text-gray-800">جدیدترین قالب‌های ما را از دست نده</p>
           </div>
-          <div className="flex items-center bg-white shadow-md rounded-full overflow-hidden p-1 border border-gray-300 max-w-xl">
-            <input
-              type="email"
-              placeholder="ایمیل"
-              className="flex-1 px-4 py-2 focus:outline-none border-none placeholder:text-right"
-            />
-            <button className="bg-purple-gradient text-white px-6 py-2 rounded-full cursor-pointer">
-              ارسال
-            </button>
+
+          <div className="flex items-center justify-center">
+            <div className="flex items-center bg-white shadow-md rounded-full overflow-hidden p-1 border border-gray-300 max-w-xl">
+              <input
+                type="email"
+                placeholder="ایمیل"
+                className="flex-1 px-4 py-2 focus:outline-none border-none placeholder:text-right"
+              />
+              <button className="bg-purple-gradient text-white px-6 py-2 rounded-full cursor-pointer">
+                ارسال
+              </button>
+            </div>
           </div>
+
+
         </div>
       </div>
       <div className="mt-12 text-center flex justify-center items-center gap-7">

@@ -11,10 +11,10 @@ const navigationLinks = [
 function Navbar() {
   return (
     <>
-      <div className="block md:hidden relative">
+      <div className="block lg:hidden relative">
         <MobileNavbar />
       </div>
-      <nav className="container hidden md:flex md:my-16 justify-center lg:justify-start">
+      <nav className="container hidden lg:mt-10 lg:flex justify-center lg:justify-start">
         {" "}
         {/* Desctop navbar */}
         <ul className="text-lg border-2 border-[#3E243C] w-[550px] lg:w-[665px] h-16 lg:h-20 px-7 flex justify-around items-center rounded-2xl [&>li]:cursor-pointer">

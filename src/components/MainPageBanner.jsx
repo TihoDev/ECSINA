@@ -5,7 +5,7 @@ import Button from "./UI/Button";
 
 const MainPageBanner = () => {
   return (
-    <div className="container relative overflow-hidden flex  gap-14 md:gap-0 justify-between  items-center bg-secondary-background rounded-full mt-20 ">
+    <section className="container relative overflow-hidden flex  gap-14 md:gap-0 justify-between  items-center bg-secondary-background rounded-full mt-20 ">
       {/* DESKTOP */}
       <div className="relative hidden lg:block">
         <div className=" ">
@@ -163,7 +163,7 @@ const MainPageBanner = () => {
           />
         </svg>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -9,11 +9,10 @@ const MobileNavbar = () => {
   const handleToggleMenu = (toggle) => {
     const currentMenu = menu.current;
     if (toggle === "open") {
-      currentMenu.className += " opacity-100 right-0";
+      currentMenu.classList.remove("translate-x-[100%]")
       document.body.classList.add("overflow-y-hidden");
     } else {
-      currentMenu.classList.remove("opacity-100");
-      currentMenu.classList.remove("right-0");
+      currentMenu.classList.add("translate-x-[100%]");
       document.body.classList.remove("overflow-y-hidden");
     }
   };
@@ -40,7 +39,7 @@ const MobileNavbar = () => {
       </div>
       <div>
         <ul
-          className="fixed bg-gradient-to-r from-[#FFFFFF] to-[#FEF1FD] top-0 -right-48 pt-8 md:pr-0 px-7 opacity-0 ease-in duration-200 w-[171px] h-[556px] rounded-bl-[50px] [&>li]:cursor-pointer z-50 text-[10px] font-semibold"
+          className="fixed translate-x-[100%] bg-gradient-to-r from-[#FFFFFF] to-[#FEF1FD] top-0 -right-12 pt-8 px-7 lg:pr-0 ease-in duration-200 w-2/5 h-full shadow-xl rounded-bl-[50px] [&>li]:cursor-pointer z-50 text-[10px] font-semibold"
           ref={menu}
         >
           <li className="flex justify-end !cursor-auto">

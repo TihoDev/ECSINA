@@ -7,7 +7,7 @@ import Navbar from "./Navbar";
 
 const HeroSection = () => {
   return (
-    <div
+    <section
       className=" bg-section-background  rounded-bl-[80px] rounded-br-[80px]
       lg:rounded-bl-[300px] lg:rounded-br-[300px] shadow-hero-section "
     >
@@ -15,8 +15,8 @@ const HeroSection = () => {
         <Navbar />
       </div>
       <div className="relative  h-[550px] lg:min-h-[750px] ">
-        <div className="container grid grid-cols-12 lg:mx-0 ">
-          <div className="col-span-12 lg:col-span-5 flex flex-col items-start gap-y-8">
+        <div className="container grid grid-cols-12 lg:mx-0">
+          <div className="col-span-12 lg:col-span-5 lg:mt-16 flex flex-col items-start gap-y-8">
             <h2 className=" text-xs  lg:text-5xl text-title font-extrabold leading-20  mx-auto ">
               با اکسین، اسناد تجاری را مثل حرفه‌ای‌ها بساز!
             </h2>
@@ -29,8 +29,8 @@ const HeroSection = () => {
               <Button text="رایگان دانلود کن" />
             </div>
           </div>
-          <div className=" col-span-12 place-items-center lg:col-span-7 ">
-            <div className="lg:absolute  lg:left-1/8 xl:-translate-x-1/6 ">
+          <div className=" col-span-12 place-items-center lg:col-span-7">
+            <div className="lg:absolute  lg:left-1/8 xl:-translate-x-1/6">
               <BaseIcon
                 className="visible lg:invisible mt-15 "
                 id="ExinIcon2"
@@ -44,7 +44,7 @@ const HeroSection = () => {
               <div className="absolute left-9/120 -translate-x-2/24 top-[3%] ">
                 <Border size={520} />
               </div>
-              <div className="absolute left-3/40 -translate-x-1/8 -top-[2%] ">
+              <div className="absolute left-3/40 -translate-x-1/8 -top-[2%]">
                 <Border size={590} />
                 <div className="invisible lg:visible ">
                   <div className="absolute left-[15%] -top-[5%]">
@@ -106,7 +106,7 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
