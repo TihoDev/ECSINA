@@ -18,8 +18,7 @@ const categories = [
 
 const Footer = () => {
   return (
-    <footer className="shadow-gradient bg-[radial-gradient(circle_at_center,_rgb(255,255,255)_30%,_#f7fafc_80%)] rounded-t-xl relative py-10 px-6 text-gray-700 mt-20 shadow-md before:content-[''] before:absolute before:top-[-35px] before:left-1/2 before:w-[85px] before:h-[95px] before:bg-[#f7fafc] before:rounded-full before:transform before:-translate-x-1/2 ">
-      {/* <!-- دکمه بازگشت --> */}
+    <footer className="footer-shadow-gradient bg-[radial-gradient(circle_at_center,_rgb(255,255,255)_30%,_#f7fafc_80%)] rounded-t-xl relative py-10 px-6 text-gray-700 mt-20 shadow-md before:content-[''] before:absolute before:top-[-35px] before:left-1/2 before:w-[85px] before:h-[95px] before:bg-[#f7fafc] before:rounded-full before:transform before:-translate-x-1/2 ">
       <div className="bg-rainbow-gradient absolute -top-7 left-1/2 transform -translate-x-1/2 flex justify-center items-center w-16 h-16 rounded-full cursor-pointer">
         <span className="text-xl text-black font-bold">
           <BaseIcon
@@ -30,10 +29,7 @@ const Footer = () => {
           />
         </span>
       </div>
-
-      {/* <!--  footer content --> */}
       <div className="max-w-6xl mx-auto mt-10 flex flex-col md:flex-row justify-evenly items-start">
-        {/* <!-- links--> */}
         <div className="w-full flex justify-around text-sm text-gray-800 text-right">
           <div>
             <h3 className="font-semibold mb-3 text-lg">دسترسی سریع</h3>
@@ -66,7 +62,6 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        {/* <!-- form--> */}
         <div className="w-full">
           <div className="flex items-center justify-center space-x-2 mb-3">
             <p className="text-gray-800">جدیدترین قالب‌های ما را از دست نده</p>
@@ -83,8 +78,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-
-      {/* <!-- icon --> */}
       <div className="mt-12 text-center flex justify-center items-center gap-7">
         <div className="flex justify-center space-x-6">
           <p className="mb-4 text-gray-800 font-medium pt-3">

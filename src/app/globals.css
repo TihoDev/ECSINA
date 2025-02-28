@@ -88,8 +88,24 @@ body {
   .shadow-gradient::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -80;
+    left: -50;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom right, #ffc4fa, #efffd8, #a4e7fc);
+    filter: blur(50px);
+    z-index: -1;
+    border-radius: 50%;
+    opacity: 0.7;
+  }
+  .footer-shadow-gradient {
+    position: relative;
+  }
+  .footer-shadow-gradient::before {
+    content: "";
+    position: absolute;
+    top: -80;
+    left: -50;
     width: 100%;
     height: 100%;
     background: linear-gradient(to bottom right, #ffc4fa, #efffd8, #a4e7fc);
