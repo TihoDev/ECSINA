@@ -1,4 +1,3 @@
-
 import BelowMainPageBanner from "@/components/BelowMainPageBanner";
 import HeroSection from "@/components/HeroSection";
 import MainPageBanner from "@/components/MainPageBanner";
@@ -8,7 +7,6 @@ import Navbar from "@/components/Navbar";
 export default function Home() {
   return (
     <>
-      <Navbar />
       <HeroSection />
       <MainPageBanner />
       <BelowMainPageBanner />
