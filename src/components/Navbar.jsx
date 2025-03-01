@@ -12,7 +12,7 @@ function Navbar() {
   return (
     <>
       <div className="block lg:hidden relative">
-        <MobileNavbar />
+        <MobileNavbar navigationLinks={navigationLinks} />
       </div>
       <nav className="hidden lg:flex justify-center lg:justify-start">
         {/* Desctop navbar */}
