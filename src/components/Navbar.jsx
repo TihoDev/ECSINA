@@ -12,7 +12,7 @@ function Navbar() {
   return (
     <>
       <div className="block lg:hidden relative">
-        <MobileNavbar />
+        <MobileNavbar navigationLinks={navigationLinks} />
       </div>
       <nav className="container hidden lg:mt-10 lg:flex justify-center lg:justify-start">
         {" "}
