@@ -56,13 +56,13 @@ const MobileNavbar = ({ navigationLinks }) => {
               />
             </button>
           </li>
-          <ul className="mt-12 space-y-6 md:space-y-7">
+          <ul className="mt-12 space-y-6">
           {navigationLinks.map((item) => (
             <li
             key={item.id}
-            className="hover:bg-gradient-to-r hover:from-[#3E243C] to-[#A45F9E] hover:text-white px-2 rounded-[7px] transition-all text-xs sm:text-sm md:text-base"
+            className="transition-all text-xs sm:text-sm md:text-[15px] py-2"
             >
-              <Link href={item.href}>{item.label}</Link>
+              <Link href={item.href} className="w-full py-[9px] px-2 sm:pr-3 sm:pl-24 hover:bg-gradient-to-r hover:from-[#3E243C] to-[#A45F9E] hover:text-white rounded-md">{item.label}</Link>
             </li>
           ))}
           </ul>
