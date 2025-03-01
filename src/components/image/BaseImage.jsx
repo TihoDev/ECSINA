@@ -7,9 +7,11 @@ const BaseImage = ({
   width = 50,
   height = 50,
   priority = true,
+  className = "",
 }) => {
   return (
     <Image
+      className={className}
       src={imageUrl}
       alt={alt}
       width={width}
