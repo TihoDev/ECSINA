@@ -1,9 +1,9 @@
-import ProductDetailsCard from "./ProductDetailsCard";
+import ProductDetailsCard from "../ProductDetailsCard";
 
 const ProductDetailsSection = () => {
   return (
-    <div className="container my-10 space-y-8 md:flex md:flex-row-reverse md: md:h-96 md:gap-5">
-      <div className="w-full md:h-full md:w-3/5">
+    <div className="container space-y-8 lg:flex lg:flex-row-reverse lg:h-96 lg:gap-6 mb-20">
+      <div className="w-full lg:h-full lg:w-3/5">
         {/* It is better to use the img element here. (Not Image component) */}
         <img
           src="/images/Checker.png"

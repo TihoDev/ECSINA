@@ -1,10 +1,10 @@
-import BaseIcon from "./icon/BaseIcon";
-import DownloadGuideButton from "./UI/DownloadGuideButton";
+import BaseIcon from "../icon/BaseIcon";
+import DownloadGuideButton from "../UI/DownloadGuideButton";
 
 const SearchBar = () => {
   return (
-    <div className="container flex justify-between my-10 gap-2 md:gap-4 lg:gap-8">
-      <div className="flex relative w-2/3 md:w-3/4 lg:w-4/5">
+    <div className=" flex justify-between my-10 gap-2 md:gap-4 lg:gap-8">
+      <form className="flex relative w-2/3 md:w-3/4 lg:w-4/5">
         <input
           type="text"
           className="border-[3px] border-[#71416D] rounded-xl pr-6 py-3 lg:py-4 placeholder:font-normal w-full shadow-product-card focus:outline-none z-50"
@@ -21,7 +21,7 @@ const SearchBar = () => {
             />
           </div>
         </div>
-      </div>
+      </form>
       <DownloadGuideButton>راهنمای دانلود قالب ها</DownloadGuideButton>
     </div>
   );

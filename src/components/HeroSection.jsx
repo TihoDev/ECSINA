@@ -11,7 +11,7 @@ const HeroSection = () => {
       className=" bg-section-background  rounded-bl-[80px] rounded-br-[80px]
       lg:rounded-bl-[300px] lg:rounded-br-[300px] shadow-hero-section "
     >
-      <div className="lg:ml-[20%]">
+      <div className="lg:pt-14 lg:pr-14">
         <Navbar />
       </div>
       <div className="relative  h-[550px] lg:min-h-[750px] ">
