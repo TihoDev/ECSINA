@@ -1,9 +1,9 @@
 import React from 'react'
 import BaseIcon from './icon/BaseIcon';
 
-const HelpToDownloadCard  = () => {
+const HelpToDownloadCard  = ({topSpace}) => {
     return(
-        <div className='absolute left-15 top-[510px] z-40 rounded-4xl bg-[#FFF6FE] w-[500px] p-10 shadow-lg'>
+        <div className={`absolute left-15 ${topSpace} z-40 rounded-4xl bg-[#FFF6FE] w-[500px] p-10 shadow-lg`}>
             <div className='mb-4 justify-between flex'>
                 <h1 className='whitespace-nowrap font-extrabold text-xl leading-5 text-black'>
                 راهنمای دانلود و استفاده از قالب‌های رایگان

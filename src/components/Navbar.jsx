@@ -2,7 +2,7 @@ import Link from "next/link";
 import MobileNavbar from "./MobileNavbar";
 
 const navigationLinks = [
-  { id: 1, label: "محصولات ما", href: "/templates" },
+  { id: 1, label: "محصولات ما", href: "/products" },
   { id: 2, label: "صفحه اصلی", href: "/" },
   { id: 3, label: "درباره ما", href: "/" },
   { id: 4, label: "تماس با ما", href: "/" },

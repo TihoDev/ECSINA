@@ -22,7 +22,7 @@ const SearchBar = () => {
           </div>
         </div>
       </form>
-      <DownloadGuideButton />
+      <DownloadGuideButton topSpace="top-[510px]"/>
     </div>
   );
 };

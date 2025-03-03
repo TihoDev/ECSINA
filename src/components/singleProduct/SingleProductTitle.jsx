@@ -9,7 +9,7 @@ const SingleProductTitle = ({title}) => {
             {title}
         </h1>
 
-        <DownloadGuideButton>راهنمای دانلود قالب ها</DownloadGuideButton>
+        <DownloadGuideButton topSpace="top-[335px]">راهنمای دانلود قالب ها</DownloadGuideButton>
         {/* <HelpToDownloadCard /> */}
     </div>
   )
