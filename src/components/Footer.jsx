@@ -18,7 +18,7 @@ const categories = [
 
 const Footer = () => {
   return (
-    <footer className="footer-shadow-gradient bg-[radial-gradient(circle_at_center,_rgb(255,255,255)_30%,_#f7fafc_80%)] rounded-t-xl relative py-10 px-6 text-gray-700 mt-20 shadow-md before:content-[''] before:absolute before:top-[-35px] before:left-1/2 before:w-[85px] before:h-[95px] before:bg-[#f7fafc] before:rounded-full before:transform before:-translate-x-1/2 ">
+    <footer className="footer-shadow-gradient bg-[radial-gradient(circle_at_center,_rgb(255,255,255)_30%,_#f7fafc_80%)] rounded-tr-[200px] rounded-tl-[200px] relative py-10 px-6 text-gray-700 mt-20 shadow-md before:content-[''] before:absolute before:top-[-35px] before:left-1/2 before:w-[85px] before:h-[95px] before:bg-[#f7fafc] before:rounded-full before:transform before:-translate-x-1/2 ">
       <div className="bg-rainbow-gradient absolute -top-7 left-1/2 transform -translate-x-1/2 flex justify-center items-center w-16 h-16 rounded-full cursor-pointer">
         <span className="text-xl text-black font-bold">
           <BaseIcon
@@ -90,19 +90,25 @@ const Footer = () => {
           </p>
 
           <Link
-            href="#"
+            href="https://t.me/exinsoftware"
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-purple-gradient text-white p-3 rounded-full text-lg w-12 h-12 flex items-center justify-center shadow-lg"
           >
             <BaseIcon id={"Telegram"} size={28} disableGradient={true} />
           </Link>
           <Link
-            href="#"
+            href="https://www.instagram.com/exiness/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-purple-gradient text-white p-3 rounded-full text-lg w-12 h-12 flex items-center justify-center shadow-lg"
           >
             <BaseIcon id={"Instagram"} size={28} disableGradient={true} />
           </Link>
           <Link
-            href="#"
+            href="exinessexin@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-purple-gradient text-white p-3 rounded-full text-lg w-12 h-12 flex items-center justify-center shadow-lg"
           >
             <BaseIcon id={"Google"} size={28} disableGradient={true} />
