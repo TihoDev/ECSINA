@@ -16,7 +16,7 @@ function Navbar() {
       </div>
       <nav className="hidden lg:flex justify-center lg:justify-start">
         {/* Desctop navbar */}
-        <ul className="text-lg border-2 border-[#3E243C] w-[550px] lg:w-[665px] h-16 lg:h-20 px-7 flex justify-around items-center rounded-2xl [&>li]:cursor-pointer">
+        <ul className="text-lg border-2 border-[#3E243C] gap-x-10 py-6 px-12 flex justify-around items-center rounded-2xl [&>li]:cursor-pointer">
           {navigationLinks.map((item) => (
             <li key={item.id}>
               <Link href={item.href}>{item.label}</Link>

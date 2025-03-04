@@ -12,7 +12,7 @@ const HeroSection = () => {
       lg:rounded-bl-[300px] lg:rounded-br-[300px] shadow-hero-section "
     >
 
-      <div className="lg:pt-14 lg:pr-14">
+      <div className="lg:pt-12 lg:pr-14">
         <Navbar />
       </div>
 
