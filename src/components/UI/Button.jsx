@@ -4,7 +4,7 @@ import BaseIcon from "../icon/BaseIcon";
 
 const Button = ({ text, disableIcon = false }) => {
   const buttonClasses = `
-    group flex items-center gap-2 lg:gap-5 px-3 py-2.5 lg:p-5 rounded-2xl
+    group flex items-center gap-2 lg:gap-5 px-3 py-2.5 lg:p-4 rounded-2xl
     bg-gradient-to-r from-black via-[#71416D] via-[55.5%] to-[#A45F9E]
     bg-[length:200%] bg-left transition-[background-position] duration-300 ease-out 
     hover:bg-[length:130%] hover:bg-right cursor-pointer z10
@@ -28,7 +28,7 @@ const Button = ({ text, disableIcon = false }) => {
   return (
     <button className={buttonClasses}>
       {!disableIcon && renderIcon()}
-      <p className="text-white text-xs lg:text-2xl font-medium">{text}</p>
+      <p className="text-white text-xs lg:text-xl font-medium">{text}</p>
     </button>
   );
 };

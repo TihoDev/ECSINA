@@ -23,7 +23,7 @@ const HeroSection = () => {
               اکسین، همراهیِ نوین  
             </h2>
 
-            <p className="  hidden lg:block text-2xl text-description font-semibold leading-9">
+            <p className="  hidden lg:block text-xl text-description font-semibold leading-9">
               اسناد تجاری در قالب های آماده با راهنمایی کامل
               همه چی اینجاست تا کارت سریع و بی دردسر پیش بره!
             </p>
