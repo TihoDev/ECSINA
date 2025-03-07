@@ -16,7 +16,7 @@ const HeroSection = () => {
         <Navbar />
       </div>
 
-      <div className="relative h-[550px] lg:min-h-[750px]">
+      <div className="relative h-[560px] lg:min-h-[750px]">
         <div className="container grid grid-cols-12 lg:mx-0">
           <div className="col-span-12 lg:col-span-5 lg:mt-16 flex flex-col items-start gap-y-8">
             <h2 className="w-full text-xl lg:text-5xl text-title font-extrabold leading-20 text-center lg:text-right">
@@ -98,7 +98,7 @@ const HeroSection = () => {
               </div>
             </div>
 
-            <div className="lg:hidden mt-28 flex flex-col items-center gap-y-4">
+            <div className="lg:hidden mt-30 flex flex-col items-center gap-y-4">
               <p className=" text-[14px] leading-5 text-center font-normal lg:text-2xl text-description lg:font-semibold lg:leading-9">
                 قالب‌های آماده، راهنمای کامل، همه‌چی اینجاست تا کارت سریع و
                 بی‌دردسر پیش بره!
