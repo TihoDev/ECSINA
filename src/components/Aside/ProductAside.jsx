@@ -20,5 +20,5 @@ const ProductAside = ({style , data}) => {
     </aside>
   )
 }
-
+ 
 export default ProductAside
