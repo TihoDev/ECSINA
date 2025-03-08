@@ -39,7 +39,7 @@ const MobileNavbar = ({ navigationLinks }) => {
       </div>
       <div>
         <ul
-          className="fixed translate-x-[100%] bg-gradient-to-r from-[#FFFFFF] to-[#FEF1FD] top-0 right-0 pt-8 px-6 sm:px-7 lg:pr-0 ease-in duration-200 w-2/5 h-full shadow-xl rounded-bl-[50px] [&>li]:cursor-pointer z-50 font-semibold"
+          className="fixed translate-x-[100%] bg-gradient-to-r from-[#FFFFFF] to-[#FEF1FD] top-0 right-0 pt-8 px-6 sm:px-7 lg:pr-0 ease-in duration-200 w-3/5 sm:w-2/5 h-full shadow-xl rounded-bl-[50px] [&>li]:cursor-pointer z-50 font-semibold"
           ref={menu}
         >
           <li className="flex justify-end !cursor-auto">

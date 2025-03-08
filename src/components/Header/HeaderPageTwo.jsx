@@ -14,7 +14,7 @@ const HeaderPageTwo = () => {
                 <h4 className='font-bold w-2/3 text-lg hidden lg:block text-title'>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است.</h4>
             </div>
             <div className='hidden lg:block'>
-                <BaseIcon size={230} id="ExinIcon3" disableGradient={true} fillColor='#3E243C'/>
+                <BaseIcon size={230} id="ExinIcon3" disableGradient={true} fillColor='#1E1328'/>
             </div>
         </div>
     </header>

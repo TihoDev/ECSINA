@@ -33,7 +33,7 @@ const asideData = [
 
 function page() {
     return (
-        <>
+        <div className="overflow-y-hidden">
           <HeaderPageTwo />
             <main className="pt-12">
                 <div className="container">
@@ -46,7 +46,7 @@ function page() {
                     </section>
                 </div>
             </main>
-        </>
+        </div>
     )
 }
  

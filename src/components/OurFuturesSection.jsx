@@ -44,8 +44,8 @@ const ourFuturesSectionData = [
 ];
 const OurFuturesSection = () => {
   return (
-    <section className="mt-42 mb-42 mx-4 lg:mx-12 flex items-center justify-center ">
-      <div className="bg-white future-section-shadow-gradient rounded-[80px] lg:rounded-[200px]">
+    <section className="mt-42 mb-42 mx-4 lg:mx-12 flex items-center justify-center">
+      <div className="bg-white future-section-shadow-gradient rounded-[80px] lg:rounded-[200px] section-shadows">
         <div className="container pt-20 pb-26">
           <h2 className="text-2xl lg:text-3xl font-bold text-center mb-12 text-title">
             ویژگی های قالب های اکسین

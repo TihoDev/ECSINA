@@ -6,7 +6,7 @@ import Button from "./UI/Button";
 const MainPageBanner = () => {
   return (
     <section className="container">
-      <div className="xl:px-12 xl:py-10 2xl:py-12 2xl:px-24 relative overflow-hidden flex  gap-14 md:gap-0 justify-between items-center bg-secondary-background rounded-full mt-20 ">
+      <div className="xl:px-12 section-shadows xl:py-10 2xl:py-12 2xl:px-24 relative overflow-hidden flex  gap-14 md:gap-0 justify-between items-center bg-secondary-background rounded-full mt-20 ">
         {/* DESKTOP */}
         <div className="relative hidden lg:block">
           <div className=" ">

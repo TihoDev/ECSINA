@@ -21,7 +21,7 @@ function ProductCard({ title, text, svg, className }) {
           </div>
         </div>
         <div>
-          <p className="font-normal text-right text-[14px] lg:text-md leading-7 lg:leading-[31px] text-[rgba(0,0,0,1)]">
+          <p className="font-normal text-right lg:text-[12px] xl:text-[14px] lg:text-md leading-7 lg:leading-[31px] text-[rgba(0,0,0,1)]">
             {text}
           </p>
         </div>

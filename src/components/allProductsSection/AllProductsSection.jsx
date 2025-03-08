@@ -9,12 +9,6 @@ const productsSampleCard = [
         imageId : "https://www.sportico.com/wp-content/uploads/2020/09/0911_IMG.jpg"
     },
     {
-        id : 2,
-        title : "تمام محصولات",
-        text : "مشاهده تمام محصولات",
-        imageId : undefined
-    },
-    {
         id : 3,
         title : "تمام محصولات",
         text : "مشاهده تمام محصولات",

@@ -9,7 +9,7 @@ const HeroSection = () => {
   return (
     <section
       className=" bg-section-background  rounded-bl-[80px] rounded-br-[80px]
-      lg:rounded-bl-[300px] lg:rounded-br-[300px] shadow-hero-section "
+      lg:rounded-bl-[300px] lg:rounded-br-[300px] section-shadows"
     >
 
       <div className="lg:pt-12 lg:pr-14">

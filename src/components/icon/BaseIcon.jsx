@@ -23,7 +23,7 @@ const BaseIcon = ({
           </linearGradient>
         </defs>
       )}
-      <use xlinkHref={`assets/icons/sprite.svg#${id}`} fill={fill} />
+      <use xlinkHref={`/assets/icons/sprite.svg#${id}`} fill={fill} />
     </svg>
   );
 };

@@ -14,15 +14,14 @@ const SearchBar = () => {
           <div className="h-full w-20 flex justify-center items-center absolute bg-purple-gradient rounded-l-xl z-30 cursor-pointer bg-gradient-to-r from-black via-[#71416D] via-[55.5%] to-[#A45F9E] hover:bg-[length:130%] hover:bg-right transition-all duration-300 ease-out">
             <BaseIcon
               id="Search"
-              size={25}
+              size={40}
               disableGradient={true}
               fillColor="#A2A2A2"
-              className="rounded-l-xl"
             />
           </div>
         </div>
       </form>
-      <DownloadGuideButton topSpace="top-[510px]"/>
+      <DownloadGuideButton />
     </div>
   );
 };

@@ -6,14 +6,14 @@ import ProductOfferingSection from "@/components/singleProduct/ProductOfferingSe
 
 function page() {
     return (
-        <>
+        <div className="overflow-y-hidden">
             <HeaderSingleProduct />
             <SingleProductTitle title="عنوان قالب"/>
             <ProductDetailsSection />
             <ProductDescription />
             {/* more product images section => now we don't build it */}
             <ProductOfferingSection />
-        </>
+        </div>
     )
 }
  
