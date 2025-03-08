@@ -1,35 +1,32 @@
-import React from 'react'
-import ProductSampleCard from '../ProductSampleCard'
+"use client"
 
-const productsSampleCard = [
-    {
-        id : 1,
-        title : "تمام محصولات",
-        text : "مشاهده تمام محصولات",
-        imageId : "https://www.sportico.com/wp-content/uploads/2020/09/0911_IMG.jpg"
-    },
-    {
-        id : 3,
-        title : "تمام محصولات",
-        text : "مشاهده تمام محصولات",
-        imageId : "https://www.hubspot.com/hs-fs/hubfs/instagram-story-dimensions.png?width=350&name=instagram-story-dimensions.png"
-    },
-    {
-        id : 4,
-        title : "تمام محصولات",
-        text : "مشاهده تمام محصولات",
-        imageId : "https://www.hubspot.com/hs-fs/hubfs/instagram-story-dimensions.png?width=350&name=instagram-story-dimensions.png"
-    },
-]
+import React, { useEffect, useState } from 'react'
+import ProductSampleCard from '../ProductSampleCard'
+import axios from 'axios'
 
 
 const AllProductsSection = ({style}) => {
+    const [products, setProducts]= useState()
+
+
+    const getProducts = async () => { 
+        try {
+            const data = await axios.get("https://api.exin.exiness.com/api/products")
+            setProducts(data.data)
+        } catch (error) {
+            console.log(error)
+        }
+     }
+
+    useEffect(()=>{
+        getProducts()
+    },[])
   return (
     <section className={style}>
         <div className='grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-8 lg:grid-cols-3'>
             {
-                productsSampleCard.map((product) => (
-                    <ProductSampleCard key={product.id} title={product.title} text={product.text} imageId={product.imageId}/>
+                products?.products && products?.products?.map((product) => (
+                    <ProductSampleCard key={product.id} title={product.title} text={product.body} imageId={product.main_image}/>
                 ))
             }
         </div>
