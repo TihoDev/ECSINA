@@ -22,10 +22,11 @@ const productsSampleCard = [
     },
 ]
 
+
 const AllProductsSection = ({style}) => {
   return (
     <section className={style}>
-        <div className='grid grid-cols-2 gap-12 lg:gap-8 lg:grid-cols-3'>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-8 lg:grid-cols-3'>
             {
                 productsSampleCard.map((product) => (
                     <ProductSampleCard key={product.id} title={product.title} text={product.text} imageId={product.imageId}/>
