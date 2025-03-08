@@ -18,7 +18,7 @@ function Navbar() {
         {/* Desctop navbar */}
         <ul className="text-lg border-2 border-[#3E243C] gap-x-10 py-6 px-12 flex justify-around items-center rounded-2xl [&>li]:cursor-pointer">
           {navigationLinks.map((item) => (
-            <li key={item.id}>
+            <li className="text-title" key={item.id}>
               <Link href={item.href}>{item.label}</Link>
             </li>
           ))}

@@ -13,13 +13,13 @@ const ProductSampleCard = ({
         <img
           src={imageId || notFountProductImg}
           alt={imageId ? `product image` : `this product does not have image`}
-          className="object-cover w-full h-full rounded-tl-4xl rounded-tr-4xl"
+          className="object-cover w-full h-full rounded-tl-4xl rounded-tr-4xl text-title"
         />
       </div>
       <div className="p-4">
         <div className="flex flex-col">
-          <h1 className="font-semibold text-2xl leading-9 mb-2"> {title}</h1>
-          <p className="font-normal text-base leading-6">{text}</p>
+          <h1 className="font-semibold text-2xl leading-9 mb-2 text-title"> {title}</h1>
+          <p className="font-normal text-base leading-6 text-title">{text}</p>
         </div>
         <div className="mr-auto bg-white w-12 h-12 shadow-md rounded-2xl mt-2">
           <Link href="#">

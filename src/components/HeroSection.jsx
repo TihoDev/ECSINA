@@ -27,7 +27,7 @@ const HeroSection = () => {
               اسناد تجاری در قالب های آماده با راهنمایی کامل
               همه چی اینجاست تا کارت سریع و بی دردسر پیش بره!
             </p>
-            <div className="hidden lg:block">
+            <div className="hidden lg:block ">
               <Button text="رایگان دانلود کن" />
             </div>
           </div>
@@ -48,7 +48,7 @@ const HeroSection = () => {
               </div>
               <div className="absolute left-4/40 -translate-x-1/8 -top-[3%]">
                 <Border size={585} />
-                <div className="invisible lg:visible ">
+                <div className="invisible lg:visible text-title">
                   <div className="absolute left-[15%] -top-[4%]">
                     <Tag iconId="CrossEyesLaugh" text="بدون هزینه" />
                   </div>
@@ -83,7 +83,7 @@ const HeroSection = () => {
               </div>
             </div>
 
-            <div className="lg:invisible">
+            <div className="lg:invisible text-title">
               <div className="absolute -translate-y-8/2  -translate-x-3/2 ">
                 <Tag size={26} iconId="CrossEyesLaugh" text="بدون هزینه" />
               </div>

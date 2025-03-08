@@ -15,7 +15,7 @@ function ProductCard({ title, text, svg, className }) {
             <BaseIcon id={`${svg}`} size={32} />
           </div>
           <div>
-            <h2 className="font-bold text-right text-[16px] lg:text-xl leading-[35px] mb-4 text-(0,0,0,1)]">
+            <h2 className="font-bold text-title text-right text-[16px] lg:text-xl leading-[35px] mb-4 text-(0,0,0,1)]">
               {title}
             </h2>
           </div>

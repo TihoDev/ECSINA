@@ -40,7 +40,7 @@ const productCardData = [
 const OurProductSection = () => {
   return (
     <section className="container text-center space-y-8 mt-42 mb-42">
-      <h1 className="font-extrabold text-2xl lg:text-3xl">محصولات ما</h1>
+      <h1 className="font-extrabold text-2xl lg:text-3xl !text-black">محصولات ما</h1>
       <div className="our-products-section p-4">
         {productCardData.map((data) => {
           return (

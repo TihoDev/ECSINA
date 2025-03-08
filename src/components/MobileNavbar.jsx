@@ -56,7 +56,7 @@ const MobileNavbar = ({ navigationLinks }) => {
               />
             </button>
           </li>
-          <ul className="mt-12 space-y-6">
+          <ul className="mt-12 space-y-6 text-title">
           {navigationLinks.map((item) => (
             <li
             key={item.id}
