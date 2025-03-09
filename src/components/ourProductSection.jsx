@@ -18,7 +18,7 @@ const productCardData = [
   {
     id: 3,
     svg: "Proposals",
-    style: "col-span-1 lg:col-span-1 lg:self-end",
+    style: "sm:col-span-2 lg:col-span-1 lg:self-end",
     title: "پروپوزال ها",
     desc: "اسناد رسمی که برای ارائه ایده‌ها و پروژه‌ها به افراد، سازمان‌ها یا سرمایه‌گذاران تهیه می‌شوند و به تصمیم‌گیری در مورد پروژه‌ها کمک می‌کنند.",
   },
@@ -57,5 +57,5 @@ const OurProductSection = () => {
     </section>
   );
 };
-
+ 
 export default OurProductSection;
