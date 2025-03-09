@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import Link from "next/link";
 import BaseIcon from "./icon/BaseIcon";
@@ -22,13 +22,16 @@ const ProductSampleCard = ({
         </div>
         <div className="p-4">
           <div className="flex flex-col">
-            <h1 className="font-semibold text-xl lg:text-2xl leading-9 mb-2 text-title"> {title}</h1>
+            <h1 className="font-semibold text-xl lg:text-2xl leading-9 mb-2 text-title">
+              {" "}
+              {title}
+            </h1>
             <p className="font-normal text-base leading-6 text-title">{text}</p>
           </div>
           <div className="mr-auto bg-white w-12 h-12 shadow-md rounded-2xl mt-2">
-              <button className="cursor-pointer w-full h-full flex items-center justify-center">
-                <BaseIcon id="Arrow" size={18} />
-              </button>
+            <button className="cursor-pointer w-full h-full flex items-center justify-center">
+              <BaseIcon id="Arrow" size={18} />
+            </button>
           </div>
         </div>
       </div>
