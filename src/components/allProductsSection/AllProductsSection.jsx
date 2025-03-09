@@ -11,11 +11,10 @@ const AllProductsSection = ({ style }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const [isClient, setIsClient] = useState(false);
-
-  useEffect(() => {
-    setIsClient(true); // Ensure this runs only on the client-side
-  }, []);
+  // Always call useSearchParams inside the component body
+  const searchParams = useSearchParams();
+  const category = searchParams.get("category_id");
+  const page = searchParams.get("page");
 
   const getProducts = async (category, page) => {
     try {
@@ -32,17 +31,8 @@ const AllProductsSection = ({ style }) => {
   };
 
   useEffect(() => {
-    if (isClient) {
-      const searchParams = useSearchParams();
-      const category = searchParams.get("category_id");
-      const page = searchParams.get("page");
-
-      console.log("category", category);
-      console.log("page", page);
-
-      getProducts(category, page);
-    }
-  }, [isClient]); // Depend on isClient to run only after mounting
+    getProducts(category, page);
+  }, [category, page]); // Add category and page as dependencies
 
   return (
     <section className={style}>
