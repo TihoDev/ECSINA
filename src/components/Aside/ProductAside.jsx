@@ -4,11 +4,11 @@ import BaseIcon from "../icon/BaseIcon";
 
 const CategoryItem = ({ item, isOpen, onToggle }) => (
   <div className="w-full flex justify-between ">
-    <div className="flex items-center gap-x-2">
+    <div className="flex items-center gap-x-2" onClick={onToggle}>
       <h2
         className={`${
           isOpen ? "text-main-color-active" : "text-title"
-        } text-[18px] transition-all duration-300`}
+        } text-[18px] transition-all duration-300 hover:text-main-color-active cursor-pointer`}
       >
         {item.title}
       </h2>
@@ -21,7 +21,6 @@ const CategoryItem = ({ item, isOpen, onToggle }) => (
           className={`${
             isOpen ? "-rotate-180 transition-all duration-300" : ""
           } cursor-pointer transition-all duration-300`}
-          onClick={onToggle}
         />
       )}
     </div>
@@ -36,7 +35,7 @@ const SubCategories = ({ sub }) => (
     {sub?.map((item) => (
       <span
         key={item.id}
-        className="text-[16px] hover:text-main-color-active transition-all duration-300 cursor-pointer"
+        className="text-[16px] font-normal hover:text-main-color-active transition-all duration-300 cursor-pointer"
       >
         {item.title}
       </span>
@@ -73,7 +72,9 @@ const ProductAside = ({ style, data }) => {
               isOpen={openCategories[item.id]}
               onToggle={() => toggleCategory(item.id)}
             />
-            {openCategories[item.id] && <SubCategories sub={item.sub} />}
+            {openCategories[item.id] && item?.sub?.length > 0 && (
+              <SubCategories sub={item.sub} />
+            )}
           </div>
         ))}
       </div>

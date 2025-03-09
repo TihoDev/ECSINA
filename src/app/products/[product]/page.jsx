@@ -9,7 +9,6 @@ import MoreImages from "@/components/singleProduct/MoreImages";
 async function Page({ params }) {
   const { product: productId } = await params;
   const { product } = await getProductById(productId);
-  console.log(product);
 
   return (
     <div className="overflow-y-hidden">
