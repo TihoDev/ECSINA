@@ -10,7 +10,7 @@ const MoreImages = ({ product }) => {
             key={index}
             src={image}
             alt={`Image ${index + 1}`}
-            className="w-[400px] h-[300px] object-cover rounded-lg"
+            className="sm:w-[400px] sm:h-[300px] object-cover rounded-lg"
           />
         ))}
       </div>

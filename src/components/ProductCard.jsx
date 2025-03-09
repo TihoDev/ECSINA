@@ -7,7 +7,7 @@ import BaseIcon from "./icon/BaseIcon";
 function ProductCard({ title, text, svg, className }) {
   return (
     <div
-      className={`${className} product-card flex flex-col justify-start gap-y-5 lg:justify-between  `}
+      className={`${className} product-card hover:scale- flex flex-col justify-start gap-y-5 lg:justify-between  `}
     >
       <div>
         <div className="flex flex-col justify-items-start">

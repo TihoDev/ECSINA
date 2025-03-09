@@ -197,13 +197,13 @@ const categories = [
 function page() {
   return (
     <div className="overflow-x-hidden">
-      <HeaderPageTwo />
+     <HeaderPageTwo />
       <main className="lg:pt-12">
         <div className="container">
           <section>
             <SearchBar />
           </section>
-          <section className="pt-12 mb-8 grid grid-cols-1 lg:gap-x-12 lg:grid-cols-4">
+          <section className="pt-6 mb-8 grid grid-cols-1 lg:gap-x-12 lg:grid-cols-4">
             <ProductAside
               data={categories}
               style="col-span-1 hidden lg:block"
