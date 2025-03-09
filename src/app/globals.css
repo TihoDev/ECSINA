@@ -62,28 +62,30 @@ body {
 @utility container {
   padding-inline: 1rem;
   margin-inline: auto;
+  max-width: 90%; /* Simulates the 90% zoom effect */
 
   @variant sm {
-    width: 640px;
+    max-width: 576px; /* Slightly reduced */
     padding-inline: 2rem;
   }
   @variant md {
-    width: 768px;
+    max-width: 691px; /* 90% of 768px */
     padding-inline: 3rem;
   }
   @variant lg {
-    width: 1024px;
+    max-width: 921px; /* 90% of 1024px */
     padding-inline: 4rem;
   }
   @variant xl {
-    width: 1280px;
+    max-width: 1152px; /* 90% of 1280px */
     padding-inline: 5rem;
   }
   @variant 2xl {
-    width: 1536px;
+    max-width: 1382px; /* 90% of 1536px */
     padding-inline: 6rem;
   }
 }
+
 
 @layer utilities {
   /* shadows */
