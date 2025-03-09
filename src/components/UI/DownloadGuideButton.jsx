@@ -6,7 +6,7 @@ import HelpToDownloadCard from "../HelpToDownloadCard";
 function DownloadGuideButton({children , className}) {
   const [isHelpModalOpen, setIsHelpModalOpen] = useState(false);
   const buttonClasses =
-    "bg-gradient-to-r from-black via-[#71416D] via-[55.5%] to-[#A45F9E] text-white cursor-pointer px-2 text-xs rounded-xl w-1/3 md:w-1/4 lg:w-1/5 p-4 md:text-sm xl:text-base transition-all ease-out duration-300 hover:bg-[length:130%] hover:bg-right lg:flex lg:items-center lg:gap-2 xl:gap-4 lg:justify-center group";
+    "bg-gradient-to-r from-black via-[#71416D] via-[55.5%] to-[#A45F9E] text-white cursor-pointer  whitespace-nowrap flex items-center justify-between gap-x-1 px-2 text-xs rounded-xl w-fit p-4 md:text-sm xl:text-base transition-all ease-out duration-300 hover:bg-[length:130%] hover:bg-right lg:flex lg:items-center lg:gap-2 xl:gap-4 lg:justify-center group";
   useEffect(() => {
     function closeModal(e) {
       if (!e.target.closest('button') && !e.target.closest('.modal')) {
@@ -45,7 +45,7 @@ function DownloadGuideButton({children , className}) {
     </button>
     {
       isHelpModalOpen ? (
-        <HelpToDownloadCard className={className}/>
+        <HelpToDownloadCard />
       ) : (
         null
       )

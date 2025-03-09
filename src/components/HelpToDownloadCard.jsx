@@ -1,9 +1,9 @@
 import React from 'react'
 import BaseIcon from './icon/BaseIcon';
 
-const HelpToDownloadCard  = ({className}) => {
+const HelpToDownloadCard  = () => {
     return(
-        <div className={`fixed -translate-x-1/2 -translate-y-1/2 top-[50%] left-[50%] ${className} z-40 rounded-4xl bg-[#FFF6FE] w-2/3 h-4/5 lg:h-fit overflow-y-scroll p-7 lg:p-10 shadow-lg`}>
+        <div className={`fixed -translate-x-1/2 -translate-y-1/2 top-[50%] left-[50%] z-40 rounded-4xl bg-[#FFF6FE] w-2/3 h-4/5 lg:h-fit overflow-y-scroll p-7 lg:p-10 shadow-lg`}>
             <div className='justify-between flex'>
                 <h1 className='mb-3 lg:mb-0 lg:whitespace-nowrap font-extrabold text-base text-black'>
                 راهنمای دانلود و استفاده از قالب‌های رایگان

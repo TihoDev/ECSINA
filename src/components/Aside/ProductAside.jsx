@@ -87,9 +87,9 @@ const ProductAside = ({ style, data }) => {
       </aside>
       {/* mobile */}
       <div className="flex items-center justify-between mb-12 lg:!hidden">
-        <h2 className="font-bold text-2xl text-title">دسته بندی :</h2>
+        <h2 className="font-bold text-xl text-title">دسته بندی :</h2>
 
-        <div className="dropdown dropdown-end w-[60%] border-4 rounded-2xl border-main-color py-4 px-2">
+        <div className="dropdown dropdown-end w-[60%] border-3 rounded-2xl border-[#71416D] py-2.5">
           <div className="flex items-center justify-between">
             <div tabIndex={0} role="button" className="text-black px-6">
               {selectedCategories}

@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from '../Navbar'
 import BaseIcon from '../icon/BaseIcon'
+import Link from 'next/link'
 
 const HeaderSingleProduct = () => {
   return (
@@ -8,7 +9,9 @@ const HeaderSingleProduct = () => {
         <div className="lg:container lg:flex lg:items-center lg:justify-between">
             <Navbar />
             <div className="hidden lg:block">
+              <Link href='/'>
                 <BaseIcon id="ExinIcon3" size={130} fillColor="#1E1328" disableGradient={true}/>
+              </Link>
             </div>
         </div>
     </header>

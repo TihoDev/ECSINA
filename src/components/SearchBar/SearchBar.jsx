@@ -21,7 +21,7 @@ const SearchBar = () => {
           </div>
         </div>
       </form>
-      <DownloadGuideButton />
+      <DownloadGuideButton className="" />
     </div>
   );
 };

@@ -8,7 +8,7 @@ function ProductDetailsCard({ product }) {
         <h3 className="text-black text-base lg:text-2xl font-extrabold">
           جزئیات
         </h3>
-        <span> حجم : {product.size}MB </span>
+        <span> حجم : {product.size} </span>
         <span>فرمت : {product.format}</span>
         <span>تعداد صفحات : {product.number_of_page}</span>
         <span>تاریخ انتشار : {formatDate(product.created_at)}</span>

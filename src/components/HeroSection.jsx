@@ -11,12 +11,12 @@ const HeroSection = () => {
       className=" lg:mx-auto bg-section-background  rounded-bl-[80px] rounded-br-[80px]
       lg:rounded-bl-[300px] lg:rounded-br-[300px] section-shadows"
     >
-      <div className="lg:pt-12 lg:px-10 xl:px-56">
+      <div className="lg:pt-12 lg:px-10 xl:px-40">
         <Navbar />
       </div>
 
       <div className="relative h-[560px] lg:min-h-[750px]">
-        <div className="px-10 lg:px-10 xl:px-56 grid grid-cols-12 lg:mx-0">
+        <div className="px-10 lg:px-10 xl:px-40 grid grid-cols-12 lg:mx-0">
           <div className="col-span-12 lg:col-span-5 lg:mt-16 flex flex-col items-start gap-y-8">
             <h2 className="w-full text-xl lg:text-5xl text-title font-extrabold leading-20 text-center lg:text-right">
               اکسین، همراهیِ نوین

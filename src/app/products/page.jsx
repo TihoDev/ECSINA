@@ -10,7 +10,7 @@ async function page() {
   return (
     <div className="overflow-x-hidden">
       <HeaderPageTwo />
-      <main className="pt-12">
+      <main>
         <div className="container">
           <section>
             <SearchBar />
