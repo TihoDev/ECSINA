@@ -3,7 +3,7 @@ import DownloadGuideButton from "../UI/DownloadGuideButton";
 
 const SearchBar = () => {
   return (
-    <div className=" flex justify-between my-10 gap-2 md:gap-4 lg:gap-8">
+    <div className=" flex justify-between mt-10 lg:my-10 gap-2 md:gap-4 lg:gap-8">
       <form className="flex relative w-2/3 md:w-3/4 lg:w-4/5">
         <input
           type="text"

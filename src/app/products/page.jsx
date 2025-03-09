@@ -198,7 +198,7 @@ function page() {
   return (
     <div className="overflow-x-hidden">
       <HeaderPageTwo />
-      <main className="pt-12">
+      <main className="lg:pt-12">
         <div className="container">
           <section>
             <SearchBar />
