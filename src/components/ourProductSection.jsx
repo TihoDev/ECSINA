@@ -18,7 +18,7 @@ const productCardData = [
   {
     id: 3,
     svg: "Proposals",
-    style: "col-span-2 lg:col-span-1 lg:self-end",
+    style: "col-span-1 lg:col-span-1 lg:self-end",
     title: "پروپوزال ها",
     desc: "اسناد رسمی که برای ارائه ایده‌ها و پروژه‌ها به افراد، سازمان‌ها یا سرمایه‌گذاران تهیه می‌شوند و به تصمیم‌گیری در مورد پروژه‌ها کمک می‌کنند.",
   },
@@ -41,7 +41,7 @@ const OurProductSection = () => {
   return (
     <section className="container text-center space-y-8 mt-42 mb-42">
       <h1 className="font-extrabold text-2xl lg:text-3xl !text-black">محصولات ما</h1>
-      <div className="our-products-section p-4">
+      <div className="our-products-section">
         {productCardData.map((data) => {
           return (
             <ProductCard
