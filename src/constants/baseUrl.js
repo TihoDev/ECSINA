@@ -5,4 +5,7 @@ export const API_ENDPOINTS = {
   PRODUCTS: {
     SHOW: (id) => `${BASE_URL}/${API_VERSION}/products/show/${id}`,
   },
+  CATEGORIES: {
+    ALL: `${BASE_URL}/${API_VERSION}/category`,
+  },
 };
