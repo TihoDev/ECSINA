@@ -11,7 +11,7 @@ async function Page({ params }) {
   const { product } = await getProductById(productId);
 
   return (
-    <div className="overflow-y-hidden">
+    <div className="overflow-x-hidden">
       <HeaderSingleProduct />
       <SingleProductTitle title={product.title} />
       <ProductDetailsSection product={product} />

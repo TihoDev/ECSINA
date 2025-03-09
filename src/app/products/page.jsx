@@ -196,7 +196,7 @@ const categories = [
 
 function page() {
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-x-hidden">
       <HeaderPageTwo />
       <main className="pt-12">
         <div className="container">
