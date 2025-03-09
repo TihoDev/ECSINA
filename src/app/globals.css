@@ -172,7 +172,7 @@ body {
     @apply h-full lg:h-[500px] grid items-center gap-y-4 gap-x-4 lg:grid-cols-5 lg:grid-rows-1 lg:gap-y-0 lg:gap-x-6;
   }
   .our-futures-section {
-    @apply grid grid-cols-2 grid-rows-3 gap-x-4 gap-y-8 lg:gap-8 lg:grid-cols-3 lg:grid-rows-2;
+    @apply grid col-span-1 sm:grid-cols-2 sm:grid-rows-3 gap-x-4 gap-y-8 lg:gap-8 lg:grid-cols-3 lg:grid-rows-2;
   }
 
   .product-card {

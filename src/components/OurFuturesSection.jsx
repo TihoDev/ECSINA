@@ -51,7 +51,7 @@ const OurFuturesSection = () => {
             ویژگی های قالب های اکسین
           </h2>
           <div className="our-futures-section">
-            <div className="order-2 lg:order-3 grid-cols-1">
+            <div className="order-2 lg:order-3 grid-cols-1 hidden sm:block">
               <div className="place-items-center">
                 <BaseIcon
                   id="ExinIcon3"
@@ -65,7 +65,7 @@ const OurFuturesSection = () => {
                   size={230}
                   disableGradient={true}
                   fillColor="#1E1328"
-                  className="block lg:!hidden"
+                  className="!hidden sm:!block lg:!hidden"
                 />
               </div>
             </div>
