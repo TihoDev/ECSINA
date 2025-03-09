@@ -3,7 +3,7 @@ import SingleProductTitle from "@/components/singleProduct/SingleProductTitle";
 import ProductDetailsSection from "@/components/singleProduct/ProductDetailsSection";
 import ProductDescription from "@/components/singleProduct/ProductDescription";
 import ProductOfferingSection from "@/components/singleProduct/ProductOfferingSection";
-import getProductById from "@/services/products/getProductById";
+import getProductById from "@/services/products/getProdutById";
 import MoreImages from "@/components/singleProduct/MoreImages";
 
 async function Page({ params }) {
