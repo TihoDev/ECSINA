@@ -8,24 +8,23 @@ import Navbar from "./Navbar";
 const HeroSection = () => {
   return (
     <section
-      className=" bg-section-background  rounded-bl-[80px] rounded-br-[80px]
+      className=" mx-auto bg-section-background  rounded-bl-[80px] rounded-br-[80px]
       lg:rounded-bl-[300px] lg:rounded-br-[300px] section-shadows"
     >
-
-      <div className="lg:pt-12 lg:pr-14">
+      <div className="lg:pt-12  px-10 lg:px-10 xl:px-56">
         <Navbar />
       </div>
 
       <div className="relative h-[560px] lg:min-h-[750px]">
-        <div className="container grid grid-cols-12 lg:mx-0">
+        <div className="px-10 lg:px-10 xl:px-56 grid grid-cols-12 lg:mx-0">
           <div className="col-span-12 lg:col-span-5 lg:mt-16 flex flex-col items-start gap-y-8">
             <h2 className="w-full text-xl lg:text-5xl text-title font-extrabold leading-20 text-center lg:text-right">
-              اکسین، همراهیِ نوین  
+              اکسین، همراهیِ نوین
             </h2>
 
             <p className="  hidden lg:block text-xl text-description font-semibold leading-9">
-              اسناد تجاری در قالب های آماده با راهنمایی کامل
-              همه چی اینجاست تا کارت سریع و بی دردسر پیش بره!
+              اسناد تجاری در قالب های آماده با راهنمایی کامل همه چی اینجاست تا
+              کارت سریع و بی دردسر پیش بره!
             </p>
             <div className="hidden lg:block ">
               <Button text="رایگان دانلود کن" />
