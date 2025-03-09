@@ -1,12 +1,18 @@
+import Link from "next/link";
 import React from "react";
 
-const Pagination = ({ countPage = 3 }) => {
+const Pagination = ({ pagination }) => {
   return (
     <div className="flex items-center gap-x-5 text-black">
-      <button className="font-light text-xl cursor-pointer text-secondary-color ">
+      <Link
+        href={`/products?page=${
+          pagination.current_page === 1 ? 1 : pagination.current_page - 1
+        }`}
+        className="font-light text-xl cursor-pointer text-secondary-color "
+      >
         قبلی
-      </button>
-      {Array.from({ length: countPage }).map((_, index) => (
+      </Link>
+      {Array.from({ length: pagination.last_page }).map((_, index) => (
         <button
           key={index}
           className={`font-light text-xl cursor-pointer ${
@@ -16,9 +22,12 @@ const Pagination = ({ countPage = 3 }) => {
           {index + 1}
         </button>
       ))}
-      <button className="font-light text-xl cursor-pointer text-main-color">
+      <Link
+        href={`/products?page=${pagination.current_page + 1}`}
+        className="font-light text-xl cursor-pointer text-main-color"
+      >
         بعدی
-      </button>
+      </Link>
     </div>
   );
 };
