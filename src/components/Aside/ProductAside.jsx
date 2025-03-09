@@ -45,6 +45,7 @@ const SubCategories = ({ sub }) => (
 
 const ProductAside = ({ style, data }) => {
   const [openCategories, setOpenCategories] = useState({});
+  const [selectedCategories , setSelectedCategories] = useState("بوم ناب");
 
   const toggleCategory = (categoryId) => {
     setOpenCategories((prev) => {
@@ -62,23 +63,49 @@ const ProductAside = ({ style, data }) => {
   };
 
   return (
-    <aside className={style}>
-      <h2 className="font-bold text-2xl mb-8 text-title">دسته بندی :</h2>
-      <div className="flex flex-col gap-y-4">
-        {data.map((item) => (
-          <div key={item.id}>
-            <CategoryItem
-              item={item}
-              isOpen={openCategories[item.id]}
-              onToggle={() => toggleCategory(item.id)}
-            />
-            {openCategories[item.id] && item?.sub?.length > 0 && (
-              <SubCategories sub={item.sub} />
-            )}
+    <>
+      <aside className={`${style} hidden lg:block`}>
+        <h2 className="font-bold text-2xl mb-8 text-title">دسته بندی :</h2>
+        <div className="flex flex-col gap-y-4">
+          {data.map((item) => (
+            <div key={item.id}>
+              <CategoryItem
+                item={item}
+                isOpen={openCategories[item.id]}
+                onToggle={() => toggleCategory(item.id)}
+              />
+              {openCategories[item.id] && item?.sub?.length > 0 && (
+                <SubCategories sub={item.sub} />
+              )}
+            </div>
+          ))}
+        </div>
+      </aside>
+      {/* mobile */}
+      <div className="flex items-center justify-between mb-12 lg:!hidden">
+        <h2 className="font-bold text-2xl text-title">دسته بندی :</h2>
+          
+        <div className="dropdown dropdown-end w-[60%] border-4 rounded-2xl border-main-color py-4 px-2">
+          <div className="flex items-center justify-between">
+            <div tabIndex={0} role="button" className="text-black px-6">{selectedCategories}</div>
           </div>
-        ))}
+          <ul tabIndex={0} className="dropdown-content menu bg-white rounded-box z-1 w-full p-2 shadow-sm">
+            {data.map((item) => (
+              <li key={item.id}>
+                <CategoryItem
+                  item={item}
+                  isOpen={openCategories[item.id]}
+                  onToggle={() => toggleCategory(item.id)}
+                />
+                {openCategories[item.id] && item?.sub?.length > 0 && (
+                  <SubCategories sub={item.sub} />
+                )}
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
-    </aside>
+    </>
   );
 };
 
