@@ -8,17 +8,16 @@ import { useSearchParams } from "next/navigation";
 
 const AllProductsSection = ({ style }) => {
   const [products, setProducts] = useState([]);
-  console.log(products);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const searchParams = useSearchParams();
-  const category = searchParams.get("category_id");
-  const page = searchParams.get("page");
-  console.log("category", category);
-  console.log("page", page);
+  const [isClient, setIsClient] = useState(false);
 
-  const getProducts = async () => {
+  useEffect(() => {
+    setIsClient(true); // Ensure this runs only on the client-side
+  }, []);
+
+  const getProducts = async (category, page) => {
     try {
       setIsLoading(true);
       setError(null);
@@ -33,8 +32,17 @@ const AllProductsSection = ({ style }) => {
   };
 
   useEffect(() => {
-    getProducts();
-  }, []);
+    if (isClient) {
+      const searchParams = useSearchParams();
+      const category = searchParams.get("category_id");
+      const page = searchParams.get("page");
+
+      console.log("category", category);
+      console.log("page", page);
+
+      getProducts(category, page);
+    }
+  }, [isClient]); // Depend on isClient to run only after mounting
 
   return (
     <section className={style}>
