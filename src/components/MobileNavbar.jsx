@@ -4,7 +4,7 @@ import { useRef } from "react";
 import BaseIcon from "./icon/BaseIcon";
 import Link from "next/link";
 
-const MobileNavbar = ({ navigationLinks }) => {
+const MobileNavbar = ({ navigationLinks, currentPath, isActiveLink }) => {
   const menu = useRef();
 
   const handleToggleMenu = (toggle) => {
@@ -57,15 +57,24 @@ const MobileNavbar = ({ navigationLinks }) => {
               />
             </button>
           </li>
-          <ul className="mt-12 space-y-6 text-title">
-          {navigationLinks.map((item) => (
-            <li
-            key={item.id}
-            className="transition-all text-xs sm:text-sm md:text-[15px] py-2"
-            >
-              <Link href={item.href} className="w-full py-[9px] px-2 sm:pr-3 sm:pl-24 hover:bg-gradient-to-r hover:from-[#3E243C] to-[#A45F9E] hover:text-white rounded-md">{item.label}</Link>
-            </li>
-          ))}
+          <ul className="mt-12 space-y-1 text-title">
+            {navigationLinks.map((item) => (
+              <li
+                key={item.id}
+                className="transition-all text-xs sm:text-sm md:text-[15px] py-2"
+              >
+                <Link
+                  href={item.href}
+                  className={`w-full py-[9px] px-2 sm:pr-3 sm:pl-24 rounded-md transition-all duration-300 block ${
+                    isActiveLink(item.href)
+                      ? "bg-gradient-to-r from-[#3E243C] to-[#A45F9E] text-white"
+                      : "hover:text-main-color-active"
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              </li>
+            ))}
           </ul>
         </ul>
       </div>

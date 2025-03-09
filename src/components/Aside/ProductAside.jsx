@@ -1,17 +1,19 @@
 "use client";
 import React, { useState } from "react";
 import BaseIcon from "../icon/BaseIcon";
+import Link from "next/link";
 
 const CategoryItem = ({ item, isOpen, onToggle }) => (
-  <div className="w-full flex justify-between ">
-    <div className="flex items-center gap-x-2" onClick={onToggle}>
-      <h2
+  <div className="w-full flex justify-between">
+    <div className="flex items-center gap-x-2">
+      <Link
+        href={`/products?category_id=${item.id}`}
         className={`${
           isOpen ? "text-main-color-active" : "text-title"
         } text-[18px] transition-all duration-300 hover:text-main-color-active cursor-pointer`}
       >
         {item.title}
-      </h2>
+      </Link>
       {item?.sub?.length > 1 && (
         <BaseIcon
           size={20}
@@ -21,6 +23,7 @@ const CategoryItem = ({ item, isOpen, onToggle }) => (
           className={`${
             isOpen ? "-rotate-180 transition-all duration-300" : ""
           } cursor-pointer transition-all duration-300`}
+          onClick={onToggle}
         />
       )}
     </div>
@@ -33,19 +36,20 @@ const CategoryItem = ({ item, isOpen, onToggle }) => (
 const SubCategories = ({ sub }) => (
   <div className="w-full mt-2 flex flex-col items-start px-4 gap-y-3 transition-all duration-300 text-black">
     {sub?.map((item) => (
-      <span
+      <Link
         key={item.id}
+        href={`/products?category_id=${item.id}`}
         className="text-[16px] font-normal hover:text-main-color-active transition-all duration-300 cursor-pointer"
       >
         {item.title}
-      </span>
+      </Link>
     ))}
   </div>
 );
 
 const ProductAside = ({ style, data }) => {
   const [openCategories, setOpenCategories] = useState({});
-  const [selectedCategories , setSelectedCategories] = useState("بوم ناب");
+  const [selectedCategories, setSelectedCategories] = useState("بوم ناب");
 
   const toggleCategory = (categoryId) => {
     setOpenCategories((prev) => {
@@ -83,13 +87,18 @@ const ProductAside = ({ style, data }) => {
       </aside>
       {/* mobile */}
       <div className="flex items-center justify-between mb-12 lg:!hidden">
-        <h2 className="font-bold text-xl text-title">دسته بندی :</h2>
-          
-        <div className="dropdown dropdown-end w-[60%] border-3 rounded-2xl border-[#71416D] py-4 px-2">
+        <h2 className="font-bold text-2xl text-title">دسته بندی :</h2>
+
+        <div className="dropdown dropdown-end w-[60%] border-4 rounded-2xl border-main-color py-4 px-2">
           <div className="flex items-center justify-between">
-            <div tabIndex={0} role="button" className="text-black px-6">{selectedCategories}</div>
+            <div tabIndex={0} role="button" className="text-black px-6">
+              {selectedCategories}
+            </div>
           </div>
-          <ul tabIndex={0} className="dropdown-content menu bg-white rounded-box z-1 w-full p-2 shadow-sm">
+          <ul
+            tabIndex={0}
+            className="dropdown-content menu bg-white rounded-box z-1 w-full p-2 shadow-sm"
+          >
             {data.map((item) => (
               <li key={item.id}>
                 <CategoryItem
