@@ -29,13 +29,14 @@ const MobileNavbar = ({ navigationLinks }) => {
           fillColor="#2a2a2a"
           className="cursor-pointer"
         />
-
-        <BaseIcon
-          id="ExinIcon2"
-          disableGradient={true}
-          size={35}
-          fillColor="#3E243C"
-        />
+        <Link href="/">
+          <BaseIcon
+            id="ExinIcon2"
+            disableGradient={true}
+            size={50}
+            fillColor="#3E243C"
+          />
+        </Link>
       </div>
       <div>
         <ul
