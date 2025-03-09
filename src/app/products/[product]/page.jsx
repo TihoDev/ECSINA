@@ -3,7 +3,7 @@ import SingleProductTitle from "@/components/singleProduct/SingleProductTitle";
 import ProductDetailsSection from "@/components/singleProduct/ProductDetailsSection";
 import ProductDescription from "@/components/singleProduct/ProductDescription";
 import ProductOfferingSection from "@/components/singleProduct/ProductOfferingSection";
-import getProductById from "@/services/products/getProdutById";
+import getProductById from "@/services/products/getProductById";
 import MoreImages from "@/components/singleProduct/MoreImages";
 
 async function Page({ params }) {
@@ -11,7 +11,7 @@ async function Page({ params }) {
   const { product } = await getProductById(productId);
 
   return (
-    <div className="overflow-y-hidden">
+    <div className="overflow-x-hidden">
       <HeaderSingleProduct />
       <SingleProductTitle title={product.title} />
       <ProductDetailsSection product={product} />

@@ -1,6 +1,7 @@
 import React from "react";
 import BaseIcon from "./icon/BaseIcon";
 import Link from "next/link";
+import ArrowUpButton from "./ArrowUpButton";
 
 const mockData = [
   { label: "محصولات ما" },
@@ -19,16 +20,7 @@ const categories = [
 const Footer = () => {
   return (
     <footer className="rounded-tr-[100px] rounded-tl-[100px] lg:rounded-tr-[200px] lg:rounded-tl-[200px] relative py-10 px-6 text-gray-700 bg-[#F8FFFC] section-shadows mt-20 shadow-md before:content-[''] before:absolute before:top-[-35px] before:left-1/2 before:w-[85px] before:h-[95px] before:bg-[#F8FFFC] before:rounded-full before:transform before:-translate-x-1/2 ">
-      <div className="bg-rainbow-gradient absolute -top-7 left-1/2 transform -translate-x-1/2 flex justify-center items-center w-16 h-16 rounded-full cursor-pointer">
-        <span className="text-xl text-black font-bold">
-          <BaseIcon
-            id={"ArrowUp"}
-            size={20}
-            disableGradient={true}
-            fillColor="#3E243C"
-          />
-        </span>
-      </div>
+      <ArrowUpButton />
       <div className="max-w-6xl mx-auto mt-10 flex flex-col md:flex-row justify-evenly items-start">
         <div className="w-full flex justify-around text-sm text-gray-800 text-right">
           <div>
@@ -84,8 +76,8 @@ const Footer = () => {
         </div>
       </div>
       <div className="mt-12 text-center flex justify-center items-center gap-7">
-        <div className="flex justify-center space-x-6">
-          <p className="mb-4 text-gray-800 font-medium pt-3">
+        <div className="flex justify-center space-x-4">
+          <p className="mb-4 text-gray-800 font-medium pt-3 whitespace-nowrap">
             با ما در ارتباط باشید
           </p>
 
@@ -111,7 +103,7 @@ const Footer = () => {
             rel="noopener noreferrer"
             className="bg-purple-gradient text-white p-3 rounded-full text-lg w-12 h-12 flex items-center justify-center shadow-lg"
           >
-            <BaseIcon id={"Google"} size={28} disableGradient={true} />
+            <BaseIcon id={"Gmail"} size={28} disableGradient={true}/>
           </Link>
         </div>
       </div>

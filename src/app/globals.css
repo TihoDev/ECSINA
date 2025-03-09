@@ -30,7 +30,7 @@
   font-display: swap;
 }
 html {
-  @apply !bg-main-background;
+  @apply !bg-main-background scroll-smooth;
 }
 body {
   @apply bg-main-background font-yekan font-semibold overflow-x-hidden;
