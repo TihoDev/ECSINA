@@ -29,7 +29,7 @@
   font-style: normal;
   font-display: swap;
 }
-html{
+html {
   @apply !bg-main-background;
 }
 body {
@@ -42,9 +42,10 @@ body {
   --color-secondary-title: #1e1328;
   --color-description: #2a2a2a;
   --color-main-color: #3e243c;
+  --color-main-color-active: #a45f9e;
   --color-secondary-color: #a4afb1;
   /* bg-colors */
-  --color-main-background: #F8FFFC;
+  --color-main-background: #f8fffc;
   --color-secondary-background: #fafff4;
   --color-section-background: #f8fffc;
   --color-help-download: #fff6fe;
@@ -179,7 +180,7 @@ body {
   .future-card {
     @apply bg-white w-full h-full rounded-2xl shadow-product-card p-4;
   }
-  .section-shadows{
-    @apply shadow-[0px_0px_15px_#00000020]
+  .section-shadows {
+    @apply shadow-[0px_0px_15px_#00000020];
   }
 }
