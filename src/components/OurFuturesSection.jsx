@@ -69,36 +69,16 @@ const OurFuturesSection = () => {
                 />
               </div>
             </div>
-            <FutureCard
-              title={ourFuturesSectionData.at(0).title}
-              text={ourFuturesSectionData.at(0).desc}
-              svg={ourFuturesSectionData.at(0).svg}
-              className={ourFuturesSectionData.at(0).className}
-            />
-            <FutureCard
-              title={ourFuturesSectionData.at(1).title}
-              text={ourFuturesSectionData.at(1).desc}
-              svg={ourFuturesSectionData.at(1).svg}
-              className={ourFuturesSectionData.at(1).className}
-            />
-            <FutureCard
-              title={ourFuturesSectionData.at(2).title}
-              text={ourFuturesSectionData.at(2).desc}
-              svg={ourFuturesSectionData.at(2).svg}
-              className={ourFuturesSectionData.at(2).className}
-            />
-            <FutureCard
-              title={ourFuturesSectionData.at(3).title}
-              text={ourFuturesSectionData.at(3).desc}
-              svg={ourFuturesSectionData.at(3).svg}
-              className={ourFuturesSectionData.at(3).className}
-            />
-            <FutureCard
-              title={ourFuturesSectionData.at(4).title}
-              text={ourFuturesSectionData.at(4).desc}
-              svg={ourFuturesSectionData.at(4).svg}
-              className={ourFuturesSectionData.at(4).className}
-            />
+
+            {ourFuturesSectionData.map((item) => (
+              <FutureCard
+                key={item.id}
+                title={item.title}
+                text={item.desc}
+                svg={item.svg}
+                className={item.className}
+              />
+            ))}
           </div>
         </div>
       </div>
