@@ -1,15 +1,18 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import BaseIcon from "../icon/BaseIcon";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 
-const CategoryItem = ({ item, isOpen, onToggle }) => (
+const CategoryItem = ({ item, isOpen, onToggle, activeCategory }) => (
   <div className="w-full flex justify-between">
     <div className="flex items-center gap-x-2">
       <Link
         href={`/products?category_id=${item.id}`}
         className={`${
-          isOpen ? "text-main-color-active" : "text-title"
+          isOpen || activeCategory === item.id
+            ? "text-main-color-active"
+            : "text-title"
         } text-[18px] transition-all duration-300 hover:text-main-color-active cursor-pointer`}
       >
         {item.title}
@@ -36,7 +39,7 @@ const SubCategories = ({ sub }) => (
       <Link
         key={item.id}
         href={`/products?category_id=${item.id}`}
-        className="text-[16px] font-normal hover:text-main-color-active transition-all duration-300 cursor-pointer"
+        className={`text-[16px] font-normal hover:text-main-color-active transition-all duration-300 cursor-pointer`}
       >
         {item.title}
       </Link>
@@ -47,6 +50,15 @@ const SubCategories = ({ sub }) => (
 const ProductAside = ({ style, data }) => {
   const [openCategories, setOpenCategories] = useState({});
   const [selectedCategories, setSelectedCategories] = useState("بوم ناب");
+
+  const [activeCategory, setActiveCategory] = useState(null);
+  console.log(activeCategory);
+  const searchParams = useSearchParams();
+
+  useEffect(() => {
+    const categoryId = searchParams.get("category_id");
+    setActiveCategory(+categoryId);
+  }, [searchParams]);
 
   const toggleCategory = (categoryId) => {
     setOpenCategories((prev) => {
@@ -71,6 +83,7 @@ const ProductAside = ({ style, data }) => {
           {data.map((item) => (
             <div key={item.id}>
               <CategoryItem
+                activeCategory={activeCategory}
                 item={item}
                 isOpen={openCategories[item.id]}
                 onToggle={() => toggleCategory(item.id)}
@@ -99,6 +112,7 @@ const ProductAside = ({ style, data }) => {
             {data.map((item) => (
               <li key={item.id}>
                 <CategoryItem
+                  activeCategory={activeCategory}
                   item={item}
                   isOpen={openCategories[item.id]}
                   onToggle={() => toggleCategory(item.id)}
