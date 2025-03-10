@@ -44,7 +44,7 @@ const ourFuturesSectionData = [
 ];
 const OurFuturesSection = () => {
   return (
-    <section className="mt-42 mb-42 mx-4 lg:mx-12 flex items-center justify-center">
+    <section className="mt-42 mb-20 lg:mb-42 mx-4 lg:mx-12 flex items-center justify-center">
       <div className="bg-white future-section-shadow-gradient rounded-[80px] lg:rounded-[200px] section-shadows">
         <div className="container pt-20 pb-26">
           <h2 className="text-2xl lg:text-3xl font-bold text-center mb-12 text-title">
@@ -69,36 +69,36 @@ const OurFuturesSection = () => {
                 />
               </div>
             </div>
-              <FutureCard
-                title={ourFuturesSectionData.at(0).title}
-                text={ourFuturesSectionData.at(0).desc}
-                svg={ourFuturesSectionData.at(0).svg}
-                className={ourFuturesSectionData.at(0).className}
-              />
-              <FutureCard
-                title={ourFuturesSectionData.at(1).title}
-                text={ourFuturesSectionData.at(1).desc}
-                svg={ourFuturesSectionData.at(1).svg}
-                className={ourFuturesSectionData.at(1).className}
-              />
-              <FutureCard
-                title={ourFuturesSectionData.at(2).title}
-                text={ourFuturesSectionData.at(2).desc}
-                svg={ourFuturesSectionData.at(2).svg}
-                className={ourFuturesSectionData.at(2).className}
-              />
-              <FutureCard
-                title={ourFuturesSectionData.at(3).title}
-                text={ourFuturesSectionData.at(3).desc}
-                svg={ourFuturesSectionData.at(3).svg}
-                className={ourFuturesSectionData.at(3).className}
-              />
-              <FutureCard
-                title={ourFuturesSectionData.at(4).title}
-                text={ourFuturesSectionData.at(4).desc}
-                svg={ourFuturesSectionData.at(4).svg}
-                className={ourFuturesSectionData.at(4).className}
-              />
+            <FutureCard
+              title={ourFuturesSectionData.at(0).title}
+              text={ourFuturesSectionData.at(0).desc}
+              svg={ourFuturesSectionData.at(0).svg}
+              className={ourFuturesSectionData.at(0).className}
+            />
+            <FutureCard
+              title={ourFuturesSectionData.at(1).title}
+              text={ourFuturesSectionData.at(1).desc}
+              svg={ourFuturesSectionData.at(1).svg}
+              className={ourFuturesSectionData.at(1).className}
+            />
+            <FutureCard
+              title={ourFuturesSectionData.at(2).title}
+              text={ourFuturesSectionData.at(2).desc}
+              svg={ourFuturesSectionData.at(2).svg}
+              className={ourFuturesSectionData.at(2).className}
+            />
+            <FutureCard
+              title={ourFuturesSectionData.at(3).title}
+              text={ourFuturesSectionData.at(3).desc}
+              svg={ourFuturesSectionData.at(3).svg}
+              className={ourFuturesSectionData.at(3).className}
+            />
+            <FutureCard
+              title={ourFuturesSectionData.at(4).title}
+              text={ourFuturesSectionData.at(4).desc}
+              svg={ourFuturesSectionData.at(4).svg}
+              className={ourFuturesSectionData.at(4).className}
+            />
           </div>
         </div>
       </div>

@@ -5,8 +5,8 @@ import Button from "./UI/Button";
 
 const MainPageBanner = () => {
   return (
-    <section className="mx-[12%] lg:mx-[8%]">
-      <div className="xl:px-12 section-shadows xl:py-10 2xl:py-12 2xl:px-24 relative overflow-hidden flex  gap-6  md:gap-0 justify-between items-center bg-secondary-background rounded-[70px] lg:rounded-full mt-20 ">
+    <section className="mx-[12%] lg:mx-[8%] ">
+      <div className="xl:px-12 section-shadows xl:py-10 2xl:py-12 2xl:px-24 relative overflow-hidden flex  gap-6  md:gap-0 justify-between items-center bg-secondary-background rounded-[70px] lg:rounded-full  ">
         {/* DESKTOP */}
         <div className="relative hidden lg:block">
           <div className=" ">
@@ -37,13 +37,13 @@ const MainPageBanner = () => {
               id="ExinIcon"
               disableGradient={true}
               fillColor="#3E243C"
-              size={130}
+              size={140}
             />
           </div>
         </div>
 
         <div className="relative ">
-          <div className="flex flex-col items-end gapy-1 lg:gap-y-10 ml-10 lg:ml-16 ">
+          <div className="flex flex-col items-end gapy-1 lg:gap-y-10 ml-3 md:ml-8 lg:ml-16 ">
             <p className="text-[12px] max-w-[250px] lg:max-w-[400px] lg:text-[20px] mb-4 lg:text-3xl font-extrabold text-secondary-title leading-5 lg:leading-12 ">
               قالب مورد نظرت رو پیدا نکردی ؟ ما اینجاییم تا کمکت کنیم .{" "}
             </p>
