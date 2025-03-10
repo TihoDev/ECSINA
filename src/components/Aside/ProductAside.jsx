@@ -52,7 +52,6 @@ const ProductAside = ({ style, data }) => {
   const [selectedCategories, setSelectedCategories] = useState("بوم ناب");
 
   const [activeCategory, setActiveCategory] = useState(null);
-  console.log(activeCategory);
   const searchParams = useSearchParams();
 
   useEffect(() => {
