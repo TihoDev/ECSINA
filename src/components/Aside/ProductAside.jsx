@@ -27,9 +27,6 @@ const CategoryItem = ({ item, isOpen, onToggle }) => (
         />
       )}
     </div>
-    <h4 className="text-left xl:w-2/4 text-base text-title">
-      {item.itemCount || 0}
-    </h4>
   </div>
 );
 

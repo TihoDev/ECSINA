@@ -11,10 +11,10 @@ const MobileNavbar = ({ navigationLinks, currentPath, isActiveLink }) => {
     const currentMenu = menu.current;
     if (toggle === "open") {
       currentMenu.classList.remove("translate-x-[100%]");
-      document.body.classList.add("overflow-y-hidden");
+      // document.body.classList.add("overflow-y-hidden");
     } else {
       currentMenu.classList.add("translate-x-[100%]");
-      document.body.classList.remove("overflow-y-hidden");
+      // document.body.classList.remove("overflow-y-hidden");
     }
   };
 
