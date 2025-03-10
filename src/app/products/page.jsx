@@ -10,6 +10,18 @@ export const metadata = {
   description: "صفحه محصولات | اکسین",
 };
 
+const ProductAsideWrapper = ({ style, data }) => {
+  return (
+    <Suspense
+      fallback={
+        <div className="w-[300px] h-[400px] bg-gray-100 animate-pulse rounded-lg" />
+      }
+    >
+      <ProductAside style={style} data={data} />
+    </Suspense>
+  );
+};
+
 async function page() {
   const { categories } = await getAllCategories();
 
@@ -22,9 +34,9 @@ async function page() {
             <SearchBar />
           </section>
           <section className="pt-6 mb-8 grid grid-cols-1 lg:gap-x-12 lg:grid-cols-4">
-            <ProductAside
-              data={categories}
+            <ProductAsideWrapper
               style="col-span-1 hidden lg:block"
+              data={categories}
             />
             <Suspense>
               <AllProductsSection style="col-span-3" />
