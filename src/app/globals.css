@@ -29,9 +29,17 @@
   font-style: normal;
   font-display: swap;
 }
-html {
-  @apply !bg-main-background scroll-smooth;
+html,
+body {
+  height: 100%;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
+
+#__next {
+  min-height: 100%;
+}
+
 body {
   @apply bg-main-background font-yekan font-semibold overflow-x-hidden;
 }
@@ -86,7 +94,6 @@ body {
     padding-inline: 6rem;
   }
 }
-
 
 @layer utilities {
   /* shadows */
