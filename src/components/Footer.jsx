@@ -2,34 +2,17 @@ import React from "react";
 import BaseIcon from "./icon/BaseIcon";
 import Link from "next/link";
 import ArrowUpButton from "./ArrowUpButton";
+import getAllCategories from "@/services/categories/getAllCategories";
 
 const mockData = [
-  { label: "محصولات ما",
-    link : "/products"
-   },
-  { label: "درباره ما" },
-  { label: "تماس با ما" },
+  { label: "محصولات ما", href: "/products" },
+  { label: "درباره ما", href: "/about" },
+  { label: "تماس با ما", href: "/contact" },
 ];
 
-const categories = [
-  { label: "بوم تاپ", 
-    link : "/products"
-  },
-  { label: "بوم کسب و کار", 
-    link : "/products"
-  },
-  { label: "پریزنش مدل", 
-    link : "/products"
-  },
-  { label: "پریزنش پلن", 
-    link : "/products"
-  },
-  { label: "پروفایل ها", 
-    link : "/products"
-  },
-];
+const Footer = async () => {
+  const { categories } = await getAllCategories();
 
-const Footer = () => {
   return (
     <footer className="rounded-tr-[100px] rounded-tl-[100px] lg:rounded-tr-[200px] lg:rounded-tl-[200px] relative py-10 px-6 text-gray-700 bg-[#F8FFFC] section-shadows mt-20 shadow-md before:content-[''] before:absolute before:top-[-35px] before:left-1/2 before:w-[85px] before:h-[95px] before:bg-[#F8FFFC] before:rounded-full before:transform before:-translate-x-1/2 ">
       <ArrowUpButton />
@@ -41,7 +24,7 @@ const Footer = () => {
               {mockData.map((item) => (
                 <li key={item.label}>
                   <Link
-                    href={item.link ? item.link : "#"}
+                    href={item.href}
                     className="hover:text-purple-500 transition-colors"
                   >
                     {item.label}
@@ -54,12 +37,12 @@ const Footer = () => {
             <h3 className="font-semibold mb-3 text-lg">دسته بندی ها</h3>
             <ul className="space-y-2">
               {categories.map((categorie) => (
-                <li key={categorie.label}>
+                <li key={categorie.id}>
                   <Link
-                    href={categorie.link}
+                    href={`products?category_id=${categorie.id}`}
                     className="hover:text-purple-500 transition-colors"
                   >
-                    {categorie.label}
+                    {categorie.title}
                   </Link>
                 </li>
               ))}
@@ -83,8 +66,6 @@ const Footer = () => {
               </button>
             </div>
           </div>
-
-
         </div>
       </div>
       <div className="mt-12 text-center flex justify-center items-center gap-7">
@@ -115,7 +96,7 @@ const Footer = () => {
             rel="noopener noreferrer"
             className="bg-purple-gradient text-white p-3 rounded-full text-lg w-12 h-12 flex items-center justify-center shadow-lg"
           >
-            <BaseIcon id={"Gmail"} size={28} disableGradient={true}/>
+            <BaseIcon id={"Gmail"} size={28} disableGradient={true} />
           </Link>
         </div>
       </div>
