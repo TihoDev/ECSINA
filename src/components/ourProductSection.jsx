@@ -45,9 +45,8 @@ const OurProductSection = () => {
       <div className="our-products-section">
         {productCardData.map((data) => {
           return (
-            <Link className={data.style} href="/products">
+            <Link key={data.id} className={data.style} href="/products">
               <ProductCard
-                key={data.id}
                 title={data.title}
                 text={data.desc}
                 svg={data.svg}
