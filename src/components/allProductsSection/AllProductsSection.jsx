@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useEffect, useState } from "react";
 import ProductSampleCard from "../ProductSampleCard";
 import { getAllProducts } from "@/services/products/getAllProducts";
@@ -11,10 +10,9 @@ const AllProductsSection = ({ style }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  // Always call useSearchParams inside the component body
   const searchParams = useSearchParams();
   const category = searchParams.get("category_id");
-  const page = searchParams.get("page");
+  const page = searchParams.get("page") || "1";
 
   const getProducts = async (category, page) => {
     try {
@@ -32,7 +30,7 @@ const AllProductsSection = ({ style }) => {
 
   useEffect(() => {
     getProducts(category, page);
-  }, [category, page]); // Add category and page as dependencies
+  }, [category, page]);
 
   return (
     <section className={style}>
@@ -55,8 +53,9 @@ const AllProductsSection = ({ style }) => {
           </div>
         )}
 
-        {products?.products &&
-          products?.products?.map((product) => (
+        {!isLoading &&
+          products?.products &&
+          products.products.map((product) => (
             <ProductSampleCard
               key={product.id}
               id={product.id}
@@ -73,11 +72,13 @@ const AllProductsSection = ({ style }) => {
         ></div>
       </div>
 
-      {!isLoading && (
-        <div className="mt-16 flex justify-center">
-          <Pagination pagination={products.pagination} />
-        </div>
-      )}
+      {!isLoading &&
+        products?.pagination &&
+        products.pagination.last_page > 1 && (
+          <div className="mt-16 flex justify-center">
+            <Pagination pagination={products.pagination} />
+          </div>
+        )}
     </section>
   );
 };

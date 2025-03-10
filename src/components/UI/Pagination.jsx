@@ -1,33 +1,58 @@
-import Link from "next/link";
+import { useRouter, useSearchParams } from "next/navigation";
+
 import React from "react";
 
 const Pagination = ({ pagination }) => {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const currentPage = pagination.current_page;
+  const lastPage = pagination.last_page;
+
+  const createQueryString = (name, value) => {
+    const params = new URLSearchParams(searchParams.toString());
+    params.set(name, value);
+    return params.toString();
+  };
+
+  const handlePageChange = (page) => {
+    router.push(`?${createQueryString("page", page)}`);
+  };
+
   return (
     <div className="flex items-center gap-x-5 text-black">
-      <Link
-        href={`/products?page=${
-          pagination.current_page === 1 ? 1 : pagination.current_page - 1
+      <button
+        onClick={() => currentPage > 1 && handlePageChange(currentPage - 1)}
+        className={`font-light text-xl cursor-pointer ${
+          currentPage === 1 ? "text-gray-400" : "text-main-color"
         }`}
-        className="font-light text-xl cursor-pointer text-secondary-color "
+        disabled={currentPage === 1}
       >
         قبلی
-      </Link>
-      {Array.from({ length: pagination.last_page }).map((_, index) => (
+      </button>
+      {Array.from({ length: lastPage }).map((_, index) => (
         <button
           key={index}
+          onClick={() => handlePageChange(index + 1)}
           className={`font-light text-xl cursor-pointer ${
-            index !== 0 ? "text-main-color" : "text-secondary-color"
+            currentPage === index + 1
+              ? " text-main-color"
+              : "text-secondary-color"
           }`}
         >
           {index + 1}
         </button>
       ))}
-      <Link
-        href={`/products?page=${pagination.current_page + 1}`}
-        className="font-light text-xl cursor-pointer text-main-color"
+      <button
+        onClick={() =>
+          currentPage < lastPage && handlePageChange(currentPage + 1)
+        }
+        className={`font-light text-xl cursor-pointer ${
+          currentPage === lastPage ? "text-gray-400" : "text-main-color"
+        }`}
+        disabled={currentPage === lastPage}
       >
         بعدی
-      </Link>
+      </button>
     </div>
   );
 };
