@@ -6,6 +6,11 @@ import ProductOfferingSection from "@/components/singleProduct/ProductOfferingSe
 import getProductById from "@/services/products/getProdutById";
 import MoreImages from "@/components/singleProduct/MoreImages";
 
+export const metadata = {
+  title: "صفحه محصول | اکسین",
+  description: "صفحه محصول | اکسین",
+};
+
 async function Page({ params }) {
   const { product: productId } = await params;
   const { product } = await getProductById(productId);

@@ -4,6 +4,11 @@ import AllProductsSection from "@/components/allProductsSection/AllProductsSecti
 import HeaderPageTwo from "@/components/Header/HeaderPageTwo";
 import getAllCategories from "@/services/categories/getAllCategories";
 
+export const metadata = {
+  title: "صفحه محصولات | اکسین",
+  description: "صفحه محصولات | اکسین",
+};
+
 async function page() {
   const { categories } = await getAllCategories();
 
