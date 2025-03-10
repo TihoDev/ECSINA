@@ -7,7 +7,7 @@ import BaseIcon from "./icon/BaseIcon";
 function ProductCard({ title, text, svg, className }) {
   return (
     <div
-      className={`${className} product-card hover:scale- flex flex-col justify-start gap-y-5 lg:justify-between  `}
+      className={`${className} group product-card hover:shadow-[2px_6px_8px_3px_#000000] flex flex-col justify-start gap-y-5 lg:justify-between cursor-pointer hover:scale-102 transition-all duration-300   `}
     >
       <div>
         <div className="flex flex-col justify-items-start">
@@ -27,8 +27,8 @@ function ProductCard({ title, text, svg, className }) {
         </div>
       </div>
 
-      <div className="mr-auto bg-white w-12 h-12 shadow-md rounded-2xl mt-2">
-        <div className="w-full h-full flex items-center justify-center">
+      <div className="mr-auto bg-white w-12 h-12 shadow-md rounded-2xl mt-2   ">
+        <div className="w-full h-full flex items-center justify-center group-hover:rotate-45 transition-all duration-300">
           <BaseIcon id="Arrow" size={18} />
         </div>
       </div>
