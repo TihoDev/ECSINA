@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import SearchBar from "@/components/SearchBar/SearchBar";
 import ProductAside from "@/components/Aside/ProductAside";
 import AllProductsSection from "@/components/allProductsSection/AllProductsSection";
@@ -25,7 +26,9 @@ async function page() {
               data={categories}
               style="col-span-1 hidden lg:block"
             />
-            <AllProductsSection style="col-span-3" />
+            <Suspense>
+              <AllProductsSection style="col-span-3" />
+            </Suspense>
           </section>
         </div>
       </main>
