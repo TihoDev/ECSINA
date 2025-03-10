@@ -1,3 +1,4 @@
+import Link from "next/link";
 import ProductCard from "./ProductCard";
 
 const productCardData = [
@@ -44,13 +45,14 @@ const OurProductSection = () => {
       <div className="our-products-section">
         {productCardData.map((data) => {
           return (
-            <ProductCard
-              key={data.id}
-              title={data.title}
-              text={data.desc}
-              svg={data.svg}
-              className={data.style}
-            />
+            <Link className={data.style} href="/products">
+              <ProductCard
+                key={data.id}
+                title={data.title}
+                text={data.desc}
+                svg={data.svg}
+              />
+            </Link>
           );
         })}
       </div>

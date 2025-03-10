@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import Button from "./UI/Button";
 import BaseIcon from "./icon/BaseIcon";
 import Border from "./UI/Border";
@@ -17,7 +18,7 @@ const HeroSection = () => {
 
       <div className="relative h-[560px] lg:min-h-[750px]">
         <div className="px-10 lg:px-10 xl:px-40 grid grid-cols-12 lg:mx-0">
-          <div className="col-span-12 lg:col-span-5 lg:mt-16 flex flex-col items-start gap-y-8">
+          <div className="col-span-12 lg:col-span-5 lg:mt-28 flex flex-col items-start gap-y-8">
             <h2 className="w-full text-xl lg:text-5xl text-title font-extrabold leading-20 text-center lg:text-right">
               اکسین، همراهیِ نوین
             </h2>
@@ -27,7 +28,9 @@ const HeroSection = () => {
               کارت سریع و بی دردسر پیش بره!
             </p>
             <div className="hidden lg:block ">
-              <Button text="رایگان دانلود کن" />
+              <Link href="/products">
+                <Button text="رایگان دانلود کن" />
+              </Link>
             </div>
           </div>
           <div className=" col-span-12 place-items-center lg:col-span-7">
@@ -102,7 +105,9 @@ const HeroSection = () => {
                 قالب‌های آماده، راهنمای کامل، همه‌چی اینجاست تا کارت سریع و
                 بی‌دردسر پیش بره!
               </p>
-              <Button text="رایگان دانلود کن" />
+              <Link href="/products">
+                <Button text="رایگان دانلود کن" />
+              </Link>
             </div>
           </div>
         </div>

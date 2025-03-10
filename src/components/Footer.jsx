@@ -4,17 +4,29 @@ import Link from "next/link";
 import ArrowUpButton from "./ArrowUpButton";
 
 const mockData = [
-  { label: "محصولات ما" },
+  { label: "محصولات ما",
+    link : "/products"
+   },
   { label: "درباره ما" },
   { label: "تماس با ما" },
 ];
 
 const categories = [
-  { label: "بوم تاپ" },
-  { label: "بوم کسب و کار" },
-  { label: "پریزنش مدل" },
-  { label: "پریزنش پلن" },
-  { label: "پروفایل ها" },
+  { label: "بوم تاپ", 
+    link : "/products"
+  },
+  { label: "بوم کسب و کار", 
+    link : "/products"
+  },
+  { label: "پریزنش مدل", 
+    link : "/products"
+  },
+  { label: "پریزنش پلن", 
+    link : "/products"
+  },
+  { label: "پروفایل ها", 
+    link : "/products"
+  },
 ];
 
 const Footer = () => {
@@ -29,7 +41,7 @@ const Footer = () => {
               {mockData.map((item) => (
                 <li key={item.label}>
                   <Link
-                    href="#"
+                    href={item.link ? item.link : "#"}
                     className="hover:text-purple-500 transition-colors"
                   >
                     {item.label}
@@ -44,7 +56,7 @@ const Footer = () => {
               {categories.map((categorie) => (
                 <li key={categorie.label}>
                   <Link
-                    href="#"
+                    href={categorie.link}
                     className="hover:text-purple-500 transition-colors"
                   >
                     {categorie.label}
@@ -77,7 +89,7 @@ const Footer = () => {
       </div>
       <div className="mt-12 text-center flex justify-center items-center gap-7">
         <div className="flex justify-center space-x-4">
-          <p className="mb-4 text-gray-800 font-medium pt-3 whitespace-nowrap">
+          <p className="mb-4 text-gray-800 font-extrabold pt-3 whitespace-nowrap">
             با ما در ارتباط باشید
           </p>
 

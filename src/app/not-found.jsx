@@ -1,6 +1,6 @@
 function notFound() {
     return (
-        <div>
+        <div className="text-black text-center py-12">
             صفحه مورد نظر پیدا نشد!
         </div>
     )
