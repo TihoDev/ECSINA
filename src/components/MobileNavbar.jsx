@@ -82,7 +82,7 @@ const MobileNavbar = ({ navigationLinks, currentPath, isActiveLink }) => {
       {isMenuOpen && (
         <div
           onClick={() => handleToggleMenu("close")}
-          className="fixed top-0 left-0 w-screen h-screen bg-black/30 z-10"
+          className="fixed top-0 left-0 w-screen h-screen bg-black/30 backdrop-blur-[3px] z-10"
         ></div>
       )}
     </>
