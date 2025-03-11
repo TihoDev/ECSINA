@@ -1,26 +1,27 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import BaseIcon from "./icon/BaseIcon";
 import Link from "next/link";
 
 const MobileNavbar = ({ navigationLinks, currentPath, isActiveLink }) => {
   const menu = useRef();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleToggleMenu = (toggle) => {
     const currentMenu = menu.current;
     if (toggle === "open") {
       currentMenu.classList.remove("translate-x-[100%]");
-      // document.body.classList.add("overflow-y-hidden");
+      setIsMenuOpen(true);
     } else {
       currentMenu.classList.add("translate-x-[100%]");
-      // document.body.classList.remove("overflow-y-hidden");
+      setIsMenuOpen(false);
     }
   };
 
   return (
     <>
-      <div className="bg-section-background h-[90px] rounded-b-[81px] shadow-gradient shadow-hero-section flex justify-between items-center px-12 mb-2">
+      <div className="  bg-section-background h-[90px] rounded-b-[81px] shadow-gradient shadow-hero-section flex justify-between items-center px-12 mb-2">
         <BaseIcon
           onClick={() => handleToggleMenu("open")}
           id="Burger"
@@ -57,7 +58,7 @@ const MobileNavbar = ({ navigationLinks, currentPath, isActiveLink }) => {
               />
             </button>
           </li>
-          <ul className="mt-12 space-y-1 text-title">
+          <ul className="mt-12 space-y-1 text-title z-20">
             {navigationLinks.map((item) => (
               <li
                 key={item.id}
@@ -78,6 +79,12 @@ const MobileNavbar = ({ navigationLinks, currentPath, isActiveLink }) => {
           </ul>
         </ul>
       </div>
+      {isMenuOpen && (
+        <div
+          onClick={() => handleToggleMenu("close")}
+          className="fixed top-0 left-0 w-screen h-screen bg-black/30 z-10"
+        ></div>
+      )}
     </>
   );
 };
