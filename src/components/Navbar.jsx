@@ -5,8 +5,8 @@ import { usePathname } from "next/navigation";
 import MobileNavbar from "./MobileNavbar";
 
 const navigationLinks = [
-  { id: 1, label: "محصولات ما", href: "/products" },
-  { id: 2, label: "صفحه اصلی", href: "/" },
+  { id: 1, label: "صفحه اصلی", href: "/" },
+  { id: 2, label: "محصولات ما", href: "/products" },
   { id: 3, label: "درباره ما", href: "/about" },
   { id: 4, label: "تماس با ما", href: "/contact" },
 ];
