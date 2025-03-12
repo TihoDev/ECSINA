@@ -16,7 +16,7 @@ const HeroSection = () => {
         <Navbar />
       </div>
 
-      <div className="relative h-[560px] lg:min-h-[600px]">
+      <div className="relative h-[560px] lg:min-h-[600px] 2xl:mt-12">
         <div className="px-10 lg:px-10 xl:px-40 grid grid-cols-12 lg:mx-0">
           <div className="col-span-12 lg:col-span-5 lg:mt-28 flex flex-col items-start gap-y-8">
             <h2 className="w-full text-xl lg:text-5xl text-title font-extrabold leading-20 text-center lg:text-right">
@@ -40,7 +40,7 @@ const HeroSection = () => {
             <div>
               <BaseIcon
                 className="visible lg:invisible  "
-                id="ExinIcon2"
+                id="ExinLogoWithoutHand"
                 disableGradient={true}
                 size={190}
                 fillColor="#3E243C"
@@ -53,7 +53,7 @@ const HeroSection = () => {
               <div className="absolute  ">
                 <BaseIcon
                   className="hidden lg:block"
-                  id="ExinIcon2"
+                  id="ExinLogoWithoutHand"
                   disableGradient={true}
                   size={320}
                   fillColor="#3E243C"
