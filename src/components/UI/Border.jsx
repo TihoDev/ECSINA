@@ -11,7 +11,7 @@ const Border = ({ size = 515 }) => {
           fill="none"
           stroke="#3E243C"
           strokeWidth={2}
-          strokeDasharray="8 15"
+          strokeDasharray="5 10"
         />
       </svg>
     </span>
