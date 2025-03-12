@@ -5,8 +5,8 @@ import Button from "./UI/Button";
 
 const MainPageBanner = () => {
   return (
-    <section className="mx-[12%] lg:mx-[8%] ">
-      <div className="xl:px-12 section-shadows xl:py-10 2xl:py-12 2xl:px-24 relative overflow-hidden flex  gap-6  md:gap-0 justify-between items-center bg-secondary-background rounded-[70px] lg:rounded-full  ">
+    <section className="mx-[12%] md:mx-[8%] xl:mx-[12%]  ">
+      <div className="xl:px-12 section-shadows xl:py-10 2xl:py-12 2xl:px-24 relative overflow-hidden flex gap-5 md:gap-0 justify-between items-center bg-secondary-background rounded-[70px] lg:rounded-full  ">
         {/* DESKTOP */}
         <div className="relative hidden lg:block">
           <div className=" ">
@@ -31,7 +31,7 @@ const MainPageBanner = () => {
         </div>
 
         {/* MOBILE */}
-        <div className="relative lg:hidden py-12 sm:pr-12">
+        <div className="relative lg:hidden py-6 lg:py-12 mr-4">
           <div>
             <BaseIcon
               id="ExinIcon"
@@ -44,16 +44,17 @@ const MainPageBanner = () => {
 
         <div className="relative ">
           <div className="flex flex-col items-end gapy-1 lg:gap-y-10 ml-3 md:ml-8 lg:ml-16 ">
-            <p className="text-[12px] max-w-[250px] lg:max-w-[400px] lg:text-[20px] mb-4 lg:text-3xl font-extrabold text-secondary-title leading-5 lg:leading-12 ">
-              قالب مورد نظرت رو پیدا نکردی ؟ ما اینجاییم تا کمکت کنیم .{" "}
+            <p className="text-[10px] max-w-[250px] lg:max-w-[350px] lg:text-[20px] mb-4 lg:text-3xl font-extrabold text-secondary-title leading-4 lg:leading-12 ">
+              قالب مورد نظرت رو پیدا نکردی ؟ ما <br />
+              اینجاییم تا کمکت کنیم .{" "}
             </p>
             <Button text={"ارتباط با ما"} />
           </div>
-          <div className="invisible lg:visible flex items-center justify-center ">
-            <div className="absolute top-10/12 -left-4/10">
+          <div className="invisible lg:visible flex items-center justify-center  ">
+            <div className="absolute top-12/12 -left-9/20">
               <Border size={230} />
             </div>
-            <div className=" absolute top-9/12 -left-4/10">
+            <div className=" absolute top-11/12 -left-5/10">
               <Border size={270} />
             </div>
           </div>
