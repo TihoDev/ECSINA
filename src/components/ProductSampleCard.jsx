@@ -1,8 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import BaseIcon from "./icon/BaseIcon";
-import notFountProductImg from "../../public/images/Checker.png";
 
 const ProductSampleCard = ({
   id = 0,
@@ -15,7 +13,7 @@ const ProductSampleCard = ({
       <div className="w-full rounded-4xl max-h-[344px] flex flex-col shadow-[0px_2px_4px_0px_#1E132840]">
         <div className="w-full h-[180px]">
           <img
-            src={imageId || notFountProductImg}
+            src={imageId}
             alt={imageId ? `product image` : `this product does not have image`}
             className="object-cover w-full h-full rounded-tl-4xl rounded-tr-4xl text-title"
           />
