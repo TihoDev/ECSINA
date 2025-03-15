@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function LoignLayout({ children }) {
+export default function LoginLayout({ children }) {
 
   return (<div className="w-screen h-screen overflow-hidden bg-white">
             <div className="pt-7 pr-7">
