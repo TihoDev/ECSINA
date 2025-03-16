@@ -28,7 +28,7 @@ const sideNav = () => {
                 {
                     sideNavLinks.map(item => {
                         return (
-                            <li key={item.id} className='py-3 pl-2 pr-8 cursor-pointer hover:bg-gray-400 duration-200'>
+                            <li key={item.id} className='py-3 pl-2 pr-8 cursor-pointer plum-gradient-hover duration-200'>
                                 <Link className='flex items-center gap-x-2' href={item.link}>
                                     <BaseIcon id={item.icon} size={25} disableGradient={true} fillColor='#fff'/>
                                     <Paragraph>{item.title}</Paragraph>
