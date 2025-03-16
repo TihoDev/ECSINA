@@ -1,7 +1,23 @@
 import BaseIcon from '../icon/BaseIcon'
 import Link from 'next/link'
+import Paragraph from '../UI/Paragraph'
 
+const sideNavLinks = [
+    {
+        id:1,
+        title : "پروپوزال ها",
+        icon : "PanelIcon1",
+        link : "/admin"
+    },
+    {
+        id:2,
+        title : "مدیریت دسته بندی ها ",
+        icon : "PanelIcon2",
+        link : "/admin"
+    },
+]
 const sideNav = () => {
+    
   return (
     <div className='w-full h-full flex flex-col justify-between bg-[#3E243C]'>
         <div>
@@ -9,25 +25,25 @@ const sideNav = () => {
                 <h2 className='font-black text-2xl'>اکسین</h2>
             </div>
             <ul className='space-y-2'>
-                <li className='py-3 pl-2 pr-8 cursor-pointer hover:bg-gray-400 duration-200'>
-                    <Link className='flex items-center gap-x-2' href="/admin">
-                        <BaseIcon id="PanelIcon1" size={25} disableGradient={true} fillColor='#fff'/>
-                        <p>پروپوزال ها</p>
-                    </Link>
-                </li>
-                <li className='py-3 pl-2 pr-8 cursor-pointer hover:bg-gray-400 duration-200'>
-                    <Link className='flex items-center gap-x-2' href="/admin">
-                        <BaseIcon id="PanelIcon2" size={25} disableGradient={true} fillColor='#fff'/>
-                        <p> مدیریت دسته بندی ها </p>      
-                    </Link>
-                </li>
+                {
+                    sideNavLinks.map(item => {
+                        return (
+                            <li className='py-3 pl-2 pr-8 cursor-pointer hover:bg-gray-400 duration-200'>
+                                <Link className='flex items-center gap-x-2' href={item.link}>
+                                    <BaseIcon id={item.icon} size={25} disableGradient={true} fillColor='#fff'/>
+                                    <Paragraph>{item.title}</Paragraph>
+                                </Link>
+                            </li>
+                        )
+                    })
+                }
             </ul>
         </div>
 
         <div className='pb-12 pr-8'>
             <button className='flex items-center gap-x-2 cursor-pointer'>
                 <BaseIcon id="Logout" disableGradient={true} fillColor='#fff' size={25}/>
-                <p className='font-xl font-normal'>خروج از حساب</p>
+                <Paragraph className='font-xl font-normal'>خروج از حساب</Paragraph>
             </button>
         </div>
     </div>

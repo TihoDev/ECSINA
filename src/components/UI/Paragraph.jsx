@@ -1,5 +1,5 @@
-const Paragraph = ({ text, className = "" }) => {
-    return <p className={className}>{text}</p>;
+const Paragraph = ({ className = "" , children }) => {
+    return <p className={className}>{children}</p>;
 };
   
 export default Paragraph;
