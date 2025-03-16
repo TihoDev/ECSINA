@@ -18,7 +18,7 @@ export default function Login() {
 
   return (
     <AuthForm title="ورود به حساب" onSubmit={handleSubmit(onSubmit)}>
-      <Input placeholder="نام کاربری" register={register} name="username" rules={{ required: "نام کاربری الزامی است" }} errors={errors} />
+      <Input placeholder="نام کاربری" className="bg-white block border w-full border-[#D2D2D2] rounded-lg placeholder:text-[#8C9197] text-black py-3 px-2.5 font-normal text-sm focus:outline-0" register={register} name="username" rules={{ required: "نام کاربری الزامی است" }} errors={errors} />
       <InputPassword register={register} errors={errors} />
     </AuthForm>
   );
