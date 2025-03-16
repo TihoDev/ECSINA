@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import BaseIcon from "./icon/BaseIcon";
 
 const ProductSampleCard = ({
   id = 0,
@@ -10,27 +11,29 @@ const ProductSampleCard = ({
 }) => {
   return (
     <Link href={`/products/${id}`}>
-      <div className="w-full rounded-4xl max-h-[344px] flex flex-col shadow-[0px_2px_4px_0px_#1E132840]">
-        <div className="w-full h-[180px]">
+      <div className="flex flex-col items-start shadow-product-card  rounded-4xl ">
+        <div className="h-[180px]">
           <img
             src={imageId}
             alt={imageId ? `product image` : `this product does not have image`}
             className="object-cover w-full h-full rounded-tl-4xl rounded-tr-4xl text-title"
           />
         </div>
-        <div className="p-4">
+        <div className="px-4 py-5">
           <div className="flex flex-col">
-            <h1 className="font-semibold text-lg leading-9 mb-2 text-title">
+            <h3 className="font-semibold text-lg leading-9  text-title">
               {" "}
               {title}
-            </h1>
-            <p className="font-normal text-sm leading-6 text-title">{text}</p>
+            </h3>
+            <div className="flex items-end justify-between h-auto">
+              <p className="font-normal text-sm leading-6 text-title  line-clamp-4">
+                {text}
+              </p>
+              <div className="cursor-pointer shadow-arrow  rounded-2xl  ">
+                <BaseIcon id="Arrow" size={14} />
+              </div>
+            </div>
           </div>
-          {/* <div className="mr-auto bg-white w-12 h-12 shadow-md rounded-2xl mt-2">
-            <button className="cursor-pointer w-full h-full flex items-center justify-center">
-              <BaseIcon id="Arrow" size={18} />
-            </button>
-          </div> */}
         </div>
       </div>
     </Link>

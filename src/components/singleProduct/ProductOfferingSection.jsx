@@ -14,27 +14,15 @@ const ProductOfferingData = [
     desc: "ابزاری برای تجزیه و تحلیل و بهینه سازی مدل های کسب و کار است .",
     imgUrl: "https://www.sportico.com/wp-content/uploads/2020/09/0911_IMG.jpg",
   },
-  {
-    id: 3,
-    title: "بوم كسب و كار",
-    desc: "ابزاری برای تجزیه و تحلیل و بهینه سازی مدل های کسب و کار است .",
-    imgUrl: "https://www.sportico.com/wp-content/uploads/2020/09/0911_IMG.jpg",
-  },
-  {
-    id: 4,
-    title: "بوم كسب و كار",
-    desc: "ابزاری برای تجزیه و تحلیل و بهینه سازی مدل های کسب و کار است .",
-    imgUrl: "https://www.sportico.com/wp-content/uploads/2020/09/0911_IMG.jpg",
-  },
 ];
 
 const ProductOfferingSection = () => {
   return (
-    <div className="container mb-12">
-      <h2 className="text-center font-extrabold text-2xl mb-8 text-title">
+    <div className="mb-20 shadow-main-page px-8 pt-6 pb-10 rounded-4xl">
+      <h2 className="text-start font-bold text-title text-base lg:text-4xl mb-8">
         قالب های پیشنهادی
       </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-x-4 xl:gap-x-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-x-4 xl:gap-x-8">
         {ProductOfferingData.map((item) => {
           return (
             <ProductSampleCard
