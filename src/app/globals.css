@@ -54,11 +54,14 @@ body {
   --color-main-color-active: #a45f9e;
   --color-secondary-color: #a4afb1;
   --color-text-color: #71416d;
+
   /* bg-colors */
   --color-main-background: #f8fffc;
   --color-secondary-background: #fafff4;
   --color-section-background: #f8fffc;
   --color-help-download: #fff6fe;
+  --color-border-question: #fee9fc;
+
   /* shadow */
 
   --shadow-main-page: 0px 4px 4px 0px #fe32ff;
