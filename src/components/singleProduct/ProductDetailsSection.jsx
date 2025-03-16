@@ -1,14 +1,6 @@
 import BaseIcon from "../icon/BaseIcon";
 import SimpleButton from "../UI/SimpleButton";
 
-{
-  /* <img
-  src={product.main_image}
-  alt={product.title}
-  className="w-full h-full object-cover rounded-[22px]"
-/>; */
-}
-
 const ProductDetailsSection = ({ product }) => {
   return (
     <div className="shadow-main-page rounded-4xl">
@@ -27,7 +19,7 @@ const ProductDetailsSection = ({ product }) => {
           ))}
         </div>
         <div>
-          <SimpleButton additionalStyles="p-1 lg:p-2.5 rounded-2xl tex  t-xs lg:text-xl font-semi-bold">
+          <SimpleButton additionalStyles="p-2.5  rounded-2xl text-xs lg:text-xl font-semi-bold">
             فیلم آموزشی
           </SimpleButton>
         </div>

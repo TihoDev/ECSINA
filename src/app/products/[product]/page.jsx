@@ -4,8 +4,8 @@ import ProductDetailsSection from "@/components/singleProduct/ProductDetailsSect
 import ProductDescription from "@/components/singleProduct/ProductDescription";
 import ProductOfferingSection from "@/components/singleProduct/ProductOfferingSection";
 import getProductById from "@/services/products/getProdutById";
-import MoreImages from "@/components/singleProduct/MoreImages";
 import ProductDetailsCard from "@/components/ProductDetailsCard";
+import ProductQuestions from "@/components/singleProduct/ProductQuestions";
 
 export const metadata = {
   title: "صفحه محصول | اکسین",
@@ -24,18 +24,19 @@ async function Page({ params }) {
         <div className="lg:col-span-8 flex flex-col gap-5 ">
           <ProductDetailsSection product={product} />
           <ProductDescription description={product.body} />
+          <div className="block lg:hidden">
+            <ProductDetailsCard product={product} />
+          </div>
           <ProductOfferingSection product={product} />
+          <div className="h-[1px] w-full bg-main-color my-10"></div>
+          <ProductQuestions />
         </div>
-        <div className="lg:col-span-4 ">
+        <div className=" hidden lg:block lg:col-span-4 ">
           <ProductDetailsCard product={product} />
         </div>
       </div>
     </div>
   );
-}
-
-{
-  /* <ProductOfferingSection product={product} />  */
 }
 
 export default Page;

@@ -18,7 +18,7 @@ const ProductOfferingData = [
 
 const ProductOfferingSection = () => {
   return (
-    <div className="mb-20 shadow-main-page px-8 pt-6 pb-10 rounded-4xl">
+    <div className="shadow-main-page px-8 pt-6 pb-10 rounded-4xl place-items-center">
       <h2 className="text-start font-bold text-title text-base lg:text-4xl mb-8">
         قالب های پیشنهادی
       </h2>
