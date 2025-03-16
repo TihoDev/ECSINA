@@ -2,7 +2,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import AuthForm from "@/components/authForm/AuthForm";
-import Input from "@/components/UI/Input";
+import Input from "@/components/authForm/Input"
 import InputPassword from "@/components/authForm/InputPassword";
 
 export default function Login() {

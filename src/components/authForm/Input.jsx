@@ -1,14 +1,16 @@
-"use client";
 const Input = ({ type = "text",className, placeholder, register, name, rules, errors }) => {
+  const hasError = errors[name];
+
   return (
     <div>
       <input
         type={type}
         {...register(name, rules)}
-        className={className}
+        className={`${className}
+          ${hasError ? "border-red-500" : "border-[#D2D2D2]"}`}
         placeholder={placeholder}
       />
-      {errors[name] && <p className="text-red-500 text-xs mt-1">{errors[name].message}</p>}
+      {hasError && <p className="text-red-500 text-xs mt-1">{hasError.message}</p>}
     </div>
   );
 };

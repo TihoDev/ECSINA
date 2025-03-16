@@ -4,6 +4,7 @@ import BaseIcon from "../icon/BaseIcon";
 
 const InputPassword = ({ register, errors }) => {
   const [isPassword, setIsPassword] = useState(true);
+  const hasError = errors.password;
 
   return (
     <div className="relative">
@@ -13,7 +14,8 @@ const InputPassword = ({ register, errors }) => {
           minLength: { value: 8, message: "رمز عبور باید حداقل ۸ کاراکتر باشد" }
         })} 
         type={isPassword ? "password" : "text"} 
-        className="bg-white block border w-full border-[#D2D2D2] rounded-lg placeholder:text-[#8C9197] text-black py-3 px-2.5 font-normal text-sm focus:outline-0" 
+        className={`bg-white block border w-full rounded-lg placeholder:text-[#8C9197] text-black py-3 px-2.5 font-normal text-sm focus:outline-0 
+          ${hasError ? "border-red-500" : "border-[#D2D2D2]"}`}
         placeholder="رمز عبور"
       />
 
@@ -21,7 +23,7 @@ const InputPassword = ({ register, errors }) => {
         <BaseIcon id={isPassword ? "EyeOff" : "EyeThin"} disableGradient={true} fillColor="#000" />
       </button>
 
-      {errors.password && <p className="text-red-500 text-xs mt-1">{errors.password.message}</p>}
+      {hasError && <p className="text-red-500 text-xs mt-1">{hasError.message}</p>}
     </div>
   );
 };
