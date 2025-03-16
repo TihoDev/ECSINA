@@ -1,4 +1,5 @@
 import BaseIcon from '../icon/BaseIcon'
+import Link from 'next/link'
 
 const sideNav = () => {
   return (
@@ -8,13 +9,17 @@ const sideNav = () => {
                 <h2 className='font-black text-2xl'>اکسین</h2>
             </div>
             <ul className='space-y-2'>
-                <li className='flex items-center gap-x-2 py-3 pl-2 pr-8 cursor-pointer hover:bg-gray-400 duration-200'>
-                    <BaseIcon id="PanelIcon1" size={25} disableGradient={true} fillColor='#fff'/>
-                    <p>پروپوزال ها</p>
+                <li className='py-3 pl-2 pr-8 cursor-pointer hover:bg-gray-400 duration-200'>
+                    <Link className='flex items-center gap-x-2' href="/admin">
+                        <BaseIcon id="PanelIcon1" size={25} disableGradient={true} fillColor='#fff'/>
+                        <p>پروپوزال ها</p>
+                    </Link>
                 </li>
-                <li className='flex items-center gap-x-2 py-3 pl-2 pr-8 cursor-pointer hover:bg-gray-400 duration-200'>
-                    <BaseIcon id="PanelIcon2" size={25} disableGradient={true} fillColor='#fff'/>
-                    <p> مدیریت دسته بندی ها </p>
+                <li className='py-3 pl-2 pr-8 cursor-pointer hover:bg-gray-400 duration-200'>
+                    <Link className='flex items-center gap-x-2' href="/admin">
+                        <BaseIcon id="PanelIcon2" size={25} disableGradient={true} fillColor='#fff'/>
+                        <p> مدیریت دسته بندی ها </p>      
+                    </Link>
                 </li>
             </ul>
         </div>
