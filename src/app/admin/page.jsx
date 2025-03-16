@@ -1,4 +1,3 @@
-import Modal from "@/components/UI/Modal"
 
 const page = () => {
   return (
