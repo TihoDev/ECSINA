@@ -12,11 +12,7 @@ export const metadata = {
 
 const ProductAsideWrapper = ({ style, data }) => {
   return (
-    <Suspense
-      fallback={
-        <div className="w-[300px] h-[400px] bg-gray-100 animate-pulse rounded-lg" />
-      }
-    >
+    <Suspense fallback={<div />}>
       <ProductAside style={style} data={data} />
     </Suspense>
   );

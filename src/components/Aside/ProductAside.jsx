@@ -39,7 +39,7 @@ const SubCategories = ({ sub }) => (
       <Link
         key={item.id}
         href={`/products?category_id=${item.id}`}
-        className={`text-[16px] font-normal hover:text-main-color-active transition-all duration-300 cursor-pointer`}
+        className={`text-[16px] font-normal  hover:text-main-color-active transition-all duration-300 cursor-pointer`}
       >
         {item.title}
       </Link>
@@ -76,7 +76,9 @@ const ProductAside = ({ style, data }) => {
 
   return (
     <>
-      <aside className={`${style} hidden lg:block`}>
+      <aside
+        className={`${style} hidden lg:block shadow-main-page p-10 rounded-4xl  `}
+      >
         <h2 className="font-bold text-2xl mb-8 text-title">دسته بندی :</h2>
         <div className="flex flex-col gap-y-4">
           {data.map((item) => (
