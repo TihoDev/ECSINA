@@ -14,14 +14,14 @@ function Proposal() {
 
       <div className="w-full mb-3">
         <Input className="relative placeholder:font-normal w-full pl-6 pr-12 py-3 border-1 border-[#EBEBEB] rounded-2xl" placeholder="جست و جو"/>
-        {/* <BaseIcon className="absolute top-0" id="Search" size={25} disableGradient={true} fillColor="#000"/> */}
+        <BaseIcon className="absolute top-[15%] -translate-x-3 -translate-y-[5%] cursor-pointer" id="Search" size={25} disableGradient={true} fillColor="#000"/>
       </div>
 
-      <div className="overflow-x-auto">
-        <table className="table">
+      <div className="overflow-x-auto rounded-2xl">
+        <table className="table border-separate border-spacing-y-1">
           {/* head */}
-          <thead className="bg-[#ECE9EC] rounded-tr-2xl rounded-tl-2xl text-black mb-1">
-            <tr className="text-center">
+          <thead>
+            <tr className="bg-[#ECE9EC] text-black text-center font-semibold">
               <th className="hover:underline cursor-pointer">عنوان پروپوزال</th>
               <th className="hover:underline cursor-pointer">توضیحات پروپوزال</th>
               <th className="hover:underline cursor-pointer">تاریخ انتشار</th>
@@ -30,7 +30,7 @@ function Proposal() {
           </thead>
           {/* body */}
           <tbody>
-            <tr className="overflow-x-hidden whitespace-nowrap text-center hover:bg-[#E8E8E8] bg-[#F5F4F5] transition-colors">
+            <tr className="overflow-x-hidden whitespace-nowrap text-center font-normal hover:bg-[#E8E8E8] bg-[#F5F4F5] transition-colors">
               <td>لورم ایپسوم</td>
               <td>لورم ایپسوم  لورم ایپسوم  لورم ایپسوم لورم   ایپسوم</td>
               <td>Blue</td>
@@ -47,7 +47,7 @@ function Proposal() {
                 </div>
               </td>
             </tr>
-            <tr className="overflow-x-hidden whitespace-nowrap text-center hover:bg-[#E8E8E8] bg-[#F5F4F5] transition-colors">
+            <tr className="overflow-x-hidden whitespace-nowrap text-center font-normal hover:bg-[#E8E8E8] bg-[#F5F4F5] transition-colors">
               <td>لورم ایپسوم</td>
               <td>لورم ایپسوم  لورم ایپسوم  لورم ایپسوم لورم   ایپسوم</td>
               <td>Blue</td>

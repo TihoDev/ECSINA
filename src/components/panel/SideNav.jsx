@@ -41,6 +41,7 @@ const sideNav = () => {
         </div>
                 
         <div className='pb-12 pr-8'>
+            
             <button className='flex items-center gap-x-2 cursor-pointer'>
                 <BaseIcon id="Logout" disableGradient={true} fillColor='#fff' size={25}/>
                 <Paragraph className='font-xl font-normal'>خروج از حساب</Paragraph>
