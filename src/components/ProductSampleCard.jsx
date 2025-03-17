@@ -11,7 +11,7 @@ const ProductSampleCard = ({
 }) => {
   return (
     <Link href={`/products/${id}`}>
-      <div className="flex flex-col items-start shadow-product-card  rounded-4xl ">
+      <div className="flex flex-col hadow-product-card rounded-4xl w-full">
         <div className="h-[180px]">
           <img
             src={imageId}
