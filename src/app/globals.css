@@ -55,6 +55,14 @@ body {
   --color-secondary-color: #a4afb1;
   --color-text-color: #71416d;
 
+  --color-danger: #d51717;
+  --color-danger-dark: #b81616;
+  --color-success: #15d132;
+  --color-dark-plum: #3e243c;
+  --color-light-gray: #f2f5f7;
+  --color-med-gray: #d2d2d2;
+  --colo-gray: #888888;
+
   /* bg-colors */
   --color-main-background: #f8fffc;
   --color-secondary-background: #fafff4;
@@ -180,6 +188,12 @@ body {
       rgba(113, 65, 109, 1) 24.9%,
       rgba(164, 95, 158, 1) 100%
     );
+  }
+  .plum-gradient-hover:hover {
+    background: linear-gradient(to right, #3e243c, #71416d, #a45f9e);
+  }
+  .plum-gradient {
+    background: linear-gradient(to right, #3e243c, #71416d, #a45f9e);
   }
 
   .our-products-section {
