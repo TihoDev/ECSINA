@@ -1,7 +1,8 @@
+import AdminPanel from "@/components/AdminPanel/AdminPanel";
 import React from "react";
 
 function Category() {
-  return <div>Category</div>;
+  return <AdminPanel>Category</AdminPanel>;
 }
 
 export default Category;
