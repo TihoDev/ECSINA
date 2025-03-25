@@ -1,4 +1,3 @@
-import React from "react";
 import { redirect } from "next/navigation";
 
 function AdminLayout({ children }) {
@@ -6,11 +5,7 @@ function AdminLayout({ children }) {
   const token = true;
   if (!token) redirect("/admin/login", "replace");
 
-  return (
-    <>
-      {children}
-    </>
-  )
+  return <main>{children}</main>;
 }
 
 export default AdminLayout;
