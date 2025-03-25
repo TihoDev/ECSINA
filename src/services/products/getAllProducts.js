@@ -21,14 +21,14 @@ export const getAllProducts = async (page = 1, category = null) => {
       if (error.response) {
         switch (error.response.status) {
           case 404:
-            throw new Error("محصولی یافت نشد");
+            throw new Error("No products found");
           case 401:
-            throw new Error("دسترسی غیرمجاز");
+            throw new Error("Unauthorized access");
           default:
-            throw new Error(`خطای سرور: ${error.response.status}`);
+            throw new Error(`Server error: ${error.response.status}`);
         }
       } else if (error.request) {
-        throw new Error("خطا در ارتباط با سرور");
+        throw new Error("Error communicating with the server.");
       }
     }
 
