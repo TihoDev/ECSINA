@@ -13,7 +13,7 @@ const CategoryItem = ({ item, isOpen, onToggle, activeCategory }) => (
           isOpen || activeCategory === item.id
             ? "text-main-color-active"
             : "text-title"
-        } text-[18px] transition-all duration-300 hover:text-main-color-active cursor-pointer`}
+        } text-[18px] transition-all duration-300 hover:text-main-color-active cursor-pointer text-nowrap`}
       >
         {item.title}
       </Link>
@@ -79,7 +79,7 @@ const ProductAside = ({ style, data }) => {
       <aside
         className={`${style} hidden lg:block shadow-main-page p-10 rounded-4xl  `}
       >
-        <h2 className="font-bold text-2xl mb-8 text-title">دسته بندی :</h2>
+        <h2 className="font-bold text-2xl mb-8 text-title text-nowrap">دسته بندی :</h2>
         <div className="flex flex-col gap-y-4">
           {data.map((item) => (
             <div key={item.id}>
@@ -98,7 +98,7 @@ const ProductAside = ({ style, data }) => {
       </aside>
       {/* mobile */}
       <div className="flex items-center justify-between mb-12 lg:!hidden">
-        <h2 className="font-bold text-xl text-title">دسته بندی :</h2>
+        <h2 className="font-bold text-xl text-title text-nowrap">دسته بندی :</h2>
 
         <div className="dropdown dropdown-end w-[60%] border-3 rounded-2xl border-[#71416D] py-2.5">
           <div className="flex items-center justify-between">
