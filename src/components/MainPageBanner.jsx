@@ -5,8 +5,8 @@ import Button from "./UI/Button";
 
 const MainPageBanner = () => {
   return (
-    <section className="mx-[12%] md:mx-[8%] xl:mx-[12%]  ">
-      <div className="xl:px-12 section-shadows xl:py-10 2xl:py-12 2xl:px-24 relative overflow-hidden flex gap-5 md:gap-0 justify-between items-center bg-secondary-background rounded-[70px] lg:rounded-full  ">
+    <section className="mx-[12%] md:mx-[8%] xl:mx-[12%]">
+      <div className="xl:px-12 section-shadows xl:py-10 2xl:py-12 2xl:px-24 relative overflow-hidden flex gap-5 md:gap-0 justify-evenly items-center bg-secondary-background rounded-[70px] lg:rounded-full  ">
         {/* DESKTOP */}
         <div className="relative hidden lg:block">
           <div className=" ">
@@ -43,7 +43,7 @@ const MainPageBanner = () => {
         </div>
 
         <div className="relative ">
-          <div className="flex flex-col items-end gapy-1 lg:gap-y-10 ml-3 md:ml-8 lg:ml-16 ">
+          <div className="flex flex-col gapy-1 lg:gap-y-10 ml-3 md:ml-8 lg:ml-16 items-center">
             <p className="text-[10px] max-w-[250px] lg:max-w-[350px] lg:text-[20px] mb-4 lg:text-3xl font-extrabold text-secondary-title leading-4 lg:leading-12 ">
               قالب مورد نظرت رو پیدا نکردی ؟ ما <br />
               اینجاییم تا کمکت کنیم .{" "}

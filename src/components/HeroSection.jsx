@@ -48,7 +48,7 @@ const HeroSection = () => {
             </div>
 
             {/* Desktop */}
-            <div className="invisible lg:visible absolute flex items-center justify-center left-[1%]">
+            <div className="invisible lg:visible absolute flex items-center justify-center left-[1%] max-[1280px]:left-[7%] ">
               {/* Desktop icon */}
               <div className="absolute  ">
                 <BaseIcon
