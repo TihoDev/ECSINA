@@ -31,7 +31,7 @@ async function page() {
           </section>
           <section className="pt-6 mb-8 grid grid-cols-1 lg:gap-x-12 lg:grid-cols-4">
             <ProductAsideWrapper
-              style="col-span-1 hidden lg:block"
+              style="col-span-1 hidden lg:block min-w-[190px]"
               data={categories}
             />
             <Suspense>

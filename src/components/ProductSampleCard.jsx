@@ -11,7 +11,7 @@ const ProductSampleCard = ({
 }) => {
   return (
     <Link href={`/products/${id}`}>
-      <div className="flex flex-col hadow-product-card rounded-4xl w-full">
+      <div className="flex flex-col hadow-product-card rounded-4xl w-full bg-white shadow-[0px_2px_4px_0px_#1E132840] h-[350px]">
         <div className="h-[180px]">
           <img
             src={imageId}
@@ -29,7 +29,7 @@ const ProductSampleCard = ({
               <p className="font-normal text-sm leading-6 text-title  line-clamp-4">
                 {text}
               </p>
-              <div className="cursor-pointer shadow-arrow  rounded-2xl  ">
+              <div className="cursor-pointer shadow-arrow  rounded-2xl flex items-center justify-center  min-w-[30px] min-h-[30px]">
                 <BaseIcon id="Arrow" size={14} />
               </div>
             </div>

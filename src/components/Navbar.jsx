@@ -36,7 +36,7 @@ function Navbar() {
           {navigationLinks.map((item) => (
             <li
               key={item.id}
-              className={`text-title transition-all duration-300 ${
+              className={`text-title transition-all duration-300 text-nowrap ${
                 isActiveLink(item.href)
                   ? "bg-purple-gradient text-white px-4 py-2 rounded-full"
                   : "hover:text-main-color-active"
