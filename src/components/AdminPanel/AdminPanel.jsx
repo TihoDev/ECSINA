@@ -5,7 +5,7 @@ function AdminPanel({ children }) {
   return (
     <div className="min-h-screen gap-4 grid grid-cols-12">
       <SideNav />
-      <div className="col-span-8  text-black">{children}</div>
+      <div className="col-span-10 p-4  text-black">{children}</div>
     </div>
   );
 }

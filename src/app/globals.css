@@ -188,9 +188,11 @@ body {
       rgba(113, 65, 109, 1) 24.9%,
       rgba(164, 95, 158, 1) 100%
     );
+    transition: linear 1.2s;
   }
   .plum-gradient-hover:hover {
     background: linear-gradient(to right, #3e243c, #71416d, #a45f9e);
+        transition: linear 1.2s;
   }
   .plum-gradient {
     background: linear-gradient(to right, #3e243c, #71416d, #a45f9e);

@@ -14,7 +14,6 @@ const Input = ({ type = "text", className, placeholder, register = null, errors 
           hasError ? "border-red-500" : "border-[#D2D2D2]"
         }`}
         placeholder={placeholder}
-        security={isSecure}
       />
       {type == "password" && (
         <button type="button" onClick={() => setSecure(() => !isSecure)} className="absolute left-3 top-3 cursor-pointer">
