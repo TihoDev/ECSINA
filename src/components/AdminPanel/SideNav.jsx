@@ -22,7 +22,7 @@ const SideNav = () => {
   const path = usePathname();
   console.log(path);
   return (
-    <div className="w-full h-full col-span-2 flex flex-col justify-between bg-[#3E243C]">
+    <div className="w-full h-full col-span-3 flex flex-col justify-between bg-[#3E243C]">
       <div>
         <div className="pt-7 pr-7 mb-12">
           <h2 className="font-black text-2xl">اکسین</h2>
@@ -41,10 +41,19 @@ const SideNav = () => {
         </ul>
       </div>
 
-      <button className="flex items-center self-start mr-8 mb-4   gap-x-2 cursor-pointer">
+      <button onClick={() => document.getElementById("logout").showModal()} className="flex btn items-center self-start mr-8 mb-4   gap-x-2 cursor-pointer">
         <Image alt="" src={"/icons/Logout.svg"} width={20} height={20} />
         <Paragraph className="font-xl font-normal">خروج از حساب</Paragraph>
       </button>
+      <dialog id="logout" className="modal">
+        <div className="modal-box">
+          <h3 className="font-bold text-lg">Hello!</h3>
+          <p className="py-4">Press ESC key or click outside to close</p>
+        </div>
+        <form method="dialog" className="modal-backdrop">
+          <button>close</button>
+        </form>
+      </dialog>
     </div>
   );
 };

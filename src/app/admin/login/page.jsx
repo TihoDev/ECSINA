@@ -1,9 +1,9 @@
 "use client";
 import React from "react";
 import { useForm } from "react-hook-form";
-import AuthForm from "@/components/authForm/AuthForm";
-import Input from "@/components/authForm/Input";
-import ErrorMessage from "@/components/authForm/ErrorMessage";
+import AuthForm from "@/components/Form/AuthForm";
+import Input from "@/components/Form/Input";
+import ErrorMessage from "@/components/Form/ErrorMessage";
 
 export default function Login() {
   const {
