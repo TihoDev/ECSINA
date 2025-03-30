@@ -2,7 +2,7 @@
 import Link from "next/link";
 import Paragraph from "../UI/Paragraph";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 const sideNavLinks = [
   {
@@ -20,7 +20,12 @@ const sideNavLinks = [
 ];
 const SideNav = () => {
   const path = usePathname();
-  console.log(path);
+  const router = useRouter();
+  const logOutHandler = () => {
+    console.log("Logout");
+    router.push("/");
+  };
+
   return (
     <div className="w-full h-full col-span-3 flex flex-col justify-between bg-[#3E243C]">
       <div>
@@ -41,18 +46,29 @@ const SideNav = () => {
         </ul>
       </div>
 
-      <button onClick={() => document.getElementById("logout").showModal()} className="flex btn items-center self-start mr-8 mb-4   gap-x-2 cursor-pointer">
+      <button onClick={() => document.getElementById("logout").showModal()} className="flex btn items-center self-start mr-8 mb-4  bg-transparent shadow-none border-none  gap-x-2 cursor-pointer">
         <Image alt="" src={"/icons/Logout.svg"} width={20} height={20} />
         <Paragraph className="font-xl font-normal">خروج از حساب</Paragraph>
       </button>
+
       <dialog id="logout" className="modal">
-        <div className="modal-box">
-          <h3 className="font-bold text-lg">Hello!</h3>
-          <p className="py-4">Press ESC key or click outside to close</p>
+        <div className="modal-box w-[30%] bg-secondary-background text-title">
+          <h1 className="font-bold text-lg flex items-center justify-between mb-14">
+            <p className="font-bold text-title text-2xl">خروج از حساب کاربری</p>
+            <button onClick={() => document.querySelector("#logout").close()} className="btn  bg-transparent border-none shadow-none">
+              <Image src={"/icons/x.svg"} width={15} height={15} alt="x" />
+            </button>
+          </h1>
+          <form method="dialog" className="modal-backdrop relative flex flex-col">
+            <Paragraph className="text-title">آیا مطمئن هستید که می‌خواهید از حساب کاربری خود خارج شوید؟</Paragraph>
+            <div className="w-full flex gap-3 mt-12">
+              <button className=" bg-transparent   w-1/2 p-3 rounded-[20px] text-border border-2 border-border">بازگشت</button>
+              <button onClick={() => logOutHandler()} className="bg-danger hover:bg-danger-dark w-1/2 p-3 rounded-[20px] text-white">
+                خروج از حساب
+              </button>
+            </div>
+          </form>
         </div>
-        <form method="dialog" className="modal-backdrop">
-          <button>close</button>
-        </form>
       </dialog>
     </div>
   );
