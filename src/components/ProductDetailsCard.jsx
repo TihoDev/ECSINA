@@ -1,6 +1,6 @@
 import Link from "next/link";
 import SimpleButton from "./UI/SimpleButton";
-import { formatDate } from "@/heplerFunctions/formatDate";
+import { formatDate } from "@/utils/formatDate";
 function ProductDetailsCard({ product }) {
   return (
     <div className="px-10 py-8 shadow-main-page w-full rounded-4xl lg:sticky lg:top-20  ">
