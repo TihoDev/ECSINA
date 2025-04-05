@@ -1,25 +1,37 @@
-import { Suspense } from "react";
+"use client";
+
+import { useEffect, useState, Suspense } from "react";
 import SearchBar from "@/components/SearchBar/SearchBar";
 import ProductAside from "@/components/Aside/ProductAside";
 import AllProductsSection from "@/components/allProductsSection/AllProductsSection";
 import HeaderPageTwo from "@/components/Header/HeaderPageTwo";
-import getAllCategories from "@/services/categories/getAllCategories";
-
-export const metadata = {
-  title: "صفحه محصولات | اکسین",
-  description: "صفحه محصولات | اکسین",
-};
+import { getAllCategories } from "@/services/categories/getAllCategories";
 
 const ProductAsideWrapper = ({ style, data }) => {
   return (
-    <Suspense fallback={<div />}>
+    <Suspense fallback={<div>Loading sidebar...</div>}>
       <ProductAside style={style} data={data} />
     </Suspense>
   );
 };
 
-async function page() {
-  const { categories } = await getAllCategories();
+function page() {
+  const [categories, setCategories] = useState([]);
+  const [error, setError] = useState("");
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const { data, error } = await getAllCategories();
+
+      if (error) {
+        setError(error);
+      } else {
+        setCategories(data.data);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   return (
     <div className="overflow-x-hidden">
@@ -38,6 +50,8 @@ async function page() {
               <AllProductsSection style="col-span-3" />
             </Suspense>
           </section>
+          {/* show toast */}
+          {error && <p className="text-red-500 text-center mt-4">{error}</p>}
         </div>
       </main>
     </div>

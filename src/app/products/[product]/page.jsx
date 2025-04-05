@@ -1,3 +1,4 @@
+import { Suspense, useEffect, useState } from "react";
 import HeaderSingleProduct from "@/components/Header/HeaderSingleProduct";
 import SingleProductTitle from "@/components/singleProduct/SingleProductTitle";
 import ProductDetailsSection from "@/components/singleProduct/ProductDetailsSection";
@@ -12,9 +13,36 @@ export const metadata = {
   description: "صفحه محصول | اکسین",
 };
 
-async function Page({ params }) {
-  const { product: productId } = await params;
-  const { product } = await getProductById(productId);
+const LoadingIndicator = () => (
+  <div className="flex justify-center items-center py-4">
+    <div className="w-[40px] h-[40px] rounded-full border-4 border-black border-t-transparent animate-spin"></div>
+  </div>
+);
+
+function Page({ params }) {
+  const { product: productId } = params;
+
+  const [product, setProduct] = useState(null);
+  const [error, setError] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchProduct = async () => {
+      try {
+        const fetchedProduct = await getProductById(productId);
+        setProduct(fetchedProduct);
+      } catch (error) {
+        setError("Product could not be loaded.");
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchProduct();
+  }, [productId]);
+
+  if (isLoading) return <LoadingIndicator />;
+  if (error) return <div className="text-center text-red-500">{error}</div>;
 
   return (
     <div>

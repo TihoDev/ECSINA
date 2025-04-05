@@ -7,6 +7,7 @@ import { useSearchParams } from "next/navigation";
 
 const AllProductsSection = ({ style }) => {
   const [products, setProducts] = useState([]);
+  const [pagination, setPagination] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -14,24 +15,25 @@ const AllProductsSection = ({ style }) => {
   const category = searchParams.get("category_id");
   const page = searchParams.get("page") || "1";
 
-  const getProducts = async (category, page) => {
+  const fetchProducts = async (category, page) => {
+    setIsLoading(true);
+    setError(null);
+
     try {
-      setIsLoading(true);
-      setError(null);
       const data = await getAllProducts(page, category);
-      setProducts(data);
+
+      setProducts(data?.products || []);
+      setPagination(data?.pagination || null);
     } catch (error) {
-      setError(error.message || "خطا در دریافت محصولات");
-      console.error("Error fetching products:", error);
+      setError(error.message || "An error occurred while fetching products.");
     } finally {
       setIsLoading(false);
     }
   };
 
   useEffect(() => {
-    getProducts(category, page);
+    fetchProducts(category, page);
   }, [category, page]);
-
   return (
     <section className={style}>
       <div
