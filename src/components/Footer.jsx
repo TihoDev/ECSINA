@@ -4,6 +4,7 @@ import BaseIcon from "./icon/BaseIcon";
 import Link from "next/link";
 import ArrowUpButton from "./ArrowUpButton";
 import { getAllCategories } from "@/services/categories/getAllCategories";
+import useCategories from "@/hooks/useCategories";
 
 const mockData = [
   { label: "محصولات ما", href: "/products" },
@@ -12,22 +13,7 @@ const mockData = [
 ];
 
 const Footer = () => {
-  const [categories, setCategories] = useState([]);
-  const [error, setError] = useState("");
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const { data, error } = await getAllCategories();
-
-      if (error) {
-        setError(error);
-      } else {
-        setCategories(data.data);
-      }
-    };
-
-    fetchData();
-  }, []);
+  const { categories, error } = useCategories();
 
   return (
     <footer className="rounded-tr-[100px] rounded-tl-[100px] lg:rounded-tr-[200px] lg:rounded-tl-[200px] relative py-10 px-6 text-gray-700 bg-[#F8FFFC] section-shadows mt-20 shadow-md before:content-[''] before:absolute before:top-[-35px] before:left-1/2 before:w-[85px] before:h-[95px] before:bg-[#F8FFFC] before:rounded-full before:transform before:-translate-x-1/2 ">
@@ -52,7 +38,7 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold mb-3 text-lg">دسته بندی ها</h3>
             <ul className="space-y-2">
-              {categories.map((categorie) => (
+              {categories?.map((categorie) => (
                 <li key={categorie.id}>
                   <Link
                     href={`products?category_id=${categorie.id}`}

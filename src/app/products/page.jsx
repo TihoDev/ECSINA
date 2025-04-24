@@ -1,38 +1,20 @@
 "use client";
 
-import { useEffect, useState, Suspense } from "react";
+import { Suspense } from "react";
 import SearchBar from "@/components/SearchBar/SearchBar";
 import ProductAside from "@/components/Aside/ProductAside";
-
 import HeaderPageTwo from "@/components/Header/HeaderPageTwo";
-import { getAllCategories } from "@/services/categories/getAllCategories";
 import AllProducts from "@/components/allProductsSection/AllProducts";
+import useCategories from "@/hooks/useCategories";
 
-const ProductAsideWrapper = ({ style, data }) => {
-  return (
-    <Suspense fallback={<div>Loading sidebar...</div>}>
-      <ProductAside style={style} data={data} />
-    </Suspense>
-  );
-};
+const ProductAsideWrapper = ({ style, data }) => (
+  <Suspense fallback={<div>در حال بارگذاری نوار کناری...</div>}>
+    <ProductAside style={style} data={data} />
+  </Suspense>
+);
 
-function page() {
-  const [categories, setCategories] = useState([]);
-  const [error, setError] = useState("");
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const { data, error } = await getAllCategories();
-
-      if (error) {
-        setError(error);
-      } else {
-        setCategories(data.data);
-      }
-    };
-
-    fetchData();
-  }, []);
+export default function Page() {
+  const { categories, error } = useCategories();
 
   return (
     <div className="overflow-x-hidden">
@@ -42,21 +24,24 @@ function page() {
           <section>
             <SearchBar />
           </section>
+
           <section className="pt-6 mb-8 grid grid-cols-1 lg:gap-x-12 lg:grid-cols-4">
             <ProductAsideWrapper
               style="col-span-1 hidden lg:block min-w-[190px]"
               data={categories}
             />
-            <Suspense>
+            <Suspense fallback={<div>در حال بارگذاری محصولات...</div>}>
               <AllProducts style="col-span-3" />
             </Suspense>
           </section>
-          {/* show toast */}
-          {error && <p className="text-red-500 text-center mt-4">{error}</p>}
+
+          {error && (
+            <div className="text-red-500 text-center mt-4">
+              خطا در دریافت دسته‌بندی‌ها: {error.message || error.toString()}
+            </div>
+          )}
         </div>
       </main>
     </div>
   );
 }
-
-export default page;
