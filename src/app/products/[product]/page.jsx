@@ -1,12 +1,11 @@
-import { Suspense, useEffect, useState } from "react";
 import HeaderSingleProduct from "@/components/Header/HeaderSingleProduct";
-import SingleProductTitle from "@/components/singleProduct/SingleProductTitle";
-import ProductDetailsSection from "@/components/singleProduct/ProductDetailsSection";
-import ProductDescription from "@/components/singleProduct/ProductDescription";
-import ProductOfferingSection from "@/components/singleProduct/ProductOfferingSection";
-import getProductById from "@/services/products/getProdutById";
 import ProductDetailsCard from "@/components/ProductDetailsCard";
+import ProductDescription from "@/components/singleProduct/ProductDescription";
+import ProductDetailsSection from "@/components/singleProduct/ProductDetailsSection";
+import ProductOfferingSection from "@/components/singleProduct/ProductOfferingSection";
 import ProductQuestions from "@/components/singleProduct/ProductQuestions";
+import SingleProductTitle from "@/components/singleProduct/SingleProductTitle";
+import useProduct from "@/hooks/useProduct";
 
 export const metadata = {
   title: "صفحه محصول | اکسین",
@@ -21,25 +20,7 @@ const LoadingIndicator = () => (
 
 function Page({ params }) {
   const { product: productId } = params;
-
-  const [product, setProduct] = useState(null);
-  const [error, setError] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchProduct = async () => {
-      try {
-        const fetchedProduct = await getProductById(productId);
-        setProduct(fetchedProduct);
-      } catch (error) {
-        setError("Product could not be loaded.");
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    fetchProduct();
-  }, [productId]);
+  const { product, error, isLoading } = useProduct(productId);
 
   if (isLoading) return <LoadingIndicator />;
   if (error) return <div className="text-center text-red-500">{error}</div>;
