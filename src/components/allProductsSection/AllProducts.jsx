@@ -5,7 +5,7 @@ import { getAllProducts } from "@/services/products/getAllProducts";
 import Pagination from "../UI/Pagination";
 import { useSearchParams } from "next/navigation";
 
-const AllProductsSection = ({ style }) => {
+const AllProducts = ({ style }) => {
   const [products, setProducts] = useState([]);
   const [pagination, setPagination] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -85,4 +85,4 @@ const AllProductsSection = ({ style }) => {
   );
 };
 
-export default AllProductsSection;
+export default AllProducts;

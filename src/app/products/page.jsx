@@ -3,9 +3,10 @@
 import { useEffect, useState, Suspense } from "react";
 import SearchBar from "@/components/SearchBar/SearchBar";
 import ProductAside from "@/components/Aside/ProductAside";
-import AllProductsSection from "@/components/allProductsSection/AllProductsSection";
+
 import HeaderPageTwo from "@/components/Header/HeaderPageTwo";
 import { getAllCategories } from "@/services/categories/getAllCategories";
+import AllProducts from "@/components/allProductsSection/AllProducts";
 
 const ProductAsideWrapper = ({ style, data }) => {
   return (
@@ -47,7 +48,7 @@ function page() {
               data={categories}
             />
             <Suspense>
-              <AllProductsSection style="col-span-3" />
+              <AllProducts style="col-span-3" />
             </Suspense>
           </section>
           {/* show toast */}
