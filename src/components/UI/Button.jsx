@@ -2,12 +2,12 @@ import React from "react";
 import PropTypes from "prop-types";
 import BaseIcon from "../icon/BaseIcon";
 
-const Button = ({ text, disableIcon = false }) => {
+const Button = ({ text, disableIcon = false ,className , onClick}) => {
   const buttonClasses = `
     group flex items-center gap-2 lg:gap-5 px-3 py-2.5 lg:p-4 rounded-2xl
-    bg-gradient-to-r from-black via-[#71416D] via-[55.5%] to-[#A45F9E]
+    bg-gradient-to-r from-[#3E243C] via-[#71416D] via-[45.5%] to-[#A45F9E]
     bg-[length:200%] bg-left transition-[background-position] duration-300 ease-out 
-    hover:bg-[length:130%] hover:bg-right cursor-pointer z10
+    hover:bg-[length:130%] hover:bg-right cursor-pointer z10 ${className}
   `;
 
   const renderIcon = () => (
@@ -26,7 +26,7 @@ const Button = ({ text, disableIcon = false }) => {
   );
 
   return (
-    <button className={buttonClasses}>
+    <button className={buttonClasses} onClick={onClick}>
       {!disableIcon && renderIcon()}
       <p className="text-white text-xs lg:text-xl font-medium">{text}</p>
     </button>
