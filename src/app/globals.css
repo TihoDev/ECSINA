@@ -54,7 +54,7 @@ body {
   --color-main-color-active: #a45f9e;
   --color-secondary-color: #a4afb1;
   --color-text-color: #71416d;
-
+  --color-border:#01010E;
   --color-danger: #d51717;
   --color-danger-dark: #b81616;
   --color-success: #15d132;
@@ -188,9 +188,11 @@ body {
       rgba(113, 65, 109, 1) 24.9%,
       rgba(164, 95, 158, 1) 100%
     );
+    transition: linear 1.2s;
   }
   .plum-gradient-hover:hover {
     background: linear-gradient(to right, #3e243c, #71416d, #a45f9e);
+        transition: linear 1.2s;
   }
   .plum-gradient {
     background: linear-gradient(to right, #3e243c, #71416d, #a45f9e);
