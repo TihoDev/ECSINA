@@ -6,6 +6,14 @@ import LinkButton from "@/components/UI/LinkButton";
 import AdminPanel from "@/components/AdminPanel/AdminPanel";
 
 function Proposal() {
+  const now = new Date();
+  const proposalData = [
+    { id: 1, title: "لورم ایپسوم", desc: "لورم ایپسوم لورم ایپسوم لورم ایپسوم لورم ایپسوم", date: now },
+    { id: 2, title: "لورم ایپسوم", desc: "لورم ایپسوم لورم ایپسوم لورم ایپسوم لورم ایپسوم", date: now },
+    { id: 3, title: "لورم ایپسوم", desc: "لورم ایپسوم لورم ایپسوم لورم ایپسوم لورم ایپسوم", date: now },
+    { id: 4, title: "لورم ایپسوم", desc: "لورم ایپسوم لورم ایپسوم لورم ایپسوم لورم ایپسوم", date: now },
+    { id: 5, title: "لورم ایپسوم", desc: "لورم ایپسوم لورم ایپسوم لورم ایپسوم لورم ایپسوم", date: now },
+  ];
   return (
     <AdminPanel>
       <div className="w-full mb-4 flex items-center justify-between">
@@ -15,7 +23,7 @@ function Proposal() {
         </LinkButton>
       </div>
       <SearchBar />
-      <ProposalTable />
+      <ProposalTable data={proposalData} />
     </AdminPanel>
   );
 }
