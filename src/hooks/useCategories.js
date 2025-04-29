@@ -14,9 +14,8 @@ const useCategories = () => {
       setError(null);
     } catch (err) {
       setError(err);
-    } finally {
-      setIsLoading(false);
     }
+    setIsLoading(false);
   }, []);
 
   useEffect(() => {

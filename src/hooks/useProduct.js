@@ -7,8 +7,6 @@ const useProduct = (productId) => {
   const [isLoading, setIsLoading] = useState(false);
 
   const fetchProduct = useCallback(async () => {
-    if (!productId) return;
-
     setIsLoading(true);
     try {
       const fetchedProduct = await getProductById(productId);
@@ -16,14 +14,15 @@ const useProduct = (productId) => {
       setError(null);
     } catch (err) {
       setError(err);
-    } finally {
-      setIsLoading(false);
     }
+    setIsLoading(false);
   }, [productId]);
 
   useEffect(() => {
+    if (!productId) return;
+
     fetchProduct();
-  }, [fetchProduct]);
+  }, [productId, fetchProduct]);
 
   return { product, error, isLoading };
 };
