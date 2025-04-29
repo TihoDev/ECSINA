@@ -14,7 +14,7 @@ const ProductAsideWrapper = ({ style, data }) => (
 );
 
 export default function Page() {
-  const { categories, error } = useCategories();
+  const { categories, error, isLoading } = useCategories();
 
   return (
     <div className="overflow-x-hidden">

@@ -12,7 +12,7 @@ const mockData = [
 ];
 
 const Footer = () => {
-  const { categories, error } = useCategories();
+  const { categories, error, isLoading } = useCategories();
 
   return (
     <footer className="rounded-tr-[100px] rounded-tl-[100px] lg:rounded-tr-[200px] lg:rounded-tl-[200px] relative py-10 px-6 text-gray-700 bg-[#F8FFFC] section-shadows mt-20 shadow-md before:content-[''] before:absolute before:top-[-35px] before:left-1/2 before:w-[85px] before:h-[95px] before:bg-[#F8FFFC] before:rounded-full before:transform before:-translate-x-1/2 ">
