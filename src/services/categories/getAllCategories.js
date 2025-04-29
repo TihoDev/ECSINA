@@ -4,10 +4,10 @@ import { handleAxiosError } from "@/utils/axiosHelpers";
 
 export const getAllCategories = async () => {
   try {
-    const response = await axios.get(API_ENDPOINTS.CATEGORIES.ALL, API_CONFIG);
+    const { data } = await axios.get(API_ENDPOINTS.CATEGORIES.ALL, API_CONFIG);
 
     return {
-      data: response.data,
+      data,
       error: null,
     };
   } catch (error) {

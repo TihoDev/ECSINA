@@ -11,10 +11,10 @@ export const getAllProducts = async (page = 1, categoryId = null) => {
     }
 
     const url = `${API_ENDPOINTS.PRODUCTS.ALL}?${params.toString()}`;
-    const response = await axios.get(url, API_CONFIG);
+    const { data } = await axios.get(url, API_CONFIG);
 
     return {
-      data: response.data,
+      data,
       error: null,
     };
   } catch (error) {
