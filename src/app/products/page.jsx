@@ -1,25 +1,20 @@
+"use client";
+
 import { Suspense } from "react";
 import SearchBar from "@/components/SearchBar/SearchBar";
 import ProductAside from "@/components/Aside/ProductAside";
-import AllProductsSection from "@/components/allProductsSection/AllProductsSection";
 import HeaderPageTwo from "@/components/Header/HeaderPageTwo";
-import getAllCategories from "@/services/categories/getAllCategories";
+import AllProducts from "@/components/allProductsSection/AllProducts";
+import useCategories from "@/hooks/useCategories";
 
-export const metadata = {
-  title: "صفحه محصولات | اکسین",
-  description: "صفحه محصولات | اکسین",
-};
+const ProductAsideWrapper = ({ style, data }) => (
+  <Suspense fallback={<div>در حال بارگذاری نوار کناری...</div>}>
+    <ProductAside style={style} data={data} />
+  </Suspense>
+);
 
-const ProductAsideWrapper = ({ style, data }) => {
-  return (
-    <Suspense fallback={<div />}>
-      <ProductAside style={style} data={data} />
-    </Suspense>
-  );
-};
-
-async function page() {
-  const { categories } = await getAllCategories();
+export default function Page() {
+  const { categories, error, isLoading } = useCategories();
 
   return (
     <div className="overflow-x-hidden">
@@ -29,19 +24,24 @@ async function page() {
           <section>
             <SearchBar />
           </section>
+
           <section className="pt-6 mb-8 grid grid-cols-1 lg:gap-x-12 lg:grid-cols-4">
             <ProductAsideWrapper
               style="col-span-1 hidden lg:block min-w-[190px]"
               data={categories}
             />
-            <Suspense>
-              <AllProductsSection style="col-span-3" />
+            <Suspense fallback={<div>در حال بارگذاری محصولات...</div>}>
+              <AllProducts style="col-span-3" />
             </Suspense>
           </section>
+
+          {error && (
+            <div className="text-red-500 text-center mt-4">
+              خطا در دریافت دسته‌بندی‌ها: {error.message || error.toString()}
+            </div>
+          )}
         </div>
       </main>
     </div>
   );
 }
-
-export default page;

@@ -79,9 +79,11 @@ const ProductAside = ({ style, data }) => {
       <aside
         className={`${style} hidden lg:block shadow-main-page p-10 rounded-4xl  `}
       >
-        <h2 className="font-bold text-2xl mb-8 text-title text-nowrap">دسته بندی :</h2>
+        <h2 className="font-bold text-2xl mb-8 text-title text-nowrap">
+          دسته بندی :
+        </h2>
         <div className="flex flex-col gap-y-4">
-          {data.map((item) => (
+          {data?.map((item) => (
             <div key={item.id}>
               <CategoryItem
                 activeCategory={activeCategory}
@@ -98,7 +100,9 @@ const ProductAside = ({ style, data }) => {
       </aside>
       {/* mobile */}
       <div className="flex items-center justify-between mb-12 lg:!hidden">
-        <h2 className="font-bold text-xl text-title text-nowrap">دسته بندی :</h2>
+        <h2 className="font-bold text-xl text-title text-nowrap">
+          دسته بندی :
+        </h2>
 
         <div className="dropdown dropdown-end w-[60%] border-3 rounded-2xl border-[#71416D] py-2.5">
           <div className="flex items-center justify-between">
@@ -110,7 +114,7 @@ const ProductAside = ({ style, data }) => {
             tabIndex={0}
             className="dropdown-content menu bg-white rounded-box z-1 w-full p-2 shadow-sm"
           >
-            {data.map((item) => (
+            {data?.map((item) => (
               <li key={item.id}>
                 <CategoryItem
                   activeCategory={activeCategory}
