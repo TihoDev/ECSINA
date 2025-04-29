@@ -53,16 +53,31 @@ body {
   --color-main-color: #3e243c;
   --color-main-color-active: #a45f9e;
   --color-secondary-color: #a4afb1;
+  --color-text-color: #71416d;
+  --color-border:#01010E;
+  --color-danger: #d51717;
+  --color-danger-dark: #b81616;
+  --color-success: #15d132;
+  --color-dark-plum: #3e243c;
+  --color-light-gray: #f2f5f7;
+  --color-med-gray: #d2d2d2;
+  --colo-gray: #888888;
+
   /* bg-colors */
   --color-main-background: #f8fffc;
   --color-secondary-background: #fafff4;
   --color-section-background: #f8fffc;
   --color-help-download: #fff6fe;
+  --color-border-question: #fee9fc;
+
   /* shadow */
+
+  --shadow-main-page: 0px 4px 4px 0px #fe32ff;
   --shadow-product-card: 0px 2px 4px #1e132840;
   --shadow-detail-shadow: 0px 0px 16px #00000040;
   --shadow-border: 0px 8px 8px 0px #00000040;
   --shadow-hero-section: 0px 4px 4px 0px #00000040;
+  --shadow-arrow: 0px 1px 2px 0px #00000040;
 
   /* font */
   --font-yekan: "yekan";
@@ -173,6 +188,14 @@ body {
       rgba(113, 65, 109, 1) 24.9%,
       rgba(164, 95, 158, 1) 100%
     );
+    transition: linear 1.2s;
+  }
+  .plum-gradient-hover:hover {
+    background: linear-gradient(to right, #3e243c, #71416d, #a45f9e);
+        transition: linear 1.2s;
+  }
+  .plum-gradient {
+    background: linear-gradient(to right, #3e243c, #71416d, #a45f9e);
   }
 
   .our-products-section {
@@ -183,7 +206,7 @@ body {
   }
 
   .product-card {
-    @apply bg-white h-full lg:h-[450px] rounded-2xl shadow-product-card p-4;
+    @apply bg-white h-full lg:h-[450px] rounded-2xl shadow-product-card p-4 min-w-[150px];
   }
 
   .future-card {

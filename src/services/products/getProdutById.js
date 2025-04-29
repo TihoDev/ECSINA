@@ -1,33 +1,21 @@
 import axios from "axios";
 import { API_ENDPOINTS } from "@/constants/baseUrl";
+import { handleAxiosError } from "@/utils/axiosHelpers";
 
-export const getProductById = async (id) => {
+export const getSingleProduct = async (id) => {
   try {
-    if (!id) {
-      throw new Error("Product ID is required");
-    }
+    const url = API_ENDPOINTS.PRODUCTS.SHOW(id);
+    const { data } = await axios.get(url, API_CONFIG);
 
-    const { data } = await axios.get(API_ENDPOINTS.PRODUCTS.SHOW(id));
-    return data;
+    return {
+      data,
+      error: null,
+    };
   } catch (error) {
-    if (axios.isAxiosError(error)) {
-      if (error.response) {
-        switch (error.response.status) {
-          case 404:
-            throw new Error("Product not found");
-          case 401:
-            throw new Error("Unauthorized access");
-          default:
-            throw new Error(`Server error: ${error.response.status}`);
-        }
-      } else if (error.request) {
-        throw new Error("Failed to connect to server");
-      }
-    }
-
-    console.error("Error fetching product:", error);
-    throw error;
+    const errorMessage = handleAxiosError(error);
+    return {
+      data: null,
+      error: errorMessage,
+    };
   }
 };
-
-export default getProductById;
