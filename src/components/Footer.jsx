@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import BaseIcon from "./icon/BaseIcon";
 import Link from "next/link";
 import ArrowUpButton from "./ArrowUpButton";
-import { getAllCategories } from "@/services/categories/GETALLCA";
 import useCategories from "@/hooks/useCategories";
 
 const mockData = [
