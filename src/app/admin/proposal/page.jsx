@@ -1,9 +1,9 @@
 import React from "react";
-import Title from "@/components/UI/Title";
-import SearchBar from "@/components/Proposals/SearchBar";
-import ProposalTable from "@/components/Proposals/ProposalTable";
-import LinkButton from "@/components/UI/LinkButton";
-import AdminPanel from "@/components/AdminPanel/AdminPanel";
+import Title from "@/components/ui/Title";
+import SearchBar from "@/components/proposals/SearchBar";
+import ProposalTable from "@/components/proposals/ProposalTable";
+import LinkButton from "@/components/ui/LinkButton";
+import AdminPanel from "@/components/admin/AdminPanel";
 
 function Proposal() {
   const now = new Date();

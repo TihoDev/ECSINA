@@ -1,4 +1,4 @@
-import { getAllCategories } from "@/services/categories/getAllCategories";
+import { getAllCategories } from "@/services/Categories/getAllCategories";
 import { useState, useEffect, useCallback } from "react";
 
 const useCategories = () => {

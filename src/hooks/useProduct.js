@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
-import getProductById from "@/services/products/getProdutById";
+import getProductById from "@/services/Products/getProdutById";
 
 const useProduct = (productId) => {
   const [product, setProduct] = useState(null);

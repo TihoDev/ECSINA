@@ -1,5 +1,5 @@
-import AdminPanel from "@/components/AdminPanel/AdminPanel";
-import Title from "@/components/UI/Title";
+import AdminPanel from "@/components/admin/AdminPanel";
+import Title from "@/components/ui/Title";
 import React, { useState } from "react";
 
 function Category() {
