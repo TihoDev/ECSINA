@@ -1,25 +1,29 @@
+import { useState, useEffect, useCallback } from "react";
 import getProductById from "@/services/products/getProdutById";
-import { useEffect, useState } from "react";
 
 const useProduct = (productId) => {
   const [product, setProduct] = useState(null);
   const [error, setError] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
+
+  const fetchProduct = useCallback(async () => {
+    if (!productId) return;
+
+    setIsLoading(true);
+    try {
+      const fetchedProduct = await getProductById(productId);
+      setProduct(fetchedProduct);
+      setError(null);
+    } catch (err) {
+      setError(err);
+    } finally {
+      setIsLoading(false);
+    }
+  }, [productId]);
 
   useEffect(() => {
-    const fetchProduct = async () => {
-      try {
-        const fetchedProduct = await getProductById(productId);
-        setProduct(fetchedProduct);
-      } catch (error) {
-        setError("Product could not be loaded.");
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
     fetchProduct();
-  }, [productId]);
+  }, [fetchProduct]);
 
   return { product, error, isLoading };
 };
