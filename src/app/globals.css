@@ -41,43 +41,57 @@ body {
   min-height: 100%;
 }
 
-body {
+/* body {
   @apply bg-main-background font-yekan font-semibold overflow-x-hidden;
-}
+} */
 
 @theme {
-  /* colors */
-  --color-title: #000000;
-  --color-secondary-title: #1e1328;
-  --color-description: #2a2a2a;
-  --color-main-color: #3e243c;
-  --color-main-color-active: #a45f9e;
-  --color-secondary-color: #a4afb1;
-  --color-text-color: #71416d;
-  --color-border:#01010E;
-  --color-danger: #d51717;
-  --color-danger-dark: #b81616;
-  --color-success: #15d132;
-  --color-dark-plum: #3e243c;
-  --color-light-gray: #f2f5f7;
-  --color-med-gray: #d2d2d2;
-  --colo-gray: #888888;
+  /* Primary Colors */
+  --color-primary-0: #e5ebff;
+  --color-primary-1: #ced8f8;
+  --color-primary-2: #b7c4f2;
+  --color-primary-3: #a0b1eb;
+  --color-primary-4: #899de4;
+  --color-primary-5: #5c77d7;
+  --color-primary-6: #2e50c9;
+  --color-primary-7: #0029bc;
+  --color-primary-8: #002196;
+  --color-primary-9: #001971;
+  --color-primary-10: #00104b;
+  --color-primary-11: #000c38;
+  --color-primary-12: #000826;
+  --color-primary-13: #000413;
+  --color-primary-14: #000000;
+  /* Secondary Colors */
+  --color-secondary-1: #ffffff;
+  --color-secondary-2: #fbfcfa;
+  --color-secondary-3: #f8f8f6;
+  --color-secondary-4: #f4f5f1;
+  --color-secondary-5: #f1f1ec;
+  --color-secondary-6: #e9ebe3;
+  --color-secondary-7: #e2e4d9;
+  --color-secondary-8: #dbddd0;
+  --color-secondary-9: #bec0b2;
+  --color-secondary-10: #a1a393;
+  --color-secondary-11: #848775;
+  --color-secondary-12: #767866;
+  --color-secondary-13: #676a56;
+  --color-secondary-14: #595b47;
+  --color-secondary-15: #4a4d38;
 
-  /* bg-colors */
-  --color-main-background: #f8fffc;
-  --color-secondary-background: #fafff4;
-  --color-section-background: #f8fffc;
-  --color-help-download: #fff6fe;
-  --color-border-question: #fee9fc;
+  /* Main Theme Colors */
+  --color-main-0: #0029BC;
+  --color-main-1: #0029BC;
+  --color-main-2: #0E80B6;
+  --color-main-3: #E5EBFF;
+  /* Gradient */
+  --gradient-landing: linear-gradient(0.53deg, rgba(246, 255, 194, 0.36) 7.05%, rgba(174, 194, 255, 0.32) 49.64%, rgba(2, 57, 255, 0.32) 99.51%);
+  --gradient-cart: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.1) 100%);
+  --gradient-cart-icon: linear-gradient(139.85deg, #000826 -15.13%, #001971 49.55%, #0029bc 137.91%);
+  --gradient-primary-1: linear-gradient(139.79deg, rgba(2, 8, 31, 0.2) 0.21%, rgba(102, 102, 102, 0.1) 106.61%);
+  --gradient-primary-2: linear-gradient(139.79deg, #f2f5fb 0.21%, #f7f9ee 106.61%);
 
   /* shadow */
-
-  --shadow-main-page: 0px 4px 4px 0px #fe32ff;
-  --shadow-product-card: 0px 2px 4px #1e132840;
-  --shadow-detail-shadow: 0px 0px 16px #00000040;
-  --shadow-border: 0px 8px 8px 0px #00000040;
-  --shadow-hero-section: 0px 4px 4px 0px #00000040;
-  --shadow-arrow: 0px 1px 2px 0px #00000040;
 
   /* font */
   --font-yekan: "yekan";
@@ -111,108 +125,6 @@ body {
 }
 
 @layer utilities {
-  /* shadows */
-  .shadow-gradient {
-    position: relative;
-  }
-  .shadow-gradient::before {
-    content: "";
-    position: absolute;
-    top: -80;
-    left: -50;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom right, #ffc4fa, #efffd8, #a4e7fc);
-    filter: blur(50px);
-    z-index: -1;
-    border-radius: 50%;
-    opacity: 0.7;
-  }
-  .future-section-shadow-gradient {
-    position: relative;
-  }
-  .future-section-shadow-gradient::before {
-    content: "";
-    position: absolute;
-    top: -40px;
-    left: 0px;
-    right: 0px;
-    width: 140%;
-    height: 110%;
-    background: linear-gradient(to bottom right, #ffc4fa, #efffd8, #a4e7fc);
-    filter: blur(50px);
-    z-index: -1;
-    border-radius: 50%;
-    opacity: 0.7;
-  }
-  .footer-shadow-gradient {
-    position: relative;
-  }
-  .footer-shadow-gradient::before {
-    content: "";
-    position: absolute;
-    top: -80;
-    left: -50;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom right, #ffc4fa, #efffd8, #a4e7fc);
-    filter: blur(50px);
-    z-index: -1;
-    border-radius: 50%;
-    opacity: 0.7;
-  }
-  .bg-rainbow-gradient {
-    background: rgb(255, 196, 250);
-    background: linear-gradient(
-      135deg,
-      rgba(255, 196, 250, 1) 0%,
-      rgba(239, 255, 216, 1) 50%,
-      rgba(164, 231, 252, 1) 100%
-    );
-  }
-  .bg-purple-gradient {
-    background: rgb(0, 0, 0);
-    background: linear-gradient(
-      90deg,
-      rgba(0, 0, 0, 1) 0%,
-      rgba(113, 65, 109, 1) 75.5%,
-      rgba(164, 95, 158, 1) 100%
-    );
-  }
 
-  .bg-purple-gradient-hover {
-    background: rgb(0, 0, 0);
-    background: linear-gradient(
-      90deg,
-      rgba(0, 0, 0, 1) 0%,
-      rgba(113, 65, 109, 1) 24.9%,
-      rgba(164, 95, 158, 1) 100%
-    );
-    transition: linear 1.2s;
-  }
-  .plum-gradient-hover:hover {
-    background: linear-gradient(to right, #3e243c, #71416d, #a45f9e);
-        transition: linear 1.2s;
-  }
-  .plum-gradient {
-    background: linear-gradient(to right, #3e243c, #71416d, #a45f9e);
-  }
 
-  .our-products-section {
-    @apply h-full lg:h-[500px] grid items-center gap-y-4 gap-x-4 lg:grid-cols-5 lg:grid-rows-1 lg:gap-y-0 lg:gap-x-6;
-  }
-  .our-futures-section {
-    @apply grid col-span-1 sm:grid-cols-2 sm:grid-rows-3 gap-x-4 gap-y-8 lg:gap-8 lg:grid-cols-3 lg:grid-rows-2;
-  }
-
-  .product-card {
-    @apply bg-white h-full lg:h-[450px] rounded-2xl shadow-product-card p-4 min-w-[150px];
-  }
-
-  .future-card {
-    @apply bg-white w-full h-full rounded-2xl shadow-product-card p-4;
-  }
-  .section-shadows {
-    @apply shadow-[0px_0px_15px_#00000020];
-  }
 }
