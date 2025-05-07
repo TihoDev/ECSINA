@@ -12,7 +12,7 @@ const Button = ({
   ...props
 }) => {
   const baseStyles =
-    "flex items-center gap-2 rounded-xl p-2 md:px-6 md:py-4 text-sm md:text-xl   font-medium  cursor-pointer transition-all duration-200";
+    "flex items-center gap-2 rounded-xl p-3 md:px-6 md:py-4 text-sm md:text-xl   font-medium  cursor-pointer transition-all duration-200";
 
   const variants = {
     primary: "bg-primary-7 text-white hover:bg-primary-8",
