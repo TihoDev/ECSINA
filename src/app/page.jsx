@@ -1,5 +1,6 @@
 import HeroBanner from "@/components/home/HeroBanner";
 import OurProducts from "@/components/home/OurProducts";
+import TemplateFeatures from "@/components/home/TemplateFeatures";
 
 export const metadata = {
   title: "صفحه اصلی | اکسین ",
@@ -21,6 +22,7 @@ export default function Home() {
     <div className="my-20">
       <HeroBanner />
       <OurProducts />
+      <TemplateFeatures />
     </div>
   );
 }

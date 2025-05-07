@@ -4,7 +4,7 @@ import Arrow from "../../../public/assets/icons/Arrow.svg";
 
 const HeroBanner = () => {
   return (
-    <section>
+    <section className="container">
       <div className="flex flex-col items-center gap-3 md:gap-6">
         <h2 className="text-lg  md:text-5xl text-black font-semibold text-center">
           با اکسینا، اسناد تجاری را مثل حرفه‌ای‌ها بساز!

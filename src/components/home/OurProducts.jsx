@@ -46,12 +46,12 @@ const allProducts = [
 
 const OurProducts = () => {
   return (
-    <section className="mt-40 ">
+    <section className="mt-40 container">
       <h5 className=" text-xl md:text-4xl text-black font-bold text-center">
         محصولات ما
       </h5>
 
-      <div className="mt-8 md:mt-20 flex items-center gap-5 justify-center flex-wrap ">
+      <div className="mt-8 md:mt-20 flex items-center gap-4 justify-evenly flex-wrap ">
         {allProducts.map((product, index) => (
           <div
             key={product.id}
