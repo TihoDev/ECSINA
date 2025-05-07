@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@plugin "daisyui";
+/* @plugin "daisyui"; */
 
 @font-face {
   font-family: "Yekan";
@@ -41,9 +41,8 @@ body {
   min-height: 100%;
 }
 
-/* body {
-  @apply bg-main-background font-yekan font-semibold overflow-x-hidden;
-} */
+body {
+}
 
 @theme {
   /* Primary Colors */
@@ -123,7 +122,7 @@ body {
 @utility container {
   padding-inline: 1rem;
   margin-inline: auto;
-  max-width: 90%; /* Simulates the 90% zoom effect */
+  max-width: 90%;
 
   @variant sm {
     max-width: 576px; /* Slightly reduced */
