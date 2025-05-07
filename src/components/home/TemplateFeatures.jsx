@@ -57,7 +57,7 @@ const TemplateFeatures = () => {
         ویژگی های قالب های اکسینا
       </h3>
 
-      <div className=" mt-24 grid grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-12">
+      <div className=" mt-24 grid grid-cols-2 md:grid-cols-3 gap-x-3 gap-y-6 md:gap-x-6 md:gap-y-12">
         {features.map((feature) => (
           <TemplateFeature feature={feature} key={feature.id} />
         ))}
