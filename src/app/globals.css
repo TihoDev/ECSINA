@@ -96,6 +96,7 @@ body {
     rgba(255, 255, 255, 0.3) 0%,
     rgba(255, 255, 255, 0.1) 100%
   );
+
   --gradient-cart-icon: linear-gradient(
     139.85deg,
     #000826 -15.13%,
@@ -120,29 +121,41 @@ body {
 }
 
 @utility container {
-  padding-inline: 1rem;
-  margin-inline: auto;
-  max-width: 90%;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  position: relative;
 
   @variant sm {
-    max-width: 576px; /* Slightly reduced */
-    padding-inline: 2rem;
+    max-width: 640px;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
   }
+
   @variant md {
-    max-width: 691px; /* 90% of 768px */
-    padding-inline: 3rem;
+    max-width: 768px;
+    padding-right: 2rem;
+    padding-left: 2rem;
   }
+
   @variant lg {
-    max-width: 921px; /* 90% of 1024px */
-    padding-inline: 4rem;
+    max-width: 1024px;
+    padding-right: 2.5rem;
+    padding-left: 2.5rem;
   }
+
   @variant xl {
-    max-width: 1152px; /* 90% of 1280px */
-    padding-inline: 5rem;
+    max-width: 1280px;
+    padding-right: 3rem;
+    padding-left: 3rem;
   }
+
   @variant 2xl {
-    max-width: 1382px; /* 90% of 1536px */
-    padding-inline: 6rem;
+    max-width: 1536px;
+    padding-right: 4rem;
+    padding-left: 4rem;
   }
 }
 
