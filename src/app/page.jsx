@@ -1,4 +1,5 @@
 import HeroBanner from "@/components/home/HeroBanner";
+import OurProducts from "@/components/home/OurProducts";
 
 export const metadata = {
   title: "صفحه اصلی | اکسین ",
@@ -17,8 +18,9 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <div>
+    <div className="my-20">
       <HeroBanner />
+      <OurProducts />
     </div>
   );
 }

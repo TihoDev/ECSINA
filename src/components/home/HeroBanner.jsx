@@ -16,6 +16,8 @@ const HeroBanner = () => {
 
         <Button icon={Arrow}>رایگان دانلود کن</Button>
       </div>
+
+      <div></div>
     </section>
   );
 };
