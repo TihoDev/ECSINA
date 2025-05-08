@@ -1,3 +1,4 @@
+import Navbar from "@/components/UI/Navbar";
 import "./globals.css";
 
 export const metadata = {
@@ -13,7 +14,12 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html lang="fa" dir="rtl">
-      <body className="">{children}</body>
+      <body>
+        <nav>
+          <Navbar />
+        </nav>
+        <main>{children}</main>
+      </body>
     </html>
   );
 }
