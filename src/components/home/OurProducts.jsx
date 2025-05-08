@@ -51,7 +51,7 @@ const OurProducts = () => {
         محصولات ما
       </h5>
 
-      <div className="mt-8 md:mt-20 flex items-center gap-4 justify-evenly flex-wrap ">
+      <div className="mt-8 md:mt-20 flex items-center gap-4  justify-center md:justify-evenly flex-wrap ">
         {allProducts.map((product, index) => (
           <div
             key={product.id}
