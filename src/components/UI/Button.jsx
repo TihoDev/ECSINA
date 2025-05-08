@@ -12,7 +12,7 @@ const Button = ({
   ...props
 }) => {
   const baseStyles =
-    "flex items-center gap-2 rounded-xl p-3 md:px-6 md:py-4 text-sm md:text-xl   font-medium  cursor-pointer transition-all duration-200";
+    "flex items-center gap-2 rounded-xl p-3 md:px-6 md:py-4 text-sm md:text-xl font-medium cursor-pointer transition-all duration-200 group";
 
   const variants = {
     primary: "bg-primary-7 text-white hover:bg-primary-8",
@@ -40,7 +40,7 @@ const Button = ({
           alt="button icon"
           width={iconSize}
           height={iconSize}
-          className="object-contain"
+          className="object-contain transition-transform duration-200 group-hover:rotate-45"
         />
       )}
       <span>{children}</span>
