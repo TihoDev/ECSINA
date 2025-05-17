@@ -1,3 +1,4 @@
+import AllComments from "@/components/home/AllComments";
 import Guidance from "@/components/home/Guidance";
 import HeroBanner from "@/components/home/HeroBanner";
 import OurServices from "@/components/home/OurServices";
@@ -24,6 +25,7 @@ export default function Home() {
       <HeroBanner />
       <OurServices />
       <TemplateFeatures />
+      <AllComments />
       <Guidance />
     </div>
   );
