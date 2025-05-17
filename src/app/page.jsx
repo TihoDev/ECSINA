@@ -1,3 +1,4 @@
+import Guidance from "@/components/home/Guidance";
 import HeroBanner from "@/components/home/HeroBanner";
 import OurProducts from "@/components/home/OurProducts";
 import TemplateFeatures from "@/components/home/TemplateFeatures";
@@ -23,6 +24,7 @@ export default function Home() {
       <HeroBanner />
       <OurProducts />
       <TemplateFeatures />
+      <Guidance />
     </div>
   );
 }
