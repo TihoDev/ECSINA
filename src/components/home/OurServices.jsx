@@ -1,10 +1,11 @@
-import Product from "../UI/Product";
+import Product from "../UI/Service";
 
 import Status1 from "../../../public/assets/icons/Status1.svg";
 import Status2 from "../../../public/assets/icons/Status2.svg";
 import Status3 from "../../../public/assets/icons/Status3.svg";
 import Document from "../../../public/assets/icons/Document.svg";
 import Computer from "../../../public/assets/icons/Computer.svg";
+import Service from "../UI/Service";
 
 const allProducts = [
   {
@@ -44,7 +45,7 @@ const allProducts = [
   },
 ];
 
-const OurProducts = () => {
+const OurServices = () => {
   return (
     <section className="mt-40 container">
       <h5 className=" text-xl md:text-4xl text-black font-bold text-center">
@@ -57,7 +58,7 @@ const OurProducts = () => {
             key={product.id}
             className={`${index % 2 === 0 ? "md:mt-32" : ""}`}
           >
-            <Product product={product} />
+            <Service product={product} />
           </div>
         ))}
       </div>
@@ -65,4 +66,4 @@ const OurProducts = () => {
   );
 };
 
-export default OurProducts;
+export default OurServices;

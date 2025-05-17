@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import Arrow from "../../../public/assets/icons/Arrow.svg";
 
-const Product = ({ product }) => {
+const Service = ({ product }) => {
   return (
     <>
       <div className=" hidden md:flex px-6 shadow-product py-4  flex-col items-start gap-4 border border-primary-7 rounded-4xl md:min-h-96 md:w-[220px]">
@@ -42,4 +42,4 @@ const Product = ({ product }) => {
   );
 };
 
-export default Product;
+export default Service;

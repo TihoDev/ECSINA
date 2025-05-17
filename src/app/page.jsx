@@ -1,6 +1,6 @@
 import Guidance from "@/components/home/Guidance";
 import HeroBanner from "@/components/home/HeroBanner";
-import OurProducts from "@/components/home/OurProducts";
+import OurServices from "@/components/home/OurServices";
 import TemplateFeatures from "@/components/home/TemplateFeatures";
 
 export const metadata = {
@@ -22,7 +22,7 @@ export default function Home() {
   return (
     <div className="my-20">
       <HeroBanner />
-      <OurProducts />
+      <OurServices />
       <TemplateFeatures />
       <Guidance />
     </div>
