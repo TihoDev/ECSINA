@@ -40,7 +40,9 @@ const Button = ({
           alt="button icon"
           width={iconSize}
           height={iconSize}
-          className="object-contain transition-transform duration-200 group-hover:rotate-45"
+          className={`object-contain transition-transform duration-200 group-hover:rotate-45 ${
+            variant === "outline" ? "invert" : ""
+          }`}
         />
       )}
       <span>{children}</span>
