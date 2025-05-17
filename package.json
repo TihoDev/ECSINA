@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "npm run generate-svg && next dev",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -14,7 +14,6 @@
     "axios": "^1.8.2",
     "date-fns": "^4.1.0",
     "fs-extra": "^11.3.0",
-    "glob": "^11.0.1",
     "next": "15.1.7",
     "node-html-parser": "^7.0.1",
     "postcss": "^8.5.3",
