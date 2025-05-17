@@ -1,5 +1,7 @@
 import Navbar from "@/components/UI/Navbar";
+
 import "./globals.css";
+import Footer from "@/components/UI/Footer";
 
 export const metadata = {
   title: "EXIN",
@@ -15,10 +17,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="fa" dir="rtl">
       <body>
-        <nav>
+        <header>
           <Navbar />
-        </nav>
+        </header>
         <main>{children}</main>
+        <footer>
+          <Footer />
+        </footer>
       </body>
     </html>
   );
