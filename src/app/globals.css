@@ -78,13 +78,17 @@ body {
   --color-secondary-14: #595b47;
   --color-secondary-15: #4a4d38;
   --color-secondary-16: #9e9e9e;
-  --color-secondary-17: d1d1d1;
+  --color-secondary-17: #d1d1d1;
+  --color-secondary-18: #475467;
+  --color-secondary-19: #464935;
+  --color-secondary-20: #19002b;
 
   /* Main Theme Colors */
   --color-main-0: #0029bc;
   --color-main-1: #0029bc;
   --color-main-2: #0e80b6;
   --color-main-3: #e5ebff;
+
   /* Gradient */
   --gradient-landing: linear-gradient(
     0.53deg,
@@ -115,10 +119,22 @@ body {
     #f7f9ee 106.61%
   );
 
+  --gradient-primary-3: linear-gradient(
+      278.67deg,
+      #e5ebff -0.11%,
+      #dae2fc 56.32%,
+      #ced8f8 101.57%
+    ),
+    linear-gradient(180deg, rgba(255, 255, 255, 0) -16.57%, #ffffff 84.63%);
+
   /* shadow */
 
   /* font */
   --font-yekan: "yekan";
+  /* global.css */
+  .bg-gradient-primary-3 {
+    background: var(--gradient-primary-3);
+  }
 }
 
 @utility container {
