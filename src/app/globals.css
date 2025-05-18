@@ -132,9 +132,6 @@ body {
   /* font */
   --font-yekan: "yekan";
   /* global.css */
-  .bg-gradient-primary-3 {
-    background: var(--gradient-primary-3);
-  }
 }
 
 @utility container {
