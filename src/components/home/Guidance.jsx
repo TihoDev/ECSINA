@@ -4,15 +4,11 @@ import Image from "next/image";
 import Arrow from "../../../public/assets/icons/Arrow.svg";
 import Arrow2 from "../../../public/assets/icons/Arrow2.svg";
 import Wing from "../../../public/assets/icons/Wing.svg";
+import ScrollToTopButton from "../UI/ScrollToTopButton";
 
 const Guidance = () => {
   return (
-    <div
-      style={{
-        background: "var(--gradient-primary-3)",
-      }}
-      className="mt-44 rounded-3xl relative"
-    >
+    <div className="mt-44 rounded-3xl  gradient-secondary-background py-10 relative">
       <div className=" container flex items-center justify-center flex-col gap-3 md:gap-8 ">
         <p className="text-secondary-20 text-base font-medium md:text-4xl mt-10">
           قالب مورد نظرت رو پیدا نکردی؟{" "}
@@ -65,6 +61,10 @@ const Guidance = () => {
           alt=""
           className="block md:hidden"
         />
+      </div>
+
+      <div className="absolute -bottom-20 left-1/2 -translate-x-1/2">
+        <ScrollToTopButton />
       </div>
     </div>
   );
