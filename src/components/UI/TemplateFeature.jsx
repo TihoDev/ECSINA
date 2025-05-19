@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const TemplateFeature = ({ feature }) => {
   return (
-    <div className="flex flex-col items-start md:items-center gap-2 md:gap-4 rounded-2xl p-5 md:p-8 shadow-2xl">
+    <div className="flex flex-col items-start md:items-center bg-secondary-2 gap-2 md:gap-4 rounded-2xl p-5 md:p-8 border border-secondary-8 shadow-feature-cart ">
       <Image
         src={feature.icon}
         alt={feature.title}

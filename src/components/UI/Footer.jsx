@@ -38,7 +38,7 @@ const Footer = () => {
       {/* Top */}
       <div className="container mt-2">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 mb-10 ">
+        <Link href="/" className="flex items-center gap-2 mb-4 md:mb-10 ">
           <Image src={Logo} alt="Logo" />
           <span className="w-[1px]  h-16 bg-secondary-13"></span>
           <div className="text-black flex flex-col items-start gap-1">
@@ -56,10 +56,7 @@ const Footer = () => {
             <p className="text-xs leading-6 font-medium text-secondary-18">
               لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
               استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله
-              در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد
-              نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد،
-              کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان
-              جامعه و م
+              در ستون و سطرآنچنان که لازم است
             </p>
             {/* Icons */}
             <div className="flex items-center gap-2 mt-5 md:mt-8">
@@ -75,7 +72,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="flex flex-col md:flex-row gap-2 items-start md:gap-10">
+          <div className="flex flex-col md:flex-row gap-2 items-start md:gap-10 -mt-22 md:mt-0">
             <div>
               <p className=" text-base md:text-xl font-medium text-secondary-18 mb-2 text-nowrap">
                 دسترسی سریع
@@ -94,7 +91,7 @@ const Footer = () => {
             </div>
             <div>
               <p className=" text-base md:text-xl font-medium text-secondary-18 mb-2 text-nowrap">
-                دسترسی سریع
+                دسته بندی محصولات
               </p>
               <ul className="flex flex-col items-start gap-2">
                 {categories.map((link) => (

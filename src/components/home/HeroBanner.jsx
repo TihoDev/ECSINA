@@ -52,7 +52,7 @@ const stars = [
 const Sticker = ({ text = "", className = "", icon = "" }) => {
   return (
     <div
-      className={`shadow-2xl px-4 py-2.5 rounded-sm  inline-flex items-center justify-center ${className}`}
+      className={`shadow-2xl px-4 py-2.5 rounded-sm  inline-flex items-center justify-center shadow-sticker ${className}`}
     >
       <span className="text-secondary-19 text-xs  md:text-xl font-semibold">
         {text}
@@ -87,7 +87,8 @@ const HeroBanner = () => {
 
       <div className="place-items-center mt-10">
         {/* LOGO Desktop */}
-        <div className="relative hidden md:block">
+        <div className="relative hidden md:block ">
+          {/* gradient-landing */}
           <Image src={Logo} alt="Main Logo" width={600} height={550} />
 
           {stars.map((star) => (

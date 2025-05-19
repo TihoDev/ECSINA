@@ -52,15 +52,17 @@ const features = [
 
 const TemplateFeatures = () => {
   return (
-    <section className="mt-40 container">
-      <h3 className="text-xl md:text-4xl text-center text-black font-semibold md:font-bold ">
-        ویژگی های قالب های اکسینا
-      </h3>
+    <section className="mt-40 gradient-main-background py-24 rounded-2xl">
+      <div className="container">
+        <h3 className="text-xl md:text-4xl text-center text-black font-semibold md:font-bold ">
+          ویژگی های قالب های اکسینا
+        </h3>
 
-      <div className=" mt-24 grid grid-cols-2 md:grid-cols-3 gap-x-3 gap-y-6 md:gap-x-6 md:gap-y-12">
-        {features.map((feature) => (
-          <TemplateFeature feature={feature} key={feature.id} />
-        ))}
+        <div className=" mt-24 grid grid-cols-2 md:grid-cols-3 gap-x-3 gap-y-6 md:gap-x-6 md:gap-y-12">
+          {features.map((feature) => (
+            <TemplateFeature feature={feature} key={feature.id} />
+          ))}
+        </div>
       </div>
     </section>
   );
