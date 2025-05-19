@@ -6,12 +6,7 @@ import notFoundImage from "../../../public/assets/images/User.png";
 
 const Commnet = ({ commnet }) => {
   return (
-    <div
-      style={{
-        background: "var(--gradient-primary-3)",
-      }}
-      className="flex flex-col gap-6 rounded-3xl p-4 "
-    >
+    <div className="flex flex-col gap-3 md:gap-6 rounded-3xl p-4 cursor-pointer gradient-comment ">
       {/* info */}
       <div className="flex flex-col md:flex-row items-start gap-2">
         <Image
@@ -57,7 +52,7 @@ const Commnet = ({ commnet }) => {
 
         <span className="flex items-center gap-1">
           <Image src={RatingStart} alt=" " width={16} height={16} />
-          <p className="text-xs mt-1 md:text-base font-light md:font-normal text-black">
+          <p className="text-xs mt-1 md:text-base font-normal md:font-normal text-black">
             {commnet.rate}
           </p>
         </span>
