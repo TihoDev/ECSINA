@@ -1,5 +1,4 @@
 @import "tailwindcss";
-/* @plugin "daisyui"; */
 
 @font-face {
   font-family: "Yekan";
@@ -61,6 +60,8 @@ body {
   --color-primary-12: #000826;
   --color-primary-13: #000413;
   --color-primary-14: #000000;
+  --color-primary-15: #2e2f33;
+
   /* Secondary Colors */
   --color-secondary-1: #ffffff;
   --color-secondary-2: #fbfcfa;
@@ -90,16 +91,12 @@ body {
   --color-main-3: #e5ebff;
 
   /* Gradient */
+
   --gradient-landing: linear-gradient(
     0.53deg,
     rgba(246, 255, 194, 0.36) 7.05%,
     rgba(174, 194, 255, 0.32) 49.64%,
     rgba(2, 57, 255, 0.32) 99.51%
-  );
-  --gradient-cart: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.3) 0%,
-    rgba(255, 255, 255, 0.1) 100%
   );
 
   --gradient-cart-icon: linear-gradient(
@@ -108,18 +105,35 @@ body {
     #001971 49.55%,
     #0029bc 137.91%
   );
-  --gradient-primary-1: linear-gradient(
-    139.79deg,
-    rgba(2, 8, 31, 0.2) 0.21%,
-    rgba(102, 102, 102, 0.1) 106.61%
-  );
-  --gradient-primary-2: linear-gradient(
-    139.79deg,
-    #f2f5fb 0.21%,
-    #f7f9ee 106.61%
+
+  --gradient-main-background: linear-gradient(
+      53.92deg,
+      rgba(249, 252, 233, 0.8) 2.53%,
+      rgba(245, 247, 235, 0.8) 52.16%,
+      #f1f1ec 105.15%
+    ),
+    linear-gradient(359.22deg, rgba(251, 252, 250, 0) -7.38%, #fbfcfa 100.86%);
+
+  --gradient-invite-cart: linear-gradient(
+      96.69deg,
+      rgba(255, 255, 255, 0.3) -2.13%,
+      rgba(229, 235, 255, 0.9) 24.06%,
+      rgba(255, 255, 255, 0.1) 96.04%
+    ),
+    linear-gradient(
+      85.74deg,
+      rgba(255, 255, 255, 0.3) 0.73%,
+      rgba(248, 253, 226, 0.3) 77.66%
+    );
+
+  --gradient-comment: linear-gradient(
+    278.67deg,
+    #e5ebff -0.11%,
+    #dae2fc 56.32%,
+    #ced8f8 101.57%
   );
 
-  --gradient-primary-3: linear-gradient(
+  --gradient-secondary-background: linear-gradient(
       278.67deg,
       #e5ebff -0.11%,
       #dae2fc 56.32%,
@@ -127,7 +141,13 @@ body {
     ),
     linear-gradient(180deg, rgba(255, 255, 255, 0) -16.57%, #ffffff 84.63%);
 
+  --shadow-stroke2: linear-gradient(139.79deg, #f2f5fb 0.21%, #f7f9ee 106.61%);
+
   /* shadow */
+  --shadow-product-cart: 0px 1px 4px 0px #2e2f33;
+  --shadow-feature-cart: 0px 4px 3px 0px #dbddd0;
+  --shadow-invite-cart: 0px 1px 2px 0px #00000040;
+  --shadow-icon: 0px 2px 4px 0px #1e132840;
 
   /* font */
   --font-yekan: "yekan";
@@ -174,4 +194,44 @@ body {
 }
 
 @layer utilities {
+  /* gradient */
+  .gradient-landing {
+    background: var(--gradient-landing);
+  }
+  .gradient-cart-icon {
+    background: var(--gradient-cart-icon);
+  }
+  .gradient-main-background {
+    background: var(--gradient-main-background);
+  }
+  .gradient-invite-cart {
+    background: var(--gradient-invite-cart);
+  }
+  .gradient-comment {
+    background: var(--gradient-comment);
+  }
+  .gradient-secondary-background {
+    background: var(--gradient-secondary-background);
+  }
+  .gradient-stroke2 {
+    background: var(--shadow-stroke2);
+  }
+
+  /* shadow */
+  .shadow-product-cart {
+    box-shadow: var(--shadow-product-cart);
+  }
+  .shadow-feature-cart {
+    box-shadow: var(--shadow-feature-cart);
+  }
+  .shadow-invite-cart {
+    box-shadow: var(--shadow-invite-cart);
+  }
+  .shadow-icon {
+    box-shadow: var(--shadow-icon);
+  }
+  .shadow-sticker {
+    backdrop-filter: blur(15px);
+    box-shadow: 0px 1px 1px 0px #00000040;
+  }
 }
