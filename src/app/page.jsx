@@ -2,6 +2,7 @@ import AllComments from "@/components/home/AllComments";
 import Guidance from "@/components/home/Guidance";
 import HeroBanner from "@/components/home/HeroBanner";
 import OurServices from "@/components/home/OurServices";
+import PersonalDashboardInvite from "@/components/home/PersonalDashboardInvite";
 import TemplateFeatures from "@/components/home/TemplateFeatures";
 
 export const metadata = {
@@ -25,6 +26,7 @@ export default function Home() {
       <HeroBanner />
       <OurServices />
       <TemplateFeatures />
+      <PersonalDashboardInvite />
       <AllComments />
       <Guidance />
     </div>
