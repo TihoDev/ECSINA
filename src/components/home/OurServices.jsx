@@ -3,6 +3,7 @@ import Status2 from "../../../public/assets/icons/Status2.svg";
 import Status3 from "../../../public/assets/icons/Status3.svg";
 import Document from "../../../public/assets/icons/Document.svg";
 import Computer from "../../../public/assets/icons/Computer.svg";
+
 import Service from "../UI/Service";
 
 const allProducts = [
@@ -45,7 +46,7 @@ const allProducts = [
 
 const OurServices = () => {
   return (
-    <section className="mt-40 container">
+    <section className="-mt-20  container">
       <h5 className=" text-xl md:text-4xl text-black font-bold text-center">
         محصولات ما
       </h5>
