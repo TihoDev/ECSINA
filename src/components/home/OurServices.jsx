@@ -1,5 +1,3 @@
-import Product from "../UI/Service";
-
 import Status1 from "../../../public/assets/icons/Status1.svg";
 import Status2 from "../../../public/assets/icons/Status2.svg";
 import Status3 from "../../../public/assets/icons/Status3.svg";

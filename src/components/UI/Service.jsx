@@ -5,7 +5,7 @@ import Arrow from "../../../public/assets/icons/Arrow.svg";
 const Service = ({ product }) => {
   return (
     <>
-      <div className="hidden md:flex px-6 bg-secondary-2 py-4 flex-col items-start gap-5 border border-primary-7 rounded-4xl md:min-h-96 md:w-[220px] shadow-product-cart">
+      <div className="group hidden md:flex px-6 bg-secondary-2 py-4 flex-col items-start gap-5 border border-primary-7 rounded-4xl md:min-h-96 md:w-[220px] shadow-product-cart hover:shadow-hover hover:scale-101 transition-all duration-300">
         <div className="p-4 rounded-md  max-w-[64px] flex items-center justify-center gradient-cart-icon">
           <Image
             src={product.icon}
@@ -18,8 +18,14 @@ const Service = ({ product }) => {
           {product.description}
         </p>
 
-        <div className="rounded-2xl p-4 mr-auto cursor-pointer gradient-cart-icon">
-          <Image src={Arrow} width={13} height={13} alt="Arrow" />
+        <div className="rounded-2xl p-4 mr-auto cursor-pointer gradient-cart-icon ">
+          <Image
+            src={Arrow}
+            width={13}
+            height={13}
+            alt="Arrow"
+            className="group-hover:rotate-45 transition-all duration-300"
+          />
         </div>
       </div>
 
