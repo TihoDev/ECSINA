@@ -79,9 +79,9 @@ const HeroBanner = () => {
       </div>
 
       <div className=" relative flex justify-evenly mt-8 md:mt-20">
-        <Sticker text="قالب های آماده" className={"rotate-20 "} />
-        <Sticker text="الهام بگیر و اجرا کن" className={"rotate-10"} />
+        <Sticker text="قالب های آماده" className={"rotate-20"} />
         <Sticker icon={Growth} className={""} />
+        <Sticker text="الهام بگیر و اجرا کن" className={"rotate-10"} />
         <Sticker text="رایگان!" className={"-rotate-20"} />
       </div>
 
