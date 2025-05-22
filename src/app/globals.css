@@ -148,6 +148,7 @@ body {
   --shadow-feature-cart: 0px 4px 3px 0px #dbddd0;
   --shadow-invite-cart: 0px 1px 2px 0px #00000040;
   --shadow-icon: 0px 2px 4px 0px #1e132840;
+  --shadow-hover: 0px 2px 4px 0px #2e2f33;
 
   /* font */
   --font-yekan: "yekan";
@@ -229,6 +230,9 @@ body {
   }
   .shadow-icon {
     box-shadow: var(--shadow-icon);
+  }
+  .shadow-hover {
+    box-shadow: var(--shadow-hover);
   }
   .shadow-sticker {
     backdrop-filter: blur(15px);
