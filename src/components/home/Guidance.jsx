@@ -8,7 +8,7 @@ import ScrollToTopButton from "../UI/ScrollToTopButton";
 
 const Guidance = () => {
   return (
-    <div className="mt-44 rounded-3xl  gradient-secondary-background py-10 relative">
+    <div className="mt-16 md:mt-40 rounded-3xl  gradient-secondary-background py-5 md:py-10 relative">
       <div className=" container flex items-center justify-center flex-col gap-3 md:gap-8 ">
         <p className="text-secondary-20 text-base font-medium md:text-4xl mt-10">
           قالب مورد نظرت رو پیدا نکردی؟{" "}
@@ -28,7 +28,7 @@ const Guidance = () => {
       </div>
 
       {/* Wing */}
-      <div className="absolute flex items-center justify-center  p-1 md:p-2 bg-white rounded-full -top-1/4 right-1/16">
+      <div className="absolute flex items-center justify-center  p-1 md:p-2 bg-white rounded-full -top-1/6 md:-top-1/5  right-1/16">
         <Image
           src={Wing}
           alt=""
