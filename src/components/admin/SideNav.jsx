@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link";
-import Paragraph from "../ui/Paragraph";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 
