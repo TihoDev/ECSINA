@@ -92,54 +92,19 @@ body {
 
   /* Gradient */
 
-  --gradient-landing: linear-gradient(
-    0.53deg,
-    rgba(246, 255, 194, 0.36) 7.05%,
-    rgba(174, 194, 255, 0.32) 49.64%,
-    rgba(2, 57, 255, 0.32) 99.51%
-  );
+  --gradient-landing: linear-gradient(0.53deg, rgba(246, 255, 194, 0.36) 7.05%, rgba(174, 194, 255, 0.32) 49.64%, rgba(2, 57, 255, 0.32) 99.51%);
 
-  --gradient-cart-icon: linear-gradient(
-    139.85deg,
-    #000826 -15.13%,
-    #001971 49.55%,
-    #0029bc 137.91%
-  );
+  --gradient-cart-icon: linear-gradient(139.85deg, #000826 -15.13%, #001971 49.55%, #0029bc 137.91%);
 
-  --gradient-main-background: linear-gradient(
-      53.92deg,
-      rgba(249, 252, 233, 0.8) 2.53%,
-      rgba(245, 247, 235, 0.8) 52.16%,
-      #f1f1ec 105.15%
-    ),
+  --gradient-main-background: linear-gradient(53.92deg, rgba(249, 252, 233, 0.8) 2.53%, rgba(245, 247, 235, 0.8) 52.16%, #f1f1ec 105.15%),
     linear-gradient(359.22deg, rgba(251, 252, 250, 0) -7.38%, #fbfcfa 100.86%);
 
-  --gradient-invite-cart: linear-gradient(
-      96.69deg,
-      rgba(255, 255, 255, 0.3) -2.13%,
-      rgba(229, 235, 255, 0.9) 24.06%,
-      rgba(255, 255, 255, 0.1) 96.04%
-    ),
-    linear-gradient(
-      85.74deg,
-      rgba(255, 255, 255, 0.3) 0.73%,
-      rgba(248, 253, 226, 0.3) 77.66%
-    );
+  --gradient-invite-cart: linear-gradient(96.69deg, rgba(255, 255, 255, 0.3) -2.13%, rgba(229, 235, 255, 0.9) 24.06%, rgba(255, 255, 255, 0.1) 96.04%),
+    linear-gradient(85.74deg, rgba(255, 255, 255, 0.3) 0.73%, rgba(248, 253, 226, 0.3) 77.66%);
 
-  --gradient-comment: linear-gradient(
-    278.67deg,
-    #e5ebff -0.11%,
-    #dae2fc 56.32%,
-    #ced8f8 101.57%
-  );
+  --gradient-comment: linear-gradient(278.67deg, #e5ebff -0.11%, #dae2fc 56.32%, #ced8f8 101.57%);
 
-  --gradient-secondary-background: linear-gradient(
-      278.67deg,
-      #e5ebff -0.11%,
-      #dae2fc 56.32%,
-      #ced8f8 101.57%
-    ),
-    linear-gradient(180deg, rgba(255, 255, 255, 0) -16.57%, #ffffff 84.63%);
+  --gradient-secondary-background: linear-gradient(278.67deg, #e5ebff -0.11%, #dae2fc 56.32%, #ced8f8 101.57%), linear-gradient(180deg, rgba(255, 255, 255, 0) -16.57%, #ffffff 84.63%);
 
   --shadow-stroke2: linear-gradient(139.79deg, #f2f5fb 0.21%, #f7f9ee 106.61%);
 
@@ -237,5 +202,9 @@ body {
   .shadow-sticker {
     backdrop-filter: blur(15px);
     box-shadow: 0px 1px 1px 0px #00000040;
+  }
+
+  .blue_shadow {
+    box-shadow: 0px 4px 12px 0px rgba(0, 41, 188, 0.6);
   }
 }

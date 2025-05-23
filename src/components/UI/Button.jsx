@@ -1,5 +1,6 @@
 import Image from "next/image";
 
+
 const Button = ({
   children,
   variant = "primary",
@@ -19,21 +20,12 @@ const Button = ({
     outline: "border border-2 border-primary-7 bg-transparent",
   };
 
-  const disabledStyles =
-    "bg-secondary-16 cursor-not-allowed pointer-events-none";
+  const disabledStyles = "bg-secondary-16 cursor-not-allowed pointer-events-none";
 
-  const btnClass = `${baseStyles} ${variants[variant]} ${
-    disabled ? disabledStyles : ""
-  } ${className}`.trim();
+  const btnClass = `${baseStyles} ${variants[variant]} ${disabled ? disabledStyles : ""} ${className}`.trim();
 
   return (
-    <button
-      type={type}
-      className={btnClass}
-      disabled={disabled}
-      onClick={onClick}
-      {...props}
-    >
+    <button type={type} className={btnClass} disabled={disabled} onClick={onClick} {...props}>
       {icon && (
         <Image
           src={icon}

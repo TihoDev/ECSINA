@@ -34,7 +34,7 @@ const categories = [
 
 const Footer = () => {
   return (
-    <div className="mt-20 border-t border-secondary-17">
+    <footer className="bottom-0 left-0 right-0  border-t border-secondary-17">
       {/* Top */}
       <div className="container mt-2">
         {/* Logo */}
@@ -43,9 +43,7 @@ const Footer = () => {
           <span className="w-[1px]  h-16 bg-secondary-13"></span>
           <div className="text-black flex flex-col items-start gap-1">
             <span className="text-xl font-bold">اکسینا</span>
-            <span className="text-xs font-[100]">
-              همراهـــــــــــــیِ نوین
-            </span>
+            <span className="text-xs font-[100]">همراهـــــــــــــیِ نوین</span>
             <span className="text-sm font-light">اسناد تجاری</span>
           </div>
         </Link>
@@ -54,9 +52,7 @@ const Footer = () => {
         <div className="flex items-start gap-10 md:gap-20 mb-8 md:mb-16">
           <div className="max-w-md flex flex-col justify-between ">
             <p className="text-xs leading-6 font-medium text-secondary-18">
-              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
-              استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله
-              در ستون و سطرآنچنان که لازم است
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است
             </p>
             {/* Icons */}
             <div className="flex items-center gap-2 mt-5 md:mt-8">
@@ -74,32 +70,20 @@ const Footer = () => {
 
           <div className="flex flex-col md:flex-row gap-2 items-start md:gap-10 -mt-22 md:mt-0">
             <div>
-              <p className=" text-base md:text-xl font-medium text-secondary-18 mb-2 text-nowrap">
-                دسترسی سریع
-              </p>
+              <p className=" text-base md:text-xl font-medium text-secondary-18 mb-2 text-nowrap">دسترسی سریع</p>
               <ul className="flex flex-col items-start gap-2">
                 {navigationLinks.map((link) => (
-                  <Link
-                    key={link.id}
-                    href={link.href}
-                    className="text-xs md:text-base text-secondary-18 font-medium transition-all duration-300 hover:text-primary-6"
-                  >
+                  <Link key={link.id} href={link.href} className="text-xs md:text-base text-secondary-18 font-medium transition-all duration-300 hover:text-primary-6">
                     {link.title}
                   </Link>
                 ))}
               </ul>
             </div>
             <div>
-              <p className=" text-base md:text-xl font-medium text-secondary-18 mb-2 text-nowrap">
-                دسته بندی محصولات
-              </p>
+              <p className=" text-base md:text-xl font-medium text-secondary-18 mb-2 text-nowrap">دسته بندی محصولات</p>
               <ul className="flex flex-col items-start gap-2">
                 {categories.map((link) => (
-                  <Link
-                    key={link.id}
-                    href={link.href}
-                    className="text-xs md:text-base text-secondary-18 font-medium transition-all duration-300 hover:text-primary-6"
-                  >
+                  <Link key={link.id} href={link.href} className="text-xs md:text-base text-secondary-18 font-medium transition-all duration-300 hover:text-primary-6">
                     {link.title}
                   </Link>
                 ))}
@@ -111,11 +95,9 @@ const Footer = () => {
 
       {/* Boottm */}
       <div className="bg-primary-7 rounded-t-sm md:rounded-t-2xl w-full flex items-center justify-center py-3 md:py-5">
-        <p className="font-medium text-xs md:text-base text-white">
-          تمامی حقوق مادی و معنوی برای شرکت اکسینا محفوظ است.
-        </p>
+        <p className="font-medium text-xs md:text-base text-white">تمامی حقوق مادی و معنوی برای شرکت اکسینا محفوظ است.</p>
       </div>
-    </div>
+    </footer>
   );
 };
 
