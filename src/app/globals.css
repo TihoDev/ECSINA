@@ -34,13 +34,13 @@ body {
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   scroll-behavior: smooth;
+  margin: 0;
 }
 
 #__next {
+  display: flex;
+  flex-direction: column;
   min-height: 100%;
-}
-
-body {
 }
 
 @theme {
@@ -181,6 +181,9 @@ body {
   }
   .gradient-stroke2 {
     background: var(--shadow-stroke2);
+  }
+  .gradient-landing2 {
+    background: linear-gradient(to bottom, rgba(206, 216, 248, 1) 0%, rgba(206, 216, 248, 1) 20%, rgba(0, 0, 0, 0) 100%);
   }
 
   /* shadow */

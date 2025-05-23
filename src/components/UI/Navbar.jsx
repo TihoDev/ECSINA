@@ -16,7 +16,7 @@ const navigationLinks = [
 
 const Navbar = () => {
   return (
-    <header className="container mt-4 md:mt-10">
+    <header id="header" className="container mt-4 md:mt-10">
       {/* Desktop */}
       <nav className="hidden md:flex justify-between items-center">
         <div className=" flex items-center gap-3 xl:gap-8">

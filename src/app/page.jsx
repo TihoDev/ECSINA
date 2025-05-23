@@ -21,17 +21,13 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <html lang="fa" dir="rtl">
-      <body>
-        <MainLayout>
-          <HeroBanner />
-          <OurServices />
-          <TemplateFeatures />
-          <PersonalDashboardInvite />
-          <AllComments />
-          <Guidance />
-        </MainLayout>
-      </body>
-    </html>
+    <MainLayout>
+      <HeroBanner />
+      <OurServices />
+      <TemplateFeatures />
+      <PersonalDashboardInvite />
+      <AllComments />
+      <Guidance />
+    </MainLayout>
   );
 }
