@@ -6,7 +6,7 @@ import notFoundImage from "../../../public/assets/images/User.png";
 
 const Commnet = ({ commnet }) => {
   return (
-    <div className="flex flex-col gap-3 md:gap-6 rounded-3xl p-4 cursor-pointer gradient-comment ">
+    <div className="flex flex-col gap-3 md:gap-6 rounded-3xl p-4 cursor-pointer gradient-comment  hover:scale-102 transition-all duration-400">
       {/* info */}
       <div className="flex flex-col md:flex-row items-start gap-2">
         <Image

@@ -5,6 +5,7 @@ import Arrow from "../../../public/assets/icons/Arrow.svg";
 import Logo from "../../../public/assets/icons/MainLogo.svg";
 import Star from "../../../public/assets/icons/Star.svg";
 import Growth from "../../../public/assets/icons/growth.svg";
+import Gradient from "../../../public/assets/icons/Gradient.svg";
 
 const stars = [
   {
@@ -79,17 +80,23 @@ const HeroBanner = () => {
       </div>
 
       <div className=" relative flex justify-evenly mt-8 md:mt-20">
-        <Sticker text="قالب های آماده" className={"rotate-20 "} />
-        <Sticker text="الهام بگیر و اجرا کن" className={"rotate-10"} />
+        <Sticker text="قالب های آماده" className={"rotate-20"} />
         <Sticker icon={Growth} className={""} />
+        <Sticker text="الهام بگیر و اجرا کن" className={"rotate-10"} />
         <Sticker text="رایگان!" className={"-rotate-20"} />
       </div>
 
-      <div className="place-items-center mt-10">
+      <div className=" relative place-items-center mt-10">
         {/* LOGO Desktop */}
         <div className="relative hidden md:block ">
           {/* gradient-landing */}
-          <Image src={Logo} alt="Main Logo" width={600} height={550} />
+          <Image
+            src={Logo}
+            alt="Main Logo"
+            width={600}
+            height={550}
+            className="z-20"
+          />
 
           {stars.map((star) => (
             <Image
@@ -117,6 +124,16 @@ const HeroBanner = () => {
               className={star.className}
             />
           ))}
+        </div>
+        <div>
+          <div className="w-40 h-40 md:w-64 md:h-64 -z-10">
+            <Image
+              src={Gradient}
+              alt=""
+              fill
+              className="absolute -top-1/6 left-1/4"
+            />
+          </div>
         </div>
       </div>
     </section>
