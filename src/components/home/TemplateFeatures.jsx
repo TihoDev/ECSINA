@@ -41,11 +41,11 @@ const features = [
 
 const TemplateFeatures = () => {
   return (
-    <section className="mt-40 gradient-main-background py-24 rounded-2xl">
+    <section className=" mt-16 md:mt-40 gradient-main-background py-8  md:py-16">
       <div className="container">
         <h3 className="text-xl md:text-4xl text-center text-black font-semibold md:font-bold ">ویژگی های قالب های اکسینا</h3>
 
-        <div className=" mt-24 grid grid-cols-2 md:grid-cols-3 gap-x-3 gap-y-6 md:gap-x-6 md:gap-y-12">
+        <div className=" mt-12 md:mt-24 grid grid-cols-2 md:grid-cols-3 gap-x-3 gap-y-6 md:gap-x-6 md:gap-y-12">
           {features.map((feature) => (
             <TemplateFeature feature={feature} key={feature.id} />
           ))}

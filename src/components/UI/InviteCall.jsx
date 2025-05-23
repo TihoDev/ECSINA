@@ -4,7 +4,7 @@ import NotFound from "../../../public/assets/images/NotFound.png";
 const InviteCall = ({ card, index }) => {
   return (
     <div
-      className={`flex flex-col bg-red-200 gap-0.5 md:gap-3 rounded-2xl pb-2 pt-4 px-2 md:pt-10 md:pb-4 md:px-6 gradient-invite-cart shadow-invite-cart ${
+      className={`group flex flex-col bg-red-200 gap-0.5 md:gap-3 rounded-2xl pb-2 pt-4 px-2 md:pt-10 md:pb-4 md:px-6 gradient-invite-cart hover:scale-101 transition-all duration-400 shadow-invite-cart ${
         index >= 1 ? "md:min-h-[360px]" : ""
       }`}
     >
@@ -13,7 +13,13 @@ const InviteCall = ({ card, index }) => {
         <p className="text-primary-15 font-semibold text-base md:text-xl">
           {card.title}
         </p>
-        <Image src={Arrow} alt="" width={36} height={36} />
+        <Image
+          src={Arrow}
+          alt=""
+          width={36}
+          height={36}
+          className="group-hover:rotate-45 group-hover:mb-2 group-hover:ml-2  transition-all duration-400"
+        />
       </div>
 
       {/* Body */}

@@ -57,7 +57,11 @@ const Footer = () => {
             {/* Icons */}
             <div className="flex items-center gap-2 mt-5 md:mt-8">
               {icons.map((icon) => (
-                <Link key={icon.id} href={icon.href} className="flex items-center justify-center  p-2 border-1 border-primary-7 rounded-sm">
+                <Link
+                  key={icon.id}
+                  href={icon.href}
+                  className="flex items-center justify-center  p-2 border-1 border-primary-7  rounded-sm hover:bg-primary-1  transition-all duration-300"
+                >
                   <Image src={icon.name} alt="" width={26} height={26} />
                 </Link>
               ))}

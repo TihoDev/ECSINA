@@ -147,13 +147,13 @@ const AllComments = () => {
           <>
             <button
               onClick={() => slider.current.prev()}
-              className="absolute -left-2 md:-left-5 top-2/5 -translate-y-1/2 border border-primary-7 rounded-xl px-2 py-1 cursor-pointer rotate-180"
+              className="absolute -left-2 md:-left-5 top-2/5 -translate-y-1/2 border border-primary-7 rounded-md px-2 py-1 cursor-pointer rotate-180"
             >
               <Image src={NextArrow} alt="" width={10} height={10} />
             </button>
             <button
               onClick={() => slider.current.next()}
-              className="absolute -right22 md:-right-5 top-2/5 -translate-y-1/2 border border-primary-7 rounded-xl px-2 py-1 cursor-pointer"
+              className="absolute -right22 md:-right-5 top-2/5 -translate-y-1/2 border border-primary-7 rounded-md px-2 py-1 cursor-pointer"
             >
               <Image src={NextArrow} alt="" width={10} height={10} />
             </button>
