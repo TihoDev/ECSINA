@@ -2,9 +2,6 @@ import Button from "../UI/Button";
 
 import Image from "next/image";
 
-
- 
-
 const stars = [
   {
     id: 1,
@@ -48,13 +45,13 @@ const stars = [
   },
 ];
 
-const Sticker = ({ text = "", className = "", icon = "" }) => {
+const Sticker = ({ children, className = "" }) => {
   return (
-    <div className={`shadow-2xl px-4 py-2.5 rounded-sm  inline-flex items-center justify-center shadow-sticker ${className}`}>
-      <span className="text-secondary-19 text-xs  md:text-xl font-semibold">
-        {text}
-
-        {icon && <Image alt="" src={icon} width={30} height={30} />}
+    <div
+      className={`shadow-2xl px-4 py-2.5 rounded-[8px] items-center justify-center shadow-sticker  ${className} `}
+    >
+      <span className="text-secondary-19 text-[10px]  md:text-base font-semibold">
+        {children}
       </span>
     </div>
   );
@@ -62,45 +59,80 @@ const Sticker = ({ text = "", className = "", icon = "" }) => {
 
 const HeroBanner = () => {
   return (
-    <section className="container">
-      <div className="flex flex-col items-center gap-3 md:gap-6">
-        <h2 className="text-lg  md:text-5xl text-black font-semibold text-center">با اکسینا، اسناد تجاری را مثل حرفه‌ای‌ها بساز!</h2>
-        <h6 className="text-base md:text-3xl font-normal text-black  md:max-w-[60%] text-center">قالب‌های آماده، راهنمای کامل، همه‌چی اینجاست تا کارت سریع و بی‌دردسر پیش بره!</h6>
+    <section className="container ">
+      <div className="flex flex-col items-center gap-3 md:gap-6 z-100">
+        <h2 className="text-lg  md:text-5xl text-black font-semibold text-center">
+          با اکسینا، اسناد تجاری را مثل حرفه‌ای‌ها بساز!
+        </h2>
+        <h6 className="text-base md:text-3xl font-normal text-black  md:max-w-[60%] text-center">
+          قالب‌های آماده، راهنمای کامل، همه‌چی اینجاست تا کارت سریع و بی‌دردسر
+          پیش بره!
+        </h6>
 
-        <Button icon={assets / icons / Arrow.svg}>رایگان دانلود کن</Button>
+        <Button icon={"assets/icons/Arrow.svg"}>رایگان دانلود کن</Button>
       </div>
 
-      <div className=" relative flex justify-evenly mt-8 md:mt-20">
-        <Sticker text="قالب های آماده" className={"rotate-20"} />
-        <Sticker icon={"assets/icons/growth.svg"} className={""} />
-        <Sticker text="الهام بگیر و اجرا کن" className={"rotate-10"} />
-        <Sticker text="رایگان!" className={"-rotate-20"} />
+      <div className=" relative flex justify-around  mt-8 md:mt-20 z-10">
+        <Sticker className="rotate-15">قالب های آماده</Sticker>
+        <Sticker className="rotate-6 ">رایگان!</Sticker>
+        <Sticker>
+          <Image src={"assets/icons/growth.svg"} alt={""} fill />
+        </Sticker>
+        <Sticker className="-rotate-15">الهام بگیر و اجرا کن</Sticker>
       </div>
 
-      <div className=" relative place-items-center mt-10">
+      <div className=" relative place-items-center mt-10 z-10">
         {/* LOGO Desktop */}
         <div className="relative hidden md:block ">
           {/* gradient-landing */}
-          <Image src={"assets/icons/MainLogo.svg"} alt="Main Logo" width={600} height={550} className="z-20" />
+          <Image
+            src={"assets/icons/MainLogo.svg"}
+            alt="Main Logo"
+            width={600}
+            height={550}
+            className="z-20"
+          />
 
           {stars.map((star) => (
-            <Image key={star.id} src={star.icon} alt={star.alt} width={star.desktopSize} height={star.desktopSize} className={star.className} />
+            <Image
+              key={star.id}
+              src={star.icon}
+              alt={star.alt}
+              width={star.desktopSize}
+              height={star.desktopSize}
+              className={star.className}
+            />
           ))}
         </div>
         {/* LOGO Mobile */}
 
         <div className="relative block md:hidden">
-          <Image src={Logo} alt="Main Logo" width={250} height={200} />
+          <Image
+            src={"assets/icons/MainLogo.svg"}
+            alt="Main Logo"
+            width={250}
+            height={200}
+          />
 
           {stars.map((star) => (
-            <Image key={star.id} src={star.icon} alt={star.alt} width={star.moblieSize} height={star.moblieSize} className={star.className} />
+            <Image
+              key={star.id}
+              src={star.icon}
+              alt={star.alt}
+              width={star.moblieSize}
+              height={star.moblieSize}
+              className={star.className}
+            />
           ))}
         </div>
-        <div>
-          <div className="w-40 h-40 md:w-64 md:h-64 -z-10">
-            <Image src={"assets/icons/Gradient.svg"} alt="" fill className="absolute -top-1/6 left-1/4" />
-          </div>
-        </div>
+      </div>
+      <div className="w-40 h-40 md:w-64 md:h-64 ">
+        <Image
+          src={"assets/icons/Gradient.svg"}
+          alt=""
+          fill
+          className="absolute -top-1/6 left-1/4 -z-10"
+        />
       </div>
     </section>
   );

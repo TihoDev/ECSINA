@@ -6,15 +6,22 @@ const Guidance = () => {
   return (
     <div className="mt-12 md:mt-40  py-5 md:py-12 relative gradient-landing2">
       <div className=" container flex items-center justify-center flex-col gap-3 md:gap-8 ">
-        <p className="text-secondary-20 text-base font-medium md:text-4xl mt-10">قالب مورد نظرت رو پیدا نکردی؟ </p>
+        <p className="text-secondary-20 text-base font-medium md:text-4xl mt-10">
+          قالب مورد نظرت رو پیدا نکردی؟{" "}
+        </p>
         <p className=" text-xs md:text-2xl font-normal text-black text-center max-w-5xl  mb-4">
-          اگر هیچ‌کدوم از قالب‌ها پاسخگوی نیازت نبود، می‌تونی از طریق راه‌های ارتباطی با ما در تماس باشی — یا با ثبت‌نام در اکسینا، یک داشبورد شخصی داشته باشی که از اونجا به‌راحتی با پشتیبانی ما
-          ارتباط بگیری.
+          اگر هیچ‌کدوم از قالب‌ها پاسخگوی نیازت نبود، می‌تونی از طریق راه‌های
+          ارتباطی با ما در تماس باشی یا با ثبت‌نام در اکسینا، یک داشبورد شخصی
+          داشته باشی که از اونجا به‌راحتی با پشتیبانی ما ارتباط بگیری.
         </p>
         {/* Buttons */}
         <div className="flex items-center gap-6 mb-8">
           <Button icon={"/assets/icons/Arrow.svg"}>ارتباط با ما</Button>
-          <Button icon={"/assets/icons/Arrow.svg"} className="text-primary-7" variant="outline">
+          <Button
+            icon={"/assets/icons/Arrow.svg"}
+            className="text-primary-7"
+            variant="outline"
+          >
             ثبت نام
           </Button>
         </div>
@@ -30,7 +37,7 @@ const Guidance = () => {
         <Image src={"assets/icons/Arrow2.svg"} fill alt="" />
       </div>
 
-      <div className="absolute -bottom-20 left-1/2 -translate-x-1/2">
+      <div className="absolute -bottom-10 md:-bottom-15 left-1/2 -translate-x-1/2">
         <ScrollToTopButton />
       </div>
     </div>
