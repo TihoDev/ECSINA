@@ -5,7 +5,7 @@ import Image from "next/image";
 const stars = [
   {
     id: 1,
-    icon: "assets/icons/Star.svg",
+    icon: "/assets/icons/Star.svg",
     alt: "Star",
     moblieSize: 20,
     desktopSize: 30,
@@ -13,7 +13,7 @@ const stars = [
   },
   {
     id: 2,
-    icon: "assets/icons/Star.svg",
+    icon: "/assets/icons/Star.svg",
     alt: "Star",
     moblieSize: 20,
     desktopSize: 30,
@@ -21,7 +21,7 @@ const stars = [
   },
   {
     id: 3,
-    icon: "assets/icons/Star.svg",
+    icon: "/assets/icons/Star.svg",
     alt: "Star",
     moblieSize: 20,
     desktopSize: 30,
@@ -29,7 +29,7 @@ const stars = [
   },
   {
     id: 4,
-    icon: "assets/icons/Star.svg",
+    icon: "/assets/icons/Star.svg",
     alt: "Star",
     moblieSize: 20,
     desktopSize: 30,
@@ -37,7 +37,7 @@ const stars = [
   },
   {
     id: 5,
-    icon: "assets/icons/Star.svg",
+    icon: "/assets/icons/Star.svg",
     alt: "Star",
     moblieSize: 20,
     desktopSize: 30,
@@ -68,30 +68,21 @@ const HeroBanner = () => {
           قالب‌های آماده، راهنمای کامل، همه‌چی اینجاست تا کارت سریع و بی‌دردسر
           پیش بره!
         </h6>
-
-        <Button icon={"assets/icons/Arrow.svg"}>رایگان دانلود کن</Button>
+        <Button icon={"/assets/icons/Arrow.svg"}>رایگان دانلود کن</Button>
       </div>
 
-      <div className=" relative flex justify-around  mt-8 md:mt-20 z-10">
-        <Sticker className="rotate-15">قالب های آماده</Sticker>
-        <Sticker className="rotate-6 ">رایگان!</Sticker>
-        <Sticker>
-          <Image src={"assets/icons/growth.svg"} alt={""} fill />
-        </Sticker>
-        <Sticker className="-rotate-15">الهام بگیر و اجرا کن</Sticker>
+      <div className=" relative flex justify-evenly mt-8 md:mt-20">
+        <Sticker text="قالب های آماده" className={"rotate-20"} />
+        <Sticker icon={"/assets/icons/growth.svg"} className={""} />
+        <Sticker text="الهام بگیر و اجرا کن" className={"rotate-10"} />
+        <Sticker text="رایگان!" className={"-rotate-20"} />
       </div>
 
       <div className=" relative place-items-center mt-10 z-10">
         {/* LOGO Desktop */}
         <div className="relative hidden md:block ">
           {/* gradient-landing */}
-          <Image
-            src={"assets/icons/MainLogo.svg"}
-            alt="Main Logo"
-            width={600}
-            height={550}
-            className="z-20"
-          />
+          <Image src={"/assets/icons/MainLogo.svg"} alt="Main Logo" width={600} height={550} className="z-20" />
 
           {stars.map((star) => (
             <Image
@@ -107,12 +98,9 @@ const HeroBanner = () => {
         {/* LOGO Mobile */}
 
         <div className="relative block md:hidden">
-          <Image
-            src={"assets/icons/MainLogo.svg"}
-            alt="Main Logo"
-            width={250}
-            height={200}
-          />
+
+          <Image src={"/assets/icons/Logo.svg"} alt="Main Logo" width={250} height={200} />
+ 
 
           {stars.map((star) => (
             <Image
@@ -125,14 +113,11 @@ const HeroBanner = () => {
             />
           ))}
         </div>
-      </div>
-      <div className="w-40 h-40 md:w-64 md:h-64 ">
-        <Image
-          src={"assets/icons/Gradient.svg"}
-          alt=""
-          fill
-          className="absolute -top-1/6 left-1/4 -z-10"
-        />
+        <div>
+          <div className="w-40 h-40 md:w-64 md:h-64 -z-10">
+            <Image src={"/assets/icons/Gradient.svg"} alt="" fill className="absolute -top-1/6 left-1/4" />
+          </div>
+        </div>
       </div>
     </section>
   );
