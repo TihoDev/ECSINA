@@ -2,13 +2,10 @@ import Button from "../UI/Button";
 
 import Image from "next/image";
 
-
- 
-
 const stars = [
   {
     id: 1,
-    icon: "assets/icons/Star.svg",
+    icon: "/assets/icons/Star.svg",
     alt: "Star",
     moblieSize: 20,
     desktopSize: 30,
@@ -16,7 +13,7 @@ const stars = [
   },
   {
     id: 2,
-    icon: "assets/icons/Star.svg",
+    icon: "/assets/icons/Star.svg",
     alt: "Star",
     moblieSize: 20,
     desktopSize: 30,
@@ -24,7 +21,7 @@ const stars = [
   },
   {
     id: 3,
-    icon: "assets/icons/Star.svg",
+    icon: "/assets/icons/Star.svg",
     alt: "Star",
     moblieSize: 20,
     desktopSize: 30,
@@ -32,7 +29,7 @@ const stars = [
   },
   {
     id: 4,
-    icon: "assets/icons/Star.svg",
+    icon: "/assets/icons/Star.svg",
     alt: "Star",
     moblieSize: 20,
     desktopSize: 30,
@@ -40,7 +37,7 @@ const stars = [
   },
   {
     id: 5,
-    icon: "assets/icons/Star.svg",
+    icon: "/assets/icons/Star.svg",
     alt: "Star",
     moblieSize: 20,
     desktopSize: 30,
@@ -67,12 +64,12 @@ const HeroBanner = () => {
         <h2 className="text-lg  md:text-5xl text-black font-semibold text-center">با اکسینا، اسناد تجاری را مثل حرفه‌ای‌ها بساز!</h2>
         <h6 className="text-base md:text-3xl font-normal text-black  md:max-w-[60%] text-center">قالب‌های آماده، راهنمای کامل، همه‌چی اینجاست تا کارت سریع و بی‌دردسر پیش بره!</h6>
 
-        <Button icon={assets / icons / Arrow.svg}>رایگان دانلود کن</Button>
+        <Button icon={"/assets/icons/Arrow.svg"}>رایگان دانلود کن</Button>
       </div>
 
       <div className=" relative flex justify-evenly mt-8 md:mt-20">
         <Sticker text="قالب های آماده" className={"rotate-20"} />
-        <Sticker icon={"assets/icons/growth.svg"} className={""} />
+        <Sticker icon={"/assets/icons/growth.svg"} className={""} />
         <Sticker text="الهام بگیر و اجرا کن" className={"rotate-10"} />
         <Sticker text="رایگان!" className={"-rotate-20"} />
       </div>
@@ -81,7 +78,7 @@ const HeroBanner = () => {
         {/* LOGO Desktop */}
         <div className="relative hidden md:block ">
           {/* gradient-landing */}
-          <Image src={"assets/icons/MainLogo.svg"} alt="Main Logo" width={600} height={550} className="z-20" />
+          <Image src={"/assets/icons/MainLogo.svg"} alt="Main Logo" width={600} height={550} className="z-20" />
 
           {stars.map((star) => (
             <Image key={star.id} src={star.icon} alt={star.alt} width={star.desktopSize} height={star.desktopSize} className={star.className} />
@@ -90,7 +87,7 @@ const HeroBanner = () => {
         {/* LOGO Mobile */}
 
         <div className="relative block md:hidden">
-          <Image src={Logo} alt="Main Logo" width={250} height={200} />
+          <Image src={"/assets/icons/Logo.svg"} alt="Main Logo" width={250} height={200} />
 
           {stars.map((star) => (
             <Image key={star.id} src={star.icon} alt={star.alt} width={star.moblieSize} height={star.moblieSize} className={star.className} />
@@ -98,7 +95,7 @@ const HeroBanner = () => {
         </div>
         <div>
           <div className="w-40 h-40 md:w-64 md:h-64 -z-10">
-            <Image src={"assets/icons/Gradient.svg"} alt="" fill className="absolute -top-1/6 left-1/4" />
+            <Image src={"/assets/icons/Gradient.svg"} alt="" fill className="absolute -top-1/6 left-1/4" />
           </div>
         </div>
       </div>

@@ -4,11 +4,11 @@ import Image from "next/image";
 
 
 const icons = [
-  { id: 1, name: "assets/icons/Youtube.svg", href: "/" },
-  { id: 2, name: "assets/icons/Telegram.svg", href: "/" },
-  { id: 3, name: "assets/icons/Whatsapp.svg", href: "/" },
-  { id: 4, name: "assets/icons/Instagram.svg", href: "/" },
-  { id: 5, name: "assets/icons/Linkedln.svg", href: "/" },
+  { id: 1, name: "/assets/icons/Youtube.svg", href: "/" },
+  { id: 2, name: "/assets/icons/Telegram.svg", href: "/" },
+  { id: 3, name: "/assets/icons/Whatsapp.svg", href: "/" },
+  { id: 4, name: "/assets/icons/Instagram.svg", href: "/" },
+  { id: 5, name: "/assets/icons/Linkedln.svg", href: "/" },
 ];
 
 const navigationLinks = [
@@ -28,12 +28,12 @@ const categories = [
 
 const Footer = () => {
   return (
-    <footer className="mt-auto  ">
+    <footer className="mt-auto">
       {/* Top */}
       <div className="container mt-2">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 mb-4 md:mb-10 ">
-          <Image src={"assets/icons/Logo.svg"} alt="Logo" />
+          <Image src={"/assets/icons/Logo.svg"} alt="Logo" width={50} height={50} />
           <span className="w-[1px]  h-16 bg-secondary-13"></span>
           <div className="text-black flex flex-col items-start gap-1">
             <span className="text-xl font-bold">اکسینا</span>

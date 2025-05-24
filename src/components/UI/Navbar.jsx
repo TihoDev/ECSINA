@@ -22,7 +22,7 @@ const Navbar = () => {
         <div className=" flex items-center gap-3 xl:gap-8">
           {/* Logo and text */}
           <Link href="/" className="flex items-center gap-2 ">
-            <Image src={"assets/icons/Logo.svg"} alt="Logo" />
+            <Image src={"/assets/icons/Logo.svg"} width={50} height={50} alt="Logo" />
             <span className="w-[1px]  h-16 bg-secondary-13"></span>
             <div className="text-black flex flex-col items-start gap-1">
               <span className="text-xl font-bold">اکسینا</span>
@@ -42,7 +42,7 @@ const Navbar = () => {
           </ul>
         </div>
         <Link href="/auth">
-          <Button icon={"assets/icons/Arrow.svg"}>ثبت نام</Button>
+          <Button icon={"/assets/icons/Arrow.svg"}>ثبت نام</Button>
         </Link>
       </nav>
       {/* Mobile */}

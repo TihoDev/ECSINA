@@ -21,7 +21,7 @@ const ContactPage = () => {
   return (
     <MainLayout>
       <section className="flex flex-col  items-center my-5   min-w-screen">
-        <div className="py-12 pb-10 px-12 w-4/5 grid grid-cols-2 gap-10 blue_shadow rounded-lg">
+        <div className="py-12 pb-10 px-6 md:px-12 w-4/5 grid grid-cols-1 md:grid-cols-2 gap-10 blue_shadow rounded-lg">
           <div className="col-span-1">
             <h1 className="text-black md:text-right  text-center text-3xl font-bold pt-8">تماس با اکسینا</h1>
             <Typography className={"font-light text-xl my-8  text-center md:text-right"}>
