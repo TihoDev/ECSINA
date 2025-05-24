@@ -1,20 +1,14 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import Logo from "../../../public/assets/icons/Logo.svg";
 
-import Youtube from "../../../public/assets/icons/Youtube.svg";
-import Telegram from "../../../public/assets/icons/Telegram.svg";
-import Whatsapp from "../../../public/assets/icons/Whatsapp.svg";
-import Instagram from "../../../public/assets/icons/Instagram.svg";
-import Linkedln from "../../../public/assets/icons/Linkedln.svg";
 
 const icons = [
-  { id: 1, name: Youtube, href: "/" },
-  { id: 2, name: Telegram, href: "/" },
-  { id: 3, name: Whatsapp, href: "/" },
-  { id: 4, name: Instagram, href: "/" },
-  { id: 5, name: Linkedln, href: "/" },
+  { id: 1, name: "assets/icons/Youtube.svg", href: "/" },
+  { id: 2, name: "assets/icons/Telegram.svg", href: "/" },
+  { id: 3, name: "assets/icons/Whatsapp.svg", href: "/" },
+  { id: 4, name: "assets/icons/Instagram.svg", href: "/" },
+  { id: 5, name: "assets/icons/Linkedln.svg", href: "/" },
 ];
 
 const navigationLinks = [
@@ -34,12 +28,12 @@ const categories = [
 
 const Footer = () => {
   return (
-    <footer className="bottom-0 left-0 right-0  border-t border-secondary-17">
+    <footer className="mt-auto  ">
       {/* Top */}
       <div className="container mt-2">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 mb-4 md:mb-10 ">
-          <Image src={Logo} alt="Logo" />
+          <Image src={"assets/icons/Logo.svg"} alt="Logo" />
           <span className="w-[1px]  h-16 bg-secondary-13"></span>
           <div className="text-black flex flex-col items-start gap-1">
             <span className="text-xl font-bold">اکسینا</span>
@@ -57,11 +51,7 @@ const Footer = () => {
             {/* Icons */}
             <div className="flex items-center gap-2 mt-5 md:mt-8">
               {icons.map((icon) => (
-                <Link
-                  key={icon.id}
-                  href={icon.href}
-                  className="flex items-center justify-center  p-2 border-1 border-primary-7  rounded-sm hover:bg-primary-1  transition-all duration-300"
-                >
+                <Link key={icon.id} href={icon.href} className="flex items-center justify-center  p-2 border-1 border-primary-7  rounded-sm hover:bg-primary-1  transition-all duration-300">
                   <Image src={icon.name} alt="" width={26} height={26} />
                 </Link>
               ))}

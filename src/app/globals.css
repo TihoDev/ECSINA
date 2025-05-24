@@ -34,13 +34,13 @@ body {
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   scroll-behavior: smooth;
+  margin: 0;
 }
 
 #__next {
+  display: flex;
+  flex-direction: column;
   min-height: 100%;
-}
-
-body {
 }
 
 @theme {
@@ -61,6 +61,7 @@ body {
   --color-primary-13: #000413;
   --color-primary-14: #000000;
   --color-primary-15: #2e2f33;
+  --color-input: rgba(129, 184, 206, 0.28);
 
   /* Secondary Colors */
   --color-secondary-1: #ffffff;
@@ -182,7 +183,13 @@ body {
   .gradient-stroke2 {
     background: var(--shadow-stroke2);
   }
-
+  .gradient-landing2 {
+    background: linear-gradient(to bottom, rgba(206, 216, 248, 1) 0%, rgba(206, 216, 248, 1) 20%, rgba(0, 0, 0, 0) 100%);
+  }
+  .box-gradient {
+    background: linear-gradient(-245.07deg, rgba(229, 235, 255, 0.36) 0%, #dfe6fd 63.94%, #ced8f8 100%);
+  }
+  .box-gradient_hover
   /* shadow */
   .shadow-product-cart {
     box-shadow: var(--shadow-product-cart);

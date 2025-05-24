@@ -1,3 +1,5 @@
+import MainLayout from "@/components/layout/MainLayout";
+
 export default function Page() {
-  return <div className="overflow-x-hidden"></div>;
+  return <MainLayout></MainLayout>;
 }

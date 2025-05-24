@@ -1,7 +1,7 @@
 import React from "react";
 
-function Typography() {
-  return <p>Typography</p>;
+function Typography({ children, className }) {
+  return <p className={`${className}`}>{children}</p>;
 }
 
 export default Typography;
