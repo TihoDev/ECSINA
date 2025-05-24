@@ -1,7 +1,6 @@
 import Button from "../UI/Button";
 
 import Image from "next/image";
-import Arrow from "../../../public/assets/icons/Arrow.svg";
 import Logo from "../../../public/assets/icons/MainLogo.svg";
 import Star from "../../../public/assets/icons/Star.svg";
 import Growth from "../../../public/assets/icons/growth.svg";
@@ -76,7 +75,7 @@ const HeroBanner = () => {
           پیش بره!
         </h6>
 
-        <Button icon={Arrow}>رایگان دانلود کن</Button>
+        <Button icon={assets/icons/Arrow.svg}>رایگان دانلود کن</Button>
       </div>
 
       <div className=" relative flex justify-evenly mt-8 md:mt-20">

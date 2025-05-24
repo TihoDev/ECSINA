@@ -7,7 +7,7 @@ import { useState, useRef, useEffect } from "react";
 import Commnet from "../UI/Commnet";
 import Image from "next/image";
 
-import NextArrow from "../../../public/assets/icons/NextArrow.svg";
+
 
 const allComents = [
   {
@@ -149,13 +149,13 @@ const AllComments = () => {
               onClick={() => slider.current.prev()}
               className="absolute -left-2 md:-left-5 top-2/5 -translate-y-1/2 border border-primary-7 rounded-md px-2 py-1 cursor-pointer rotate-180"
             >
-              <Image src={NextArrow} alt="" width={10} height={10} />
+              <Image src={"assets/icons/NextArrow.svg"} alt="" width={10} height={10} />
             </button>
             <button
               onClick={() => slider.current.next()}
               className="absolute -right22 md:-right-5 top-2/5 -translate-y-1/2 border border-primary-7 rounded-md px-2 py-1 cursor-pointer"
             >
-              <Image src={NextArrow} alt="" width={10} height={10} />
+              <Image src={"assets/icons/NextArrow.svg"} alt="" width={10} height={10} />
             </button>
           </>
         )}
@@ -167,7 +167,7 @@ const AllComments = () => {
               onClick={() => slider.current.next()}
               className="cursor-pointer"
             >
-              <Image src={NextArrow} alt="Prev" width={10} height={10} />
+              <Image src={"assets/icons/NextArrow.svg"} alt="Prev" width={10} height={10} />
             </button>
 
             <ul className="flex items-center gap-2">
@@ -189,7 +189,7 @@ const AllComments = () => {
               onClick={() => slider.current.prev()}
               className=" cursor-pointer rotate-180"
             >
-              <Image src={NextArrow} alt="Next" width={10} height={10} />
+              <Image src={"assets/icons/NextArrow.svg"} alt="Next" width={10} height={10} />
             </button>
           </div>
         )}

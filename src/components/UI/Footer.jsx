@@ -34,7 +34,7 @@ const categories = [
 
 const Footer = () => {
   return (
-    <footer className="mt-auto  border-t border-secondary-17">
+    <footer className="mt-auto  ">
       {/* Top */}
       <div className="container mt-2">
         {/* Logo */}
