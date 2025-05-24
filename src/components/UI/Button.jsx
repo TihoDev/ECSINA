@@ -1,13 +1,12 @@
 import Image from "next/image";
 
-
 const Button = ({
   children,
   variant = "primary",
   type = "button",
   disabled = false,
   icon = null,
-  iconSize = 10,
+  iconSize = 11,
   onClick,
   className = "",
   ...props
@@ -20,19 +19,29 @@ const Button = ({
     outline: "border border-2 border-primary-7 bg-transparent",
   };
 
-  const disabledStyles = "bg-secondary-16 cursor-not-allowed pointer-events-none";
+  const disabledStyles =
+    "bg-secondary-16 cursor-not-allowed pointer-events-none";
 
-  const btnClass = `${baseStyles} ${variants[variant]} ${disabled ? disabledStyles : ""} ${className}`.trim();
+  const btnClass = `${baseStyles} ${variants[variant]} ${
+    disabled ? disabledStyles : ""
+  } ${className}`.trim();
 
   return (
-    <button type={type} className={btnClass} disabled={disabled} onClick={onClick} {...props}>
+    <button
+      type={type}
+      className={btnClass}
+      disabled={disabled}
+      onClick={onClick}
+      {...props}
+    >
       {icon && (
         <Image
           src={icon}
           alt="button icon"
           width={iconSize}
           height={iconSize}
-          className={`object-contain transition-transform duration-200  group-hover:rotate-45 ${
+          unoptimized
+          className={`object-contain transition-transform duration-200  group-hover:rotate-45  translate-z-0 ${
             variant === "outline" ? "invert" : ""
           }`}
         />
