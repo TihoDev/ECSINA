@@ -48,9 +48,9 @@ const stars = [
 const Sticker = ({ children, className = "" }) => {
   return (
     <div
-      className={`shadow-2xl px-4 py-2.5 rounded-[8px] items-center justify-center shadow-sticker  ${className} `}
+      className={` ${className} shadow-2xl px-4 py-2.5 rounded-[8px] items-center justify-center shadow-sticker`}
     >
-      <span className="text-secondary-19 text-[10px]  md:text-base font-semibold">
+      <span className="text-secondary-19 text-[10px] md:text-base font-semibold">
         {children}
       </span>
     </div>
