@@ -5,7 +5,7 @@ import Image from "next/image";
 const stars = [
   {
     id: 1,
-    icon: "assets/icons/Star.svg",
+    icon: "/assets/icons/Star.svg",
     alt: "Star",
     moblieSize: 20,
     desktopSize: 30,
@@ -13,7 +13,7 @@ const stars = [
   },
   {
     id: 2,
-    icon: "assets/icons/Star.svg",
+    icon: "/assets/icons/Star.svg",
     alt: "Star",
     moblieSize: 20,
     desktopSize: 30,
@@ -21,7 +21,7 @@ const stars = [
   },
   {
     id: 3,
-    icon: "assets/icons/Star.svg",
+    icon: "/assets/icons/Star.svg",
     alt: "Star",
     moblieSize: 20,
     desktopSize: 30,
@@ -29,7 +29,7 @@ const stars = [
   },
   {
     id: 4,
-    icon: "assets/icons/Star.svg",
+    icon: "/assets/icons/Star.svg",
     alt: "Star",
     moblieSize: 20,
     desktopSize: 30,
@@ -37,7 +37,7 @@ const stars = [
   },
   {
     id: 5,
-    icon: "assets/icons/Star.svg",
+    icon: "/assets/icons/Star.svg",
     alt: "Star",
     moblieSize: 20,
     desktopSize: 30,
@@ -76,12 +76,12 @@ const HeroBanner = () => {
         <Sticker className="rotate-15">قالب های آماده</Sticker>
         <Sticker className="rotate-6 ">رایگان!</Sticker>
         <Sticker>
-          <Image src={"assets/icons/growth.svg"} alt={""} fill />
+          <Image src={"/assets/icons/Growth.svg"} alt={""} fill />
         </Sticker>
         <Sticker className="-rotate-15">الهام بگیر و اجرا کن</Sticker>
       </div>
 
-      <div className=" relative place-items-center mt-10 z-10">
+      <div className=" relative flex justify-center mt-10 z-10">
         {/* LOGO Desktop */}
         <div className="relative hidden md:block ">
           {/* gradient-landing */}
@@ -108,7 +108,7 @@ const HeroBanner = () => {
 
         <div className="relative block md:hidden">
           <Image
-            src={"assets/icons/MainLogo.svg"}
+            src={"/assets/icons/MainLogo.svg"}
             alt="Main Logo"
             width={250}
             height={200}
@@ -128,7 +128,7 @@ const HeroBanner = () => {
       </div>
       <div className="w-40 h-40 md:w-64 md:h-64 ">
         <Image
-          src={"assets/icons/Gradient.svg"}
+          src={"/assets/icons/Gradient.svg"}
           alt=""
           fill
           className="absolute -top-1/6 left-1/4 -z-10"
