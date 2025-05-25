@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const navigationLinks = [
   { id: 1, title: "صفحه اصلی", href: "/" },
-  { id: 2, title: "محصولات ما", href: "/" },
+  { id: 2, title: "محصولات ما", href: "/products" },
   { id: 3, title: "درباره ی ما", href: "/about" },
   { id: 4, title: "تماس با ما", href: "/contact" },
 ];
