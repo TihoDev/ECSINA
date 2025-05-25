@@ -31,18 +31,18 @@ const Commnet = ({ commnet }) => {
       <div className="flex items-center justify-between">
         <span className="flex items-center gap-2">
           <Image
-            src={"assets/icons/like.svg"}
+            src={"/assets/icons/Like.svg"}
             alt=""
             width={30}
             height={30}
-            className="bg-white p-1 rounded-sm  cursor-pointer"
+            className="bg-white p-1 rounded-sm  cursor-pointer hover:bg-secondary-3"
           />
           <Image
-            src={"assets/icons/like.svg"}
+            src={"/assets/icons/Like.svg"}
             alt=""
             width={30}
             height={30}
-            className="bg-white p-1 rounded-sm cursor-pointer rotate-180"
+            className="bg-white p-1 rounded-sm cursor-pointer hover:bg-secondary-3 rotate-180"
           />
         </span>
 
