@@ -1,3 +1,5 @@
+import { TiChartLine } from "react-icons/ti";
+import { TiChartLineOutline } from "react-icons/ti";
 import Button from "../UI/Button";
 
 import Image from "next/image";
@@ -76,7 +78,7 @@ const HeroBanner = () => {
         <Sticker className="rotate-15">قالب های آماده</Sticker>
         <Sticker className="rotate-6 ">رایگان!</Sticker>
         <Sticker>
-          <Image src={"/assets/icons/Growth.svg"} alt={""} fill />
+          <TiChartLine className="h-5 w-5  md:w-9 md:h-9" />
         </Sticker>
         <Sticker className="-rotate-15">الهام بگیر و اجرا کن</Sticker>
       </div>

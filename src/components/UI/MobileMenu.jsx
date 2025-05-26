@@ -1,4 +1,6 @@
 "use client";
+import { AiOutlineClose } from "react-icons/ai";
+import { GiHamburgerMenu } from "react-icons/gi";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "./Button";
@@ -19,12 +21,13 @@ const MobileMenu = ({ links }) => {
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
           <button onClick={openMenu} className="cursor-pointer">
-            <Image
+            {/* <Image
               width={42}
               height={42}
               src={"/assets/icons/Menu.svg"}
               alt="Menu"
-            />
+            /> */}
+            <GiHamburgerMenu size={33} />
           </button>
 
           <Link href="/about">
@@ -59,12 +62,7 @@ const MobileMenu = ({ links }) => {
         <div>
           {/* Close Icon */}
           <button onClick={closeMenu} className="cursor-pointer mt-8 mr-[75%]">
-            <Image
-              src={"/assets/icons/Add.svg"}
-              width={50}
-              height={50}
-              alt="close"
-            />
+            <AiOutlineClose size={25} fill="#0029BC" />
           </button>
 
           {/* Menus */}
