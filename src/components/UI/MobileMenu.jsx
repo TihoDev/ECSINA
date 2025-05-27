@@ -25,6 +25,7 @@ const MobileMenu = ({ links }) => {
               src={"/assets/icons/Menu.svg"}
               alt="Menu"
             />
+ 
           </button>
 
           <Link href="/about">

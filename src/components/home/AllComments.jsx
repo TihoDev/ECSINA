@@ -126,9 +126,7 @@ const AllComments = () => {
 
   return (
     <div className="container mt-16 md:mt-48">
-      <p className=" text-xl md:text-4xl font-bold flex items-center justify-center">
-        نظرات همراهان ما
-      </p>
+      <p className=" text-xl md:text-4xl font-bold flex items-center justify-center">نظرات همراهان ما</p>
 
       <div className="relative mt-10 md:mt-24">
         {/* Slider */}
@@ -164,6 +162,7 @@ const AllComments = () => {
                 width={10}
                 height={10}
               />
+ 
             </button>
           </>
         )}
@@ -184,9 +183,7 @@ const AllComments = () => {
             </button>
 
             <ul className="flex items-center gap-2">
-              {[
-                ...Array(slider.current.track.details.slides.length).keys(),
-              ].map((idx) => (
+              {[...Array(slider.current.track.details.slides.length).keys()].map((idx) => (
                 <li key={idx}>
                   <button
                     onClick={() => slider.current.moveToIdx(idx)}
@@ -197,7 +194,6 @@ const AllComments = () => {
                 </li>
               ))}
             </ul>
-
             <button
               onClick={() => slider.current.prev()}
               className=" cursor-pointer rotate-180"

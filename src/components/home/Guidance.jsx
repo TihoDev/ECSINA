@@ -29,12 +29,12 @@ const Guidance = () => {
 
       {/* Wing */}
       <div className="absolute w-20 h-20 md:w-28 md:h-28 flex items-center justify-center  p-1 md:p-2 bg-white rounded-full -top-1/6 md:-top-1/5  right-1/16">
-        <Image src={"assets/icons/Wing.svg"} alt="" fill />
+        <Image src={"/assets/icons/Wing.svg"} alt="" fill />
       </div>
 
       {/* Arrow */}
       <div className="absolute w-32 h-32  md:w-54 md:h-54 left-0 -bottom-1/5 md:-bottom-1/3">
-        <Image src={"assets/icons/Arrow2.svg"} fill alt="" />
+        <Image src={"/assets/icons/Arrow2.svg"} fill alt="" />
       </div>
 
       <div className="absolute -bottom-10 md:-bottom-15 left-1/2 -translate-x-1/2">
