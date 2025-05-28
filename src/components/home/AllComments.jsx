@@ -7,8 +7,6 @@ import { useState, useRef, useEffect } from "react";
 import Commnet from "../UI/Commnet";
 import Image from "next/image";
 
-
-
 const allComents = [
   {
     id: 1,
@@ -143,11 +141,28 @@ const AllComments = () => {
         {/* Arrows */}
         {loaded && slider.current && (
           <>
-            <button onClick={() => slider.current.prev()} className="absolute -left-2 md:-left-5 top-2/5 -translate-y-1/2 border border-primary-7 rounded-md px-2 py-1 cursor-pointer rotate-180">
-              <Image src={"/assets/icons/NextArrow.svg"} alt="" width={10} height={10} />
+            <button
+              onClick={() => slider.current.prev()}
+              className="absolute -left-2 md:-left-5 top-2/5 -translate-y-1/2 border border-primary-7 rounded-md px-2 py-1 cursor-pointer rotate-180"
+            >
+              <Image
+                src={"assets/icons/NextArrow.svg"}
+                alt=""
+                width={10}
+                height={10}
+              />
             </button>
-            <button onClick={() => slider.current.next()} className="absolute -right22 md:-right-5 top-2/5 -translate-y-1/2 border border-primary-7 rounded-md px-2 py-1 cursor-pointer">
-              <Image src={"/assets/icons/NextArrow.svg"} alt="" width={10} height={10} />
+            <button
+              onClick={() => slider.current.next()}
+              className="absolute -right22 md:-right-5 top-2/5 -translate-y-1/2 border border-primary-7 rounded-md px-2 py-1 cursor-pointer"
+            >
+              <Image
+                src={"assets/icons/NextArrow.svg"}
+                alt=""
+                width={10}
+                height={10}
+              />
+ 
             </button>
           </>
         )}
@@ -155,20 +170,40 @@ const AllComments = () => {
         {/* Pagination */}
         {loaded && slider.current && (
           <div className="flex items-center justify-center gap-4 mt-6">
-            <button onClick={() => slider.current.next()} className="cursor-pointer">
-              <Image src={"/assets/icons/NextArrow.svg"} alt="Prev" width={10} height={10} />
+            <button
+              onClick={() => slider.current.next()}
+              className="cursor-pointer"
+            >
+              <Image
+                src={"assets/icons/NextArrow.svg"}
+                alt="Prev"
+                width={10}
+                height={10}
+              />
             </button>
 
             <ul className="flex items-center gap-2">
               {[...Array(slider.current.track.details.slides.length).keys()].map((idx) => (
                 <li key={idx}>
-                  <button onClick={() => slider.current.moveToIdx(idx)} className={`w-2.5 h-2.5 rounded-full transition-all ${currentSlide === idx ? "bg-primary-15" : "bg-gray-300"}`} />
+                  <button
+                    onClick={() => slider.current.moveToIdx(idx)}
+                    className={` w-1.5 h-1.5 md:w-2.5 md:h-2.5 rounded-full transition-all ${
+                      currentSlide === idx ? "bg-primary-15" : "bg-gray-300"
+                    }`}
+                  />
                 </li>
               ))}
             </ul>
-
-            <button onClick={() => slider.current.prev()} className=" cursor-pointer rotate-180">
-              <Image src={"/assets/icons/NextArrow.svg"} alt="Next" width={10} height={10} />
+            <button
+              onClick={() => slider.current.prev()}
+              className=" cursor-pointer rotate-180"
+            >
+              <Image
+                src={"/assets/icons/NextArrow.svg"}
+                alt="Next"
+                width={10}
+                height={10}
+              />
             </button>
           </div>
         )}

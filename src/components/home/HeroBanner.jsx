@@ -48,9 +48,9 @@ const stars = [
 const Sticker = ({ children, className = "" }) => {
   return (
     <div
-      className={`shadow-2xl px-4 py-2.5 rounded-[8px] items-center justify-center shadow-sticker  ${className} `}
+      className={` ${className} shadow-2xl px-4 py-2.5 rounded-[8px] items-center justify-center shadow-sticker`}
     >
-      <span className="text-secondary-19 text-[10px]  md:text-base font-semibold">
+      <span className="text-secondary-19 text-[10px] md:text-base font-semibold">
         {children}
       </span>
     </div>
@@ -71,14 +71,16 @@ const HeroBanner = () => {
         <Button icon={"/assets/icons/Arrow.svg"}>رایگان دانلود کن</Button>
       </div>
 
-      <div className=" relative flex justify-evenly mt-8 md:mt-20">
-        <Sticker text="قالب های آماده" className={"rotate-20"} />
-        <Sticker icon={"/assets/icons/growth.svg"} className={""} />
-        <Sticker text="الهام بگیر و اجرا کن" className={"rotate-10"} />
-        <Sticker text="رایگان!" className={"-rotate-20"} />
+      <div className=" relative flex justify-around  mt-8 md:mt-20 z-10">
+        <Sticker className="rotate-15">قالب های آماده</Sticker>
+        <Sticker className="rotate-6 ">رایگان!</Sticker>
+        <Sticker>
+          <Image src={"/assets/icons/Growth.svg"} alt={""} fill />
+        </Sticker>
+        <Sticker className="-rotate-15">الهام بگیر و اجرا کن</Sticker>
       </div>
 
-      <div className=" relative place-items-center mt-10 z-10">
+      <div className=" relative flex justify-center mt-10 z-10">
         {/* LOGO Desktop */}
         <div className="relative hidden md:block ">
           {/* gradient-landing */}
@@ -98,9 +100,12 @@ const HeroBanner = () => {
         {/* LOGO Mobile */}
 
         <div className="relative block md:hidden">
-
-          <Image src={"/assets/icons/Logo.svg"} alt="Main Logo" width={250} height={200} />
- 
+          <Image
+            src={"/assets/icons/MainLogo.svg"}
+            alt="Main Logo"
+            width={250}
+            height={200}
+          />
 
           {stars.map((star) => (
             <Image
@@ -113,11 +118,14 @@ const HeroBanner = () => {
             />
           ))}
         </div>
-        <div>
-          <div className="w-40 h-40 md:w-64 md:h-64 -z-10">
-            <Image src={"/assets/icons/Gradient.svg"} alt="" fill className="absolute -top-1/6 left-1/4" />
-          </div>
-        </div>
+      </div>
+      <div className="w-40 h-40 md:w-64 md:h-64 ">
+        <Image
+          src={"/assets/icons/Gradient.svg"}
+          alt=""
+          fill
+          className="absolute -top-1/6 left-1/4 -z-10"
+        />
       </div>
     </section>
   );
