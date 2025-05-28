@@ -92,7 +92,7 @@ const allComents = [
 const AllComments = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [loaded, setLoaded] = useState(false);
-  const timer = useRef(null); // تایمر autoplay
+  const timer = useRef(null);
 
   const [sliderRef, slider] = useKeenSlider({
     loop: true,

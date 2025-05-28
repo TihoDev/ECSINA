@@ -61,7 +61,7 @@ const Sticker = ({ children, className = "" }) => {
 
 const HeroBanner = () => {
   return (
-    <section className="container ">
+    <section className="container mt-5 md:mt-20">
       <div className="flex flex-col items-center gap-3 md:gap-6 z-100">
         <h2 className="text-lg  md:text-5xl text-black font-semibold text-center">
           با اکسینا، اسناد تجاری را مثل حرفه‌ای‌ها بساز!

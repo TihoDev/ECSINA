@@ -21,12 +21,6 @@ const MobileMenu = ({ links }) => {
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
           <button onClick={openMenu} className="cursor-pointer">
-            {/* <Image
-              width={42}
-              height={42}
-              src={"/assets/icons/Menu.svg"}
-              alt="Menu"
-            /> */}
             <GiHamburgerMenu size={33} />
           </button>
 

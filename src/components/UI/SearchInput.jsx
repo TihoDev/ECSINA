@@ -8,7 +8,7 @@ const SearchInput = ({ placeholder }) => {
         className="w-full  px-3 py-3 md:py-5  outline-none text-black  font-semibold text-xs md:text-xl placeholder:text-black md:placeholder:text-2xl placeholder:font-light  "
       />
       <button
-        className="relative bg-primary-7 hover:bg-primary-8 py-2.5 px-3 md:py-5 md:px-6 rounded-xl text-white cursor-pointer
+        className="relative bg-primary-7 hover:bg-primary-8 py-3 px-5 md:py-6 md:px-12 rounded-xl text-white cursor-pointer
       transition-all duration-200 "
       >
         <Image src={"assets/icons/Search.svg"} alt="" width={30} height={30} />
