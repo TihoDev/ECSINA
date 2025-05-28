@@ -23,11 +23,10 @@ const ContactPage = () => {
       <section className="flex flex-col  items-center my-5   min-w-screen">
         <div className="py-12 pb-10 px-6 md:px-12 w-4/5 grid grid-cols-1 md:grid-cols-2 gap-10 blue_shadow rounded-lg">
           <div className="col-span-1">
-            <h1 className="text-black md:text-right  text-center text-3xl font-bold pt-8">تماس با اکسینا</h1>
+            <h1 className="text-black md:text-right  text-center text-3xl font-bold pt-8">ارتباط با اکسینا </h1>
             <Typography className={"font-light text-xl my-8  text-center md:text-right"}>
-              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی
-              مورد نیاز لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی
-              تکنولوژی مورد نیاز
+              در اکسینا، با افتخار در کنار شما هستیم تا با ارائه مشاوره تخصصی، نگارش پروپوزال‌های حرفه‌ای، و طراحی بوم کسب‌وکار و.. مسیر موفقیت شما را هموار کنیم. چنانچه سوالی درباره خدمات ما دارید یا
+              نیاز به راهنمایی دارید، تیم پشتیبانی ما آماده پاسخگویی است.
             </Typography>
             <div className="my-8 flex flex-row-reverse items-center justify-center gap-5">
               <span className="bg-primary-7 flex items-center justify-center hover:bg-primary-6 transition-all ease-in duration-200 cursor-pointer p-2 rounded-full">

@@ -1,59 +1,71 @@
-"use client";
-import React, { useEffect, useState } from "react";
-import ProductSampleCard from "../ProductSampleCard";
-import { getAllProducts } from "@/services/Products/GetAllProducts";
-import Pagination from "../ui/Pagination";
-import { useSearchParams } from "next/navigation";
+import Product from "../UI/Product";
 
-const AllProducts = ({ style }) => {
-  const [products, setProducts] = useState([]);
-  const [pagination, setPagination] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState(null);
+const products = [
+  {
+    id: 1,
+    title: "بیزنس مدل اولیه",
+    description:
+      "ابزاری برای تجزیه و تحلیل و بهینه سازی مدل های کسب و کار است .",
+    image: "/assets/images/Product.png",
+  },
+  {
+    id: 2,
+    title: "بیزنس مدل اولیه",
+    description:
+      "ابزاری برای تجزیه و تحلیل و بهینه سازی مدل های کسب و کار است .",
+    image: "/assets/images/Product.png",
+  },
+  {
+    id: 3,
+    title: "بیزنس مدل اولیه",
+    description:
+      "ابزاری برای تجزیه و تحلیل و بهینه سازی مدل های کسب و کار است .",
+    image: "/assets/images/Product.png",
+  },
+  {
+    id: 4,
+    title: "بیزنس مدل اولیه",
+    description:
+      "ابزاری برای تجزیه و تحلیل و بهینه سازی مدل های کسب و کار است .",
+    image: "/assets/images/Product.png",
+  },
+  {
+    id: 5,
+    title: "بیزنس مدل اولیه",
+    description:
+      "ابزاری برای تجزیه و تحلیل و بهینه سازی مدل های کسب و کار است .",
+    image: "/assets/images/Product.png",
+  },
+  {
+    id: 6,
+    title: "بیزنس مدل اولیه",
+    description:
+      "ابزاری برای تجزیه و تحلیل و بهینه سازی مدل های کسب و کار است .",
+    image: "/assets/images/Product.png",
+  },
+  {
+    id: 7,
+    title: "بیزنس مدل اولیه",
+    description:
+      "ابزاری برای تجزیه و تحلیل و بهینه سازی مدل های کسب و کار است .",
+    image: "/assets/images/Product.png",
+  },
+  {
+    id: 8,
+    title: "بیزنس مدل اولیه",
+    description:
+      "ابزاری برای تجزیه و تحلیل و بهینه سازی مدل های کسب و کار است .",
+    image: "/assets/images/Product.png",
+  },
+];
 
-  const searchParams = useSearchParams();
-  const category = searchParams.get("category_id");
-  const page = searchParams.get("page") || "1";
-
-  const fetchProducts = async (category, page) => {
-    setIsLoading(true);
-    setError(null);
-
-    try {
-      const data = await getAllProducts(page, category);
-
-      setProducts(data?.products || []);
-      setPagination(data?.pagination || null);
-    } catch (error) {
-      setError(error.message || "An error occurred while fetching products.");
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
-  useEffect(() => {
-    fetchProducts(category, page);
-  }, [category, page]);
+const AllProducts = () => {
   return (
-    <section className={style}>
-      <div className={`${isLoading ? "flex items-center justify-center" : "grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-8 lg:grid-cols-3"}`}>
-        {error && <div className="col-span-full text-center text-red-500 py-4">{error}</div>}
-
-        {!isLoading && !error && products?.products?.length === 0 && <div className="col-span-full text-center text-gray-500 py-4">محصولی یافت نشد</div>}
-
-        {!isLoading &&
-          products?.products &&
-          products.products.map((product) => <ProductSampleCard key={product.id} id={product.id} title={product.title} text={product.body} imageId={product.main_image} />)}
-
-        <div className={`${isLoading ? "block" : "hidden"} w-[40px] h-[40px] rounded-full border-4 border-black border-t-transparent animate-spin`}></div>
-      </div>
-
-      {!isLoading && products?.pagination && products.pagination.last_page > 1 && (
-        <div className="mt-16 flex justify-center">
-          <Pagination pagination={products.pagination} />
-        </div>
-      )}
-    </section>
+    <div className=" mt-8 mx-16 md:mx-0 md:mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
+      {products.map((product) => (
+        <Product key={product.id} product={product} />
+      ))}
+    </div>
   );
 };
 
