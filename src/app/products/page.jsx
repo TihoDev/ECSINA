@@ -7,7 +7,7 @@ export default function Page() {
   return (
     <MainLayout>
       <section className="gradient-main-background mt-4 md:mt-16 ">
-        <div className="container py-16 md:py-[110px]">
+        <div className="container pb-16 pt-8 md:pb-[110px]">
           {/* Header */}
           <div className="flex items-center justify-between gap-6">
             <SearchInput placeholder={"جست و جو ..."} />
