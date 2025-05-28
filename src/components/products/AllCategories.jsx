@@ -40,7 +40,7 @@ const allCategorries = [
 
 const Categories = () => {
   return (
-    <div className=" mt-10 md:mt-16 flex items-center flex-wrap  justify-center xl:justify-between gap-4 md:gap-8">
+    <div className=" mt-10 md:mt-16 flex items-center flex-wrap  justify-center  gap-4 md:gap-8">
       {allCategorries.map((category) => (
         <Category key={category.id} category={category} />
       ))}
