@@ -32,7 +32,7 @@ const categories = [
 
 const Footer = () => {
   return (
-    <footer className="mt-auto  ">
+    <footer className="mt-auto">
       {/* Top */}
       <div className="container mt-2">
         {/* Logo */}

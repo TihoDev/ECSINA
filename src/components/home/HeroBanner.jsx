@@ -70,8 +70,7 @@ const HeroBanner = () => {
           قالب‌های آماده، راهنمای کامل، همه‌چی اینجاست تا کارت سریع و بی‌دردسر
           پیش بره!
         </h6>
-
-        <Button icon={"assets/icons/Arrow.svg"}>رایگان دانلود کن</Button>
+        <Button icon={"/assets/icons/Arrow.svg"}>رایگان دانلود کن</Button>
       </div>
 
       <div className=" relative flex justify-around  mt-8 md:mt-20 z-10">
@@ -88,7 +87,7 @@ const HeroBanner = () => {
         <div className="relative hidden md:block ">
           {/* gradient-landing */}
           <Image
-            src={"assets/icons/MainLogo.svg"}
+            src={"/assets/icons/MainLogo.svg"}
             alt="Main Logo"
             width={600}
             height={550}
@@ -110,7 +109,7 @@ const HeroBanner = () => {
 
         <div className="relative block md:hidden">
           <Image
-            src={"/assets/icons/MainLogo.svg"}
+            src={"/assets/icons/Logo.svg"}
             alt="Main Logo"
             width={250}
             height={200}

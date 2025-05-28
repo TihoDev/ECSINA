@@ -6,13 +6,8 @@ const Commnet = ({ commnet }) => {
     <div className="flex flex-col gap-3 md:gap-6 rounded-3xl p-4 cursor-pointer gradient-comment  hover:scale-102 transition-all duration-400">
       {/* info */}
       <div className="flex flex-col md:flex-row items-start gap-2">
-        <Image
-          src={"/assets/images/User.png"}
-          alt=""
-          width={54}
-          height={54}
-          className="rounded-full"
-        />
+        <Image src={"/assets/images/User.png"} alt="" width={54} height={54} className="rounded-full" />
+ 
         <div className="flex flex-col items-start">
           <p className=" text-xs md:text-base text-black font-semibold">
             {commnet.name}
