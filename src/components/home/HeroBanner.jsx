@@ -109,7 +109,7 @@ const HeroBanner = () => {
 
         <div className="relative block md:hidden">
           <Image
-            src={"/assets/icons/Logo.svg"}
+            src={"/assets/icons/MainLogo.svg"}
             alt="Main Logo"
             width={250}
             height={200}
