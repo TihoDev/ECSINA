@@ -5,7 +5,6 @@ const allProducts = [
     title: "بیزنس مدل",
     description: "انواعی از بیزنس مدل ها که نشان می‌دهد یک کسب‌وکار چگونه ارزش ایجاد می‌کند.",
     icon: "assets/icons/Status1.svg",
-
     id: 1,
   },
   {
@@ -54,5 +53,5 @@ const OurServices = () => {
     </section>
   );
 };
-
+ 
 export default OurServices;
