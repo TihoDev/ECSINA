@@ -1,3 +1,4 @@
+import { BiLike } from "react-icons/bi";
 import Image from "next/image";
 
 const Commnet = ({ commnet }) => {
@@ -16,10 +17,16 @@ const Commnet = ({ commnet }) => {
         <p className="text-black text-xs md:text-base font-normal">{commnet.description}</p>
       </div>
       {/* Actions */}
-      <div className="flex items-center justify-between flex-row-reverse">
-        <span className="flex items-center gap-1">
-          <Image src={"/assets/icons/RatingStar.svg"} alt=" " width={16} height={16} />
-          <p className="text-xs mt-1 md:text-base font-normal md:font-normal text-black">{commnet.rate}</p>
+      <div className="flex items-center justify-between">
+        <span className="flex items-center gap-2">
+          <BiLike
+            size={28}
+            className="bg-white p-1 rounded-sm cursor-pointer hover:bg-secondary-3 "
+          />
+          <BiLike
+            size={28}
+            className="bg-white p-1 rounded-sm cursor-pointer hover:bg-secondary-3 rotate-180"
+          />
         </span>
         <span className="flex items-center gap-1">
           <Image src={"/assets/icons/Like.svg"} alt="" width={30} height={30} className="bg-white p-1 rounded-sm  cursor-pointer hover:bg-secondary-3" />

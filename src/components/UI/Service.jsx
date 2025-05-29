@@ -4,6 +4,7 @@ const Service = ({ product }) => {
   return (
     <>
       <div className="group hidden md:flex px-6 bg-secondary-2 py-4 flex-col items-start gap-5 border border-primary-7 rounded-4xl md:min-h-96 md:w-[220px] shadow-product-cart hover:shadow-hover hover:scale-101 transition-all duration-300">
+
         <div className="p-4 rounded-md  relative max-w-[64px] flex items-center justify-center gradient-cart-icon">
           <Image width={64} height={64} src={product.icon} alt={product.title} className="inline-flex" />
         </div>
@@ -19,7 +20,6 @@ const Service = ({ product }) => {
 
       <div className="p-3  md:hidden rounded-md flex flex-col gap-2 items-center justify-center min-w-24 sm:min-w-44" style={{ backgroundImage: "var(--gradient-cart-icon)" }}>
         <Image width={35} height={35} src={product.icon} alt={product.title} />
-
         <p className="text-white text-sm">{product.title}</p>
       </div>
     </>
