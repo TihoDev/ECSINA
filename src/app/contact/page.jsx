@@ -7,11 +7,11 @@ import { FaTelegramPlane } from "react-icons/fa";
 
 export const metadata = {
   title: "تماس با ما",
-  description: "بوم ناب، مرجع تخصصی خرید محصولات هنری و لوازم نقاشی با کیفیت. ارائه دهنده بهترین برندهای هنری با قیمت مناسب و ارسال سریع به سراسر ایران.",
-  keywords: "بوم ناب، لوازم نقاشی، محصولات هنری، خرید آنلاین، بوم نقاشی، رنگ روغن، آبرنگ، مداد طراحی",
+  description:
+    "سایت تخصصی ما با ارائه خدمات حرفه‌ای در زمینه نگارش پروپوزال و طراحی بوم کسب‌وکار و.. همراه شما در مسیر موفقیت است. ما با تیمی متخصص و باتجربه، آماده ارائه مشاوره و خدمات تخصصی به دانشجویان، استارتاپ‌ها و سازمان‌ها هستیم.",
+  keywords: "",
   openGraph: {
-    title: "بوم ناب | فروشگاه تخصصی لوازم نقاشی و هنری",
-    description: "بوم ناب، مرجع تخصصی خرید محصولات هنری و لوازم نقاشی با کیفیت. ارائه دهنده بهترین برندهای هنری با قیمت مناسب و ارسال سریع به سراسر ایران.",
+    title: "Ecsina",
     type: "website",
     locale: "fa_IR",
   },
@@ -23,11 +23,10 @@ const ContactPage = () => {
       <section className="flex flex-col  items-center my-5   min-w-screen">
         <div className="py-12 pb-10 px-6 md:px-12 w-4/5 grid grid-cols-1 md:grid-cols-2 gap-10 blue_shadow rounded-lg">
           <div className="col-span-1">
-            <h1 className="text-black md:text-right  text-center text-3xl font-bold pt-8">تماس با اکسینا</h1>
+            <h1 className="text-black md:text-right  text-center text-3xl font-bold pt-8">ارتباط با اکسینا </h1>
             <Typography className={"font-light text-xl my-8  text-center md:text-right"}>
-              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی
-              مورد نیاز لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی
-              تکنولوژی مورد نیاز
+              در اکسینا، با افتخار در کنار شما هستیم تا با ارائه مشاوره تخصصی، نگارش پروپوزال‌های حرفه‌ای، و طراحی بوم کسب‌وکار و.. مسیر موفقیت شما را هموار کنیم. چنانچه سوالی درباره خدمات ما دارید یا
+              نیاز به راهنمایی دارید، تیم پشتیبانی ما آماده پاسخگویی است.
             </Typography>
             <div className="my-8 flex flex-row-reverse items-center justify-center gap-5">
               <span className="bg-primary-7 flex items-center justify-center hover:bg-primary-6 transition-all ease-in duration-200 cursor-pointer p-2 rounded-full">

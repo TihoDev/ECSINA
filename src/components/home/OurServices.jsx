@@ -36,16 +36,11 @@ const allProducts = [
 const OurServices = () => {
   return (
     <section className="-mt-20  container">
-      <h5 className=" text-xl md:text-4xl text-black font-bold text-center">
-        محصولات ما
-      </h5>
+      <h5 className=" text-xl md:text-4xl text-black font-bold text-center">محصولات ما</h5>
 
       <div className="mt-8 md:mt-20 flex items-center gap-4  justify-center md:justify-evenly flex-wrap ">
         {allProducts.map((product, index) => (
-          <div
-            key={product.id}
-            className={`${index % 2 === 0 ? "md:mt-32" : ""}`}
-          >
+          <div key={product.id} className={`${index % 2 === 0 ? "md:mt-32" : ""}`}>
             <Service product={product} />
           </div>
         ))}
@@ -53,5 +48,5 @@ const OurServices = () => {
     </section>
   );
 };
-
+ 
 export default OurServices;

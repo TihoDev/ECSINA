@@ -7,21 +7,14 @@ const Commnet = ({ commnet }) => {
       {/* info */}
       <div className="flex flex-col md:flex-row items-start gap-2">
         <Image src={"/assets/images/User.png"} alt="" width={54} height={54} className="rounded-full" />
- 
         <div className="flex flex-col items-start">
-          <p className=" text-xs md:text-base text-black font-semibold">
-            {commnet.name}
-          </p>
-          <p className="text-xs text-black font-light text-nowrap">
-            {commnet.role}
-          </p>
+          <p className=" text-xs md:text-base text-black font-semibold">{commnet.name}</p>
+          <p className="text-xs text-black font-light text-nowrap">{commnet.role}</p>
         </div>
       </div>
       {/* description */}
       <div className="mb-6">
-        <p className="text-black text-xs md:text-base font-normal">
-          {commnet.description}
-        </p>
+        <p className="text-black text-xs md:text-base font-normal">{commnet.description}</p>
       </div>
       {/* Actions */}
       <div className="flex items-center justify-between">
@@ -35,17 +28,9 @@ const Commnet = ({ commnet }) => {
             className="bg-white p-1 rounded-sm cursor-pointer hover:bg-secondary-3 rotate-180"
           />
         </span>
-
         <span className="flex items-center gap-1">
-          <Image
-            src={"assets/icons/RatingStar.svg"}
-            alt=" "
-            width={16}
-            height={16}
-          />
-          <p className="text-xs mt-1 md:text-base font-normal md:font-normal text-black">
-            {commnet.rate}
-          </p>
+          <Image src={"/assets/icons/Like.svg"} alt="" width={30} height={30} className="bg-white p-1 rounded-sm  cursor-pointer hover:bg-secondary-3" />
+          <Image src={"/assets/icons/Like.svg"} alt="" width={30} height={30} className="bg-white p-1 rounded-sm cursor-pointer hover:bg-secondary-3 rotate-180" />
         </span>
       </div>
     </div>

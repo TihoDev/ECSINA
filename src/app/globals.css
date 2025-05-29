@@ -3,31 +3,46 @@
 @font-face {
   font-family: "Yekan";
   src: url("/fonts/YekanBakh-Regular.woff2") format("woff2");
-  font-weight: 400;
+  font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Yekan";
+  font-family: "Yekan-SemiBold";
   src: url("/fonts/YekanBakh-SemiBold.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Yekan";
+  font-family: "Yekan-Bold";
   src: url("/fonts/YekanBakh-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Yekan";
+  font-family: "Yekan-ExtraBold";
   src: url("/fonts/YekanBakh-ExtraBold.woff2") format("woff2");
   font-weight: 800;
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: "Vazir";
+  src: url("/fonts/Vazirmatn-Medium.woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IranSans";
+  src: url("/fonts/iransansdn.woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
 html,
 body {
   height: 100%;
@@ -35,7 +50,7 @@ body {
   -webkit-overflow-scrolling: touch;
   scroll-behavior: smooth;
   margin: 0;
-  font-family: Yekan;
+  font-family: "Vazir", "IranSans";
 }
 
 #__next {
@@ -95,55 +110,21 @@ body {
 
   /* Gradient */
 
-  --gradient-landing: linear-gradient(
-    0.53deg,
-    rgba(246, 255, 194, 0.36) 7.05%,
-    rgba(174, 194, 255, 0.32) 49.64%,
-    rgba(2, 57, 255, 0.32) 99.51%
-  );
+  --gradient-landing: linear-gradient(0.53deg, rgba(246, 255, 194, 0.36) 7.05%, rgba(174, 194, 255, 0.32) 49.64%, rgba(2, 57, 255, 0.32) 99.51%);
 
-  --gradient-cart-icon: linear-gradient(
-    139.85deg,
-    #000826 -15.13%,
-    #001971 49.55%,
-    #0029bc 137.91%
-  );
-  --gradient-main-background: linear-gradient(
-      to bottom,
-      rgba(255, 254, 240, 1) 0%,
-      rgba(255, 255, 255, 0.95) 15%,
-      rgba(249, 252, 233, 0.85) 35%,
-      rgba(245, 247, 235, 0.8) 60%,
-      #f1f1ec 100%
-    ),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #fbfcfa 100%);
+ 
+  --gradient-cart-icon: linear-gradient(139.85deg, #000826 -15.13%, #001971 49.55%, #0029bc 137.91%);
 
-  --gradient-invite-cart: linear-gradient(
-      96.69deg,
-      rgba(255, 255, 255, 0.3) -2.13%,
-      rgba(229, 235, 255, 0.9) 24.06%,
-      rgba(255, 255, 255, 0.1) 96.04%
-    ),
-    linear-gradient(
-      85.74deg,
-      rgba(255, 255, 255, 0.3) 0.73%,
-      rgba(248, 253, 226, 0.3) 77.66%
-    );
+  --gradient-main-background: linear-gradient(53.92deg, rgba(249, 252, 233, 0.8) 2.53%, rgba(245, 247, 235, 0.8) 52.16%, #f1f1ec 105.15%),
+    linear-gradient(359.22deg, rgba(251, 252, 250, 0) -7.38%, #fbfcfa 100.86%);
+ 
 
-  --gradient-comment: linear-gradient(
-    278.67deg,
-    #e5ebff -0.11%,
-    #dae2fc 56.32%,
-    #ced8f8 101.57%
-  );
+  --gradient-invite-cart: linear-gradient(96.69deg, rgba(255, 255, 255, 0.3) -2.13%, rgba(229, 235, 255, 0.9) 24.06%, rgba(255, 255, 255, 0.1) 96.04%),
+    linear-gradient(85.74deg, rgba(255, 255, 255, 0.3) 0.73%, rgba(248, 253, 226, 0.3) 77.66%);
 
-  --gradient-secondary-background: linear-gradient(
-      278.67deg,
-      #e5ebff -0.11%,
-      #dae2fc 56.32%,
-      #ced8f8 101.57%
-    ),
-    linear-gradient(180deg, rgba(255, 255, 255, 0) -16.57%, #ffffff 84.63%);
+  --gradient-comment: linear-gradient(278.67deg, #e5ebff -0.11%, #dae2fc 56.32%, #ced8f8 101.57%);
+
+  --gradient-secondary-background: linear-gradient(278.67deg, #e5ebff -0.11%, #dae2fc 56.32%, #ced8f8 101.57%), linear-gradient(180deg, rgba(255, 255, 255, 0) -16.57%, #ffffff 84.63%);
 
   --shadow-stroke2: linear-gradient(139.79deg, #f2f5fb 0.21%, #f7f9ee 106.61%);
 
@@ -155,7 +136,11 @@ body {
   --shadow-hover: 0px 2px 4px 0px #2e2f33;
 
   /* font */
-  --font-yekan: "yekan";
+  --font-yekan: "Yekan";
+  --font-yekanBold: "Yekan-Bold";
+  --font-yekanSemiBold: "Yekan-SemiBold";
+  --font-yekanExtraBold: "Yekan-ExtraBold";
+  --font-iransans: "IranSans";
   /* global.css */
 }
 
@@ -222,20 +207,10 @@ body {
     background: var(--shadow-stroke2);
   }
   .gradient-landing2 {
-    background: linear-gradient(
-      to bottom,
-      rgba(206, 216, 248, 1) 0%,
-      rgba(206, 216, 248, 1) 20%,
-      rgba(0, 0, 0, 0) 100%
-    );
+    background: linear-gradient(to bottom, rgba(206, 216, 248, 1) 0%, rgba(206, 216, 248, 1) 20%, rgba(0, 0, 0, 0) 100%);
   }
   .box-gradient {
-    background: linear-gradient(
-      -245.07deg,
-      rgba(229, 235, 255, 0.36) 0%,
-      #dfe6fd 63.94%,
-      #ced8f8 100%
-    );
+    background: linear-gradient(-245.07deg, rgba(229, 235, 255, 0.36) 0%, #dfe6fd 63.94%, #ced8f8 100%);
   }
   .box-gradient_hover
   /* shadow */
