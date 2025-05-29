@@ -26,10 +26,7 @@ const Service = ({ product }) => {
       </div>
 
       {/* Mobile */}
-      <div
-        className="p-3  md:hidden rounded-md flex flex-col gap-2 items-center justify-center min-w-24 sm:min-w-44"
-        style={{ backgroundImage: "var(--gradient-cart-icon)" }}
-      >
+      <div className="p-3  md:hidden rounded-md gradient-cart-icon flex flex-col gap-2 items-center justify-center min-w-24 sm:min-w-44">
         <Image width={35} height={35} src={product.icon} alt={product.title} />
         <p className="text-white text-sm">{product.title}</p>
       </div>

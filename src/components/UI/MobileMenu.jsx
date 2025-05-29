@@ -1,4 +1,6 @@
 "use client";
+import { AiOutlineClose } from "react-icons/ai";
+import { GiHamburgerMenu } from "react-icons/gi";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "./Button";
@@ -19,7 +21,7 @@ const MobileMenu = ({ links }) => {
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
           <button onClick={openMenu} className="cursor-pointer">
-            <Image width={42} height={42} src={"/assets/icons/menu.svg"} alt="Menu" />
+            <GiHamburgerMenu size={33} />
           </button>
 
           <Link href="/about">
@@ -28,19 +30,33 @@ const MobileMenu = ({ links }) => {
         </div>
 
         <Link href="/">
-          <Image width={44} height={44} src={"/assets/icons/Logo.svg"} alt="Logo" />
+          <Image
+            width={44}
+            height={44}
+            src={"/assets/icons/Logo.svg"}
+            alt="Logo"
+          />
         </Link>
       </div>
 
       {/* Overlay */}
-      <div className={`fixed inset-0 bg-black/50 backdrop-blur-[3px] z-40 transition-opacity duration-300 ${isOpen ? "opacity-100 visible" : "opacity-0 invisible"}`} onClick={closeMenu} />
+      <div
+        className={`fixed inset-0 bg-black/50 backdrop-blur-[3px] z-40 transition-opacity duration-300 ${
+          isOpen ? "opacity-100 visible" : "opacity-0 invisible"
+        }`}
+        onClick={closeMenu}
+      />
 
       {/* Sidebar */}
-      <div className={`fixed top-0 right-0 h-full w-48 bg-white shadow-lg z-50 transform transition-transform duration-300 rounded-bl-[50px] ${isOpen ? "translate-x-0" : "translate-x-full"}`}>
+      <div
+        className={`fixed top-0 right-0 h-full w-48 bg-white shadow-lg z-50 transform transition-transform duration-300 rounded-bl-[50px] ${
+          isOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
         <div>
           {/* Close Icon */}
           <button onClick={closeMenu} className="cursor-pointer mt-8 mr-[75%]">
-            <Image src={"/assets/icons/add.svg"} width={50} height={50} alt="close" />
+            <AiOutlineClose size={25} fill="#0029BC" />
           </button>
 
           {/* Menus */}

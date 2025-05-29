@@ -1,3 +1,4 @@
+import { BiLike } from "react-icons/bi";
 import Image from "next/image";
 
 const Commnet = ({ commnet }) => {
@@ -25,19 +26,13 @@ const Commnet = ({ commnet }) => {
       {/* Actions */}
       <div className="flex items-center justify-between">
         <span className="flex items-center gap-2">
-          <Image
-            src={"assets/icons/like.svg"}
-            alt=""
-            width={30}
-            height={30}
-            className="bg-white p-1 rounded-sm  cursor-pointer"
+          <BiLike
+            size={28}
+            className="bg-white p-1 rounded-sm cursor-pointer hover:bg-secondary-3 "
           />
-          <Image
-            src={"assets/icons/like.svg"}
-            alt=""
-            width={30}
-            height={30}
-            className="bg-white p-1 rounded-sm cursor-pointer rotate-180"
+          <BiLike
+            size={28}
+            className="bg-white p-1 rounded-sm cursor-pointer hover:bg-secondary-3 rotate-180"
           />
         </span>
 
