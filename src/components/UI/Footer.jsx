@@ -66,13 +66,13 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="flex flex-col md:flex-row gap-2 items-start md:gap-10 -mt-22 md:mt-0">
+          <div className="flex flex-col-reverse md:flex-row gap-2 items-start md:gap-10 -mt-22 md:mt-0">
             <div>
               <p className=" text-base md:text-xl font-medium text-secondary-18 mb-2 text-nowrap">دسترسی سریع</p>
               <ul className="flex flex-col items-start gap-2">
                 {navigationLinks.map((link) => (
                   <Link key={link.id} href={link.href} className="text-xs md:text-base text-secondary-18 font-medium transition-all duration-300 hover:text-primary-6">
-                    {link.item}
+                    {link.title}
                   </Link>
                 ))}
               </ul>
