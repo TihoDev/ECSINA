@@ -7,8 +7,8 @@ import AboutProduct from "@/components/products/AboutProduct";
 import CreateComment from "@/components/products/CreateComment";
 
 export const metadata = {
-  title: "صفحه محصول | اکسین",
-  description: "صفحه محصول | اکسین",
+  title: "صفحه محصول | اکسینا",
+  description: "صفحه محصول | اکسینا",
 };
 
 export default function ProductPage({ params }) {
