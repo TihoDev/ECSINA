@@ -4,6 +4,7 @@ import ProductDetails from "@/components/products/ProductDetails";
 import FrequentlyQuestions from "@/components/products/FrequentlyQuestions";
 import RecommendedProducts from "@/components/UI/RecommendedProducts";
 import AboutProduct from "@/components/products/AboutProduct";
+import CreateComment from "@/components/products/CreateComment";
 
 export const metadata = {
   title: "صفحه محصول | اکسین",
@@ -18,6 +19,7 @@ export default function ProductPage({ params }) {
         <ProductDetails />
         <AboutProduct />
         <FrequentlyQuestions />
+        <CreateComment />
         <RecommendedProducts />
       </section>
     </MainLayout>
