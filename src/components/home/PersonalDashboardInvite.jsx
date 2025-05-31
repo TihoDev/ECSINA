@@ -6,7 +6,7 @@ const inviteCards = [
   {
     id: 1,
     title: "یک فضای اختصاصی دقیقا مطابق نیاز های تو !",
-    description: `با ثبت نام در اکسین، یک داشبورد کاملا شخصی سازی شده خواهی داشت که میتوانی اسنادت را مدیریت کنی .
+    description: `با ثبت نام در اکسینا، یک داشبورد کاملا شخصی سازی شده خواهی داشت که میتوانی اسنادت را مدیریت کنی .
  ما به موقع تو را از آخرین تغییرات با خبر میکنیم . همچنین تو با اشتراک گذاری نظر و ایده هات میتوانی در این تغییرات نقش داشته باشی . در این بخش تو به پشتیبانی سریع هم دسترسی داری .`,
     image: "/assets/images/NotFound.png",
   },
@@ -28,9 +28,23 @@ const PersonalDashboardInvite = () => {
   return (
     <div className="container mt-16 md:mt-60">
       <Link href="/" className="flex items-center justify-center gap-2 ">
-        <Image src={"/assets/icons/ArrowRight.svg"} alt="" width={30} height={30} className="text-black  block md:hidden" />
-        <Image src={"/assets/icons/ArrowRight.svg"} alt="" width={50} height={50} className="text-black hidden md:block" />
-        <p className="text-black font-semibold text-base  md:text-4xl ">برای دسترسی به داشتن داشبورد شخصی خود ثبت نام کنید.</p>
+        <Image
+          src={"/assets/icons/ArrowRight.svg"}
+          alt=""
+          width={30}
+          height={30}
+          className="text-black  block md:hidden"
+        />
+        <Image
+          src={"/assets/icons/ArrowRight.svg"}
+          alt=""
+          width={50}
+          height={50}
+          className="text-black hidden md:block"
+        />
+        <p className="text-black font-semibold text-base  md:text-4xl ">
+          برای دسترسی به داشتن داشبورد شخصی خود ثبت نام کنید.
+        </p>
       </Link>
 
       {/* Cards */}
