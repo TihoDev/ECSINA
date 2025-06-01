@@ -60,8 +60,27 @@ function ContactForm() {
         <InputField type="text" title={"نام و نام‌خانوادگی"} id={"name"} required />
       </div>
       <InputField type="text" title={"ایمیل"} id={"email"} required />
-      <div className="flex flex-col">
-        <textarea rows="6" placeholder="* پیام خود را وارد کنید..." className="p-4  placeholder:text-primary-7  resize-none rounded bg-input focus:outline-none"></textarea>
+      <div className=" relative ">
+        <textarea
+          id="message"
+          rows="10"
+          className={`w-full block px-6 pt-6  rounded-md text-base bg-primary-0  text-primary-14 appearance-none focus:outline-none focus:ring-0 peer resize-none `}
+          placeholder="    "
+        ></textarea>
+        <label
+          htmlFor={"message"}
+          className="absolute text-sm text-main-1 duration-150 transform -translate-y-3
+      scale-75 top-4 z-10 origin-[0] right-4 
+      peer-placeholder-shown:scale-100
+      peer-placeholder-shown:translate-y-0
+      peer-focus:scale-90
+      peer-focus:-translate-y-3
+
+      "
+        >
+          <span className="text-main-4 px-1 mt-2 text-sm">*</span>
+          پیام خود را وارد کنید...
+        </label>
       </div>
 
       <button className="bg-primary-7 mt-5 text-white p-2 rounded-lg text-base md:text-2xl  hover:bg-primary-10 transition">ارسال پیام</button>
