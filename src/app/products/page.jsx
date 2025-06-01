@@ -17,17 +17,13 @@ export default function Page() {
           </div>
           {/* Categories */}
           <div className=" mt-16 md:mt-30">
-            <h3 className="text-black text-base md:text-4xl font-bold flex items-center justify-center">
-              دسته‌بندی محصولات
-            </h3>
+            <h3 className="text-black text-base md:text-4xl font-bold flex items-center justify-center">دسته‌بندی محصولات</h3>
             <AllCategories />
           </div>
           {/* Products */}
 
           <div className=" mt-16 md:mt-30">
-            <h3 className="text-black text-base md:text-4xl font-bold flex items-center justify-center">
-              جدیدترین قالب‌ها
-            </h3>
+            <h3 className="text-black text-base md:text-4xl font-bold flex items-center justify-center">جدیدترین قالب‌ها</h3>
 
             <AllProducts />
           </div>

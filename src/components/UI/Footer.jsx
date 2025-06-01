@@ -48,7 +48,7 @@ const Footer = () => {
         {/* Other */}
         <div className="flex items-start gap-10 md:gap-20 mb-8 md:mb-16">
           <div className="max-w-md flex flex-col justify-between ">
-            <p className="text-xs leading-6 font-medium text-secondary-18">
+            <p className="text-[10px] md:text-sm leading-6 font-light md:font-medium text-secondary-18">
               لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی
               تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و م
             </p>

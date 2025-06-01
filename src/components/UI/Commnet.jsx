@@ -19,18 +19,14 @@ const Commnet = ({ commnet }) => {
       {/* Actions */}
       <div className="flex items-center justify-between">
         <span className="flex items-center gap-2">
-          <BiLike
-            size={28}
-            className="bg-white p-1 rounded-sm cursor-pointer hover:bg-secondary-3 "
-          />
-          <BiLike
-            size={28}
-            className="bg-white p-1 rounded-sm cursor-pointer hover:bg-secondary-3 rotate-180"
-          />
+          <BiLike size={28} className="bg-white p-1 rounded-sm cursor-pointer hover:bg-secondary-3 " />
+          <BiLike size={28} className="bg-white p-1 rounded-sm cursor-pointer hover:bg-secondary-3 rotate-180" />
         </span>
         <span className="flex items-center gap-1">
-          <Image src={"/assets/icons/Like.svg"} alt="" width={30} height={30} className="bg-white p-1 rounded-sm  cursor-pointer hover:bg-secondary-3" />
-          <Image src={"/assets/icons/Like.svg"} alt="" width={30} height={30} className="bg-white p-1 rounded-sm cursor-pointer hover:bg-secondary-3 rotate-180" />
+          <span>{commnet.rate}</span>
+          <div className="relative w-4 h-4 md:w-5 md:h-5 mb-1.5">
+            <Image src={"/assets/icons/RatingStar.svg"} alt="" fill />
+          </div>
         </span>
       </div>
     </div>
