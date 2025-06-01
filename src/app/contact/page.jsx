@@ -70,7 +70,7 @@ function ContactForm() {
         <label
           htmlFor={"message"}
           className="absolute text-sm text-main-1 duration-150 transform -translate-y-3
-      scale-75 top-4 z-10 origin-[0] right-4 
+      scale-75 top-4 z-10 origin-[0] right-2 
       peer-placeholder-shown:scale-100
       peer-placeholder-shown:translate-y-0
       peer-focus:scale-90
