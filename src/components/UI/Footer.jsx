@@ -1,12 +1,17 @@
 import Link from "next/link";
 import Image from "next/image";
+import { SlSocialLinkedin } from "react-icons/sl";
+import { FiYoutube } from "react-icons/fi";
+import { BsInstagram } from "react-icons/bs";
+import { RiWhatsappLine } from "react-icons/ri";
+import { PiTelegramLogo } from "react-icons/pi";
 
 const icons = [
-  { id: 1, name: "/assets/icons/Youtube.svg", href: "/" },
-  { id: 2, name: "/assets/icons/Telegram.svg", href: "/" },
-  { id: 3, name: "/assets/icons/Whatsapp.svg", href: "/" },
-  { id: 4, name: "/assets/icons/Instagram.svg", href: "/" },
-  { id: 5, name: "/assets/icons/Linkedln.svg", href: "/" },
+  { icon: <SlSocialLinkedin size={25} />, href: "/" },
+  { icon: <BsInstagram size={25} />, href: "/" },
+  { icon: <RiWhatsappLine size={25} />, href: "/" },
+  { icon: <PiTelegramLogo size={25} />, href: "/" },
+  { icon: <FiYoutube size={25} />, href: "/" },
 ];
 
 const navigationLinks = [
@@ -31,14 +36,11 @@ const Footer = () => {
       <div className="container mt-2">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 mb-4 md:mb-10 ">
-
           <Image src={"/assets/icons/Logo.svg"} alt="Logo" width={50} height={50} />
           <span className="w-[1px]  h-16 bg-secondary-13"></span>
           <div className="text-black flex flex-col items-start gap-1">
             <span className="text-xl font-bold">اکسینا</span>
-            <span className="text-xs font-[100]">
-              همراهـــــــــــــیِ نوین
-            </span>
+            <span className="text-xs font-[100]">همراهـــــــــــــیِ نوین</span>
             <span className="text-sm font-light">اسناد تجاری</span>
           </div>
         </Link>
@@ -47,52 +49,39 @@ const Footer = () => {
         <div className="flex items-start gap-10 md:gap-20 mb-8 md:mb-16">
           <div className="max-w-md flex flex-col justify-between ">
             <p className="text-xs leading-6 font-medium text-secondary-18">
-              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
-              استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله
-              در ستون و سطرآنچنان که لازم است
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی
+              تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و م
             </p>
             {/* Icons */}
             <div className="flex items-center gap-2 mt-5 md:mt-8">
-              {icons.map((icon) => (
+              {icons.map((item) => (
                 <Link
-                  key={icon.id}
-                  href={icon.href}
-                  className="flex items-center justify-center  p-2 border-1 border-primary-7  rounded-sm hover:bg-primary-1  transition-all duration-300"
+                  key={item.icon}
+                  href={item.href}
+                  className="flex items-center justify-center p-3 border-1 border-primary-7 text-primary-7 hover:text-white  rounded-lg hover:bg-primary-7  transition-all duration-300"
                 >
-                  <Image src={icon.name} alt="" width={26} height={26} />
+                  {item.icon}
                 </Link>
               ))}
             </div>
           </div>
 
-          <div className="flex flex-col md:flex-row gap-2 items-start md:gap-10 -mt-22 md:mt-0">
+          <div className="flex flex-col-reverse md:flex-row gap-2 items-start md:gap-10 -mt-22 md:mt-0">
             <div>
-              <p className=" text-base md:text-xl font-medium text-secondary-18 mb-2 text-nowrap">
-                دسترسی سریع
-              </p>
+              <p className=" text-base md:text-xl font-medium text-secondary-18 mb-2 text-nowrap">دسترسی سریع</p>
               <ul className="flex flex-col items-start gap-2">
                 {navigationLinks.map((link) => (
-                  <Link
-                    key={link.id}
-                    href={link.href}
-                    className="text-xs md:text-base text-secondary-18 font-medium transition-all duration-300 hover:text-primary-6"
-                  >
+                  <Link key={link.id} href={link.href} className="text-xs md:text-base text-secondary-18 font-medium transition-all duration-300 hover:text-primary-6">
                     {link.title}
                   </Link>
                 ))}
               </ul>
             </div>
             <div>
-              <p className=" text-base md:text-xl font-medium text-secondary-18 mb-2 text-nowrap">
-                دسته بندی محصولات
-              </p>
+              <p className=" text-base md:text-xl font-medium text-secondary-18 mb-2 text-nowrap">دسته بندی محصولات</p>
               <ul className="flex flex-col items-start gap-2">
                 {categories.map((link) => (
-                  <Link
-                    key={link.id}
-                    href={link.href}
-                    className="text-xs md:text-base text-secondary-18 font-medium transition-all duration-300 hover:text-primary-6"
-                  >
+                  <Link key={link.id} href={link.href} className="text-xs md:text-base text-secondary-18 font-medium transition-all duration-300 hover:text-primary-6">
                     {link.title}
                   </Link>
                 ))}
@@ -104,9 +93,7 @@ const Footer = () => {
 
       {/* Boottm */}
       <div className="bg-primary-7 rounded-t-sm md:rounded-t-2xl w-full flex items-center justify-center py-3 md:py-5">
-        <p className="font-medium text-xs md:text-base text-white">
-          تمامی حقوق مادی و معنوی برای شرکت اکسینا محفوظ است.
-        </p>
+        <p className="font-medium text-xs md:text-base text-white">© تمامی حقوق مادی و معنوی برای شرکت اکسینا محفوظ است. </p>
       </div>
     </footer>
   );

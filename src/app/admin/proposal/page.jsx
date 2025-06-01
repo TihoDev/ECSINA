@@ -1,3 +1,4 @@
+import AdminPanel from "@/components/admin/AdminPanel";
 import React from "react";
 
 function Proposal() {
@@ -9,7 +10,7 @@ function Proposal() {
     { id: 4, title: "لورم ایپسوم", desc: "لورم ایپسوم لورم ایپسوم لورم ایپسوم لورم ایپسوم", date: now },
     { id: 5, title: "لورم ایپسوم", desc: "لورم ایپسوم لورم ایپسوم لورم ایپسوم لورم ایپسوم", date: now },
   ];
-  return <></>;
+  return <AdminPanel></AdminPanel>;
 }
 
 export default Proposal;
