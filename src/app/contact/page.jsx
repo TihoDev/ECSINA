@@ -4,6 +4,7 @@ import React from "react";
 import { MdEmail } from "react-icons/md";
 import { BiSolidPhoneCall } from "react-icons/bi";
 import { FaTelegramPlane } from "react-icons/fa";
+import InputField from "@/components/UI/InputField";
 
 export const metadata = {
   title: "تماس با ما",
@@ -21,25 +22,26 @@ const ContactPage = () => {
   return (
     <MainLayout>
       <section className="flex flex-col  items-center my-5   min-w-screen">
-        <div className="py-12 pb-10 px-6 md:px-12 w-4/5 grid grid-cols-1 md:grid-cols-2 gap-10 blue_shadow rounded-lg">
-          <div className="col-span-1 flex flex-col justify-around">
+        <div className="py-12 pb-10 px-4 md:px-8 lg:px-12 w-[90%] lg:w-4/5 grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 shadow-xl bg-[#FFFFFF05] rounded-lg">
+          <div className="col-span-1 flex flex-col justify-start">
             <div>
-              <h1 className="text-black md:text-right  text-center text-3xl font-bold pt-8">ارتباط با اکسینا </h1>
-              <Typography className={"font-light text-xl my-8  text-center md:text-right"}>
-                در اکسینا، با افتخار در کنار شما هستیم تا با ارائه مشاوره تخصصی، نگارش پروپوزال‌های حرفه‌ای، و طراحی بوم کسب‌وکار و.. مسیر موفقیت شما را هموار کنیم. چنانچه سوالی درباره خدمات ما دارید
-                یا نیاز به راهنمایی دارید، تیم پشتیبانی ما آماده پاسخگویی است.
+              <h1 className="text-black md:text-right  text-center text-xl md:text-3xl font-bold pt-8">تماس با اکسینا</h1>
+              <Typography className={"font-medium taxt-base sm:text-lg  my-4  text-center md:text-right"}>
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی
+                تکنولوژی مورد نیاز لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای
+                شرایط فعلی تکنولوژی مورد نیاز
               </Typography>
             </div>
 
-            <div className="mt-8  flex flex-row-reverse items-center justify-center gap-5">
-              <span className="bg-primary-7 flex items-center justify-center hover:bg-transparent border-2 text-white border-primary-7 hover:text-primary-7 transition-all ease-in duration-200 cursor-pointer p-2 rounded-full">
-                <FaTelegramPlane size={30} />
+            <div className="mt-4  hidden md:flex md:flex-row-reverse items-center justify-end gap-8">
+              <span className="bg-primary-7 flex items-center justify-center hover:bg-transparent border-2 text-white border-primary-7 hover:text-primary-7 transition-all ease-in duration-200 cursor-pointer p-3 rounded-full">
+                <FaTelegramPlane size={35} />
               </span>
-              <span className="bg-primary-7 flex items-center justify-center hover:bg-transparent border-2 text-white border-primary-7 hover:text-primary-7 transition-all ease-in duration-200 cursor-pointer p-2 rounded-full">
-                <BiSolidPhoneCall size={30} />
+              <span className="bg-primary-7 flex items-center justify-center hover:bg-transparent border-2 text-white border-primary-7 hover:text-primary-7 transition-all ease-in duration-200 cursor-pointer p-3 rounded-full">
+                <BiSolidPhoneCall size={35} />
               </span>
-              <span className="bg-primary-7 flex items-center justify-center hover:bg-transparent border-2 text-white border-primary-7 hover:text-primary-7 transition-all ease-in duration-200 cursor-pointer p-2 rounded-full">
-                <MdEmail size={30} />
+              <span className="bg-primary-7 flex items-center justify-center hover:bg-transparent border-2 text-white border-primary-7 hover:text-primary-7 transition-all ease-in duration-200 cursor-pointer p-3 rounded-full">
+                <MdEmail size={35} />
               </span>
             </div>
           </div>
@@ -52,25 +54,28 @@ const ContactPage = () => {
 
 function ContactForm() {
   return (
-    <form className="flex flex-col w-full justify-between p-6 gap-6 col-span-1 blue_shadow  rounded-lg">
-      <div className="flex flex-col lg:flex-row gap-4">
-        <div className="flex flex-col w-full">
-          <input type="text" placeholder="شماره تماس:" className="p-4 placeholder:text-primary-7  resize-none rounded bg-input focus:outline-none" />
-        </div>
-        <div className="flex flex-col w-full">
-          <input type="text" placeholder="نام و نام‌خانوادگی:" className="p-4 placeholder:text-primary-7  resize-none rounded bg-input focus:outline-none" />
-        </div>
+    <form className="flex flex-col w-full justify-between p-6 gap-6 col-span-1 shadow-xl  rounded-lg">
+      <div className=" w-full grid gap-1 md:gap-2.5 grid-cols-2">
+        <InputField type="text" title={"شماره تماس"} id={"phone"} required />
+        <InputField type="text" title={"نام و نام‌خانوادگی"} id={"name"} required />
       </div>
-
-      <div className="flex flex-col">
-        <input type="email" placeholder="ایمیل:" className="p-4 placeholder:text-primary-7  resize-none rounded bg-input focus:outline-none" />
-      </div>
-
+      <InputField type="text" title={"ایمیل"} id={"email"} required />
       <div className="flex flex-col">
         <textarea rows="6" placeholder="* پیام خود را وارد کنید..." className="p-4  placeholder:text-primary-7  resize-none rounded bg-input focus:outline-none"></textarea>
       </div>
 
-      <button className="bg-primary-7 mt-5 text-white p-2 rounded-lg text-2xl  hover:bg-primary-10 transition">ارسال پیام</button>
+      <button className="bg-primary-7 mt-5 text-white p-2 rounded-lg text-base md:text-2xl  hover:bg-primary-10 transition">ارسال پیام</button>
+      <div className="mt-8  md:hidden flex md:flex-row-reverse items-center justify-center gap-8">
+        <span className="bg-primary-7 flex items-center justify-center hover:bg-transparent border-2 text-white border-primary-7 hover:text-primary-7 transition-all ease-in duration-200 cursor-pointer p-3 rounded-full">
+          <FaTelegramPlane size={35} />
+        </span>
+        <span className="bg-primary-7 flex items-center justify-center hover:bg-transparent border-2 text-white border-primary-7 hover:text-primary-7 transition-all ease-in duration-200 cursor-pointer p-3 rounded-full">
+          <BiSolidPhoneCall size={35} />
+        </span>
+        <span className="bg-primary-7 flex items-center justify-center hover:bg-transparent border-2 text-white border-primary-7 hover:text-primary-7 transition-all ease-in duration-200 cursor-pointer p-3 rounded-full">
+          <MdEmail size={35} />
+        </span>
+      </div>
     </form>
   );
 }
