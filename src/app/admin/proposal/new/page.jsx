@@ -1,8 +1,7 @@
-import AdminPanel from "@/components/admin/AdminPanel";
 import React from "react";
 
 function NewProposal() {
-  return <AdminPanel>NewProposal</AdminPanel>;
+  return <></>;
 }
 
 export default NewProposal;

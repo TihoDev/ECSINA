@@ -1,45 +1,53 @@
-import React from "react";
-import PropTypes from "prop-types";
-import BaseIcon from "../icon/BaseIcon";
+import Image from "next/image";
 
-const Button = ({ text, disableIcon = false ,className , onClick}) => {
-  const buttonClasses = `
-    group flex items-center gap-2 lg:gap-5 px-3 py-2.5 lg:p-4 rounded-2xl
-    bg-gradient-to-r from-[#3E243C] via-[#71416D] via-[45.5%] to-[#A45F9E]
-    bg-[length:200%] bg-left transition-[background-position] duration-300 ease-out 
-    hover:bg-[length:130%] hover:bg-right cursor-pointer z10 ${className}
-  `;
+const Button = ({
+  children,
+  variant = "primary",
+  type = "button",
+  disabled = false,
+  icon = null,
+  iconSize = 11,
+  onClick,
+  className = "",
+  ...props
+}) => {
+  const baseStyles =
+    "flex items-center justify-center relative gap-2 rounded-xl py-3 px-9 md:px-12 md:py-4 text-xs md:text-xl font-medium cursor-pointer transition-all duration-200 group";
 
-  const renderIcon = () => (
-    <div>
-      <span
-        className={`transition-transform duration-300 group-hover:rotate-45 ${
-          !disableIcon ? "hidden lg:block" : ""
-        }`}
-      >
-        <BaseIcon id="Arrow" size={15} disableGradient />
-      </span>
-      <span className="lg:hidden ">
-        <BaseIcon id="Arrow" size={8} disableGradient />
-      </span>
-    </div>
-  );
+  const variants = {
+    primary: "bg-primary-7 text-white hover:bg-primary-8",
+    outline: "border border-2 border-primary-7 bg-transparent",
+  };
+
+  const disabledStyles =
+    "bg-secondary-16 cursor-not-allowed pointer-events-none";
+
+  const btnClass = `${baseStyles} ${variants[variant]} ${
+    disabled ? disabledStyles : ""
+  } ${className}`.trim();
 
   return (
-    <button className={buttonClasses} onClick={onClick}>
-      {!disableIcon && renderIcon()}
-      <p className="text-white text-xs lg:text-xl font-medium">{text}</p>
+    <button
+      type={type}
+      className={btnClass}
+      disabled={disabled}
+      onClick={onClick}
+      {...props}
+    >
+      {icon && (
+        <Image
+          src={icon}
+          alt="button icon"
+          width={iconSize}
+          height={iconSize}
+          unoptimized
+          className={`object-contain transition-transform duration-200  group-hover:rotate-45  translate-z-0  ${
+            variant === "outline" ? "invert" : ""
+          }`}
+        />
+      )}
+      <span>{children}</span>
     </button>
   );
 };
-
-Button.propTypes = {
-  text: PropTypes.string.isRequired,
-  disableIcon: PropTypes.bool,
-};
-
-Button.defaultProps = {
-  disableIcon: false,
-};
-
 export default Button;

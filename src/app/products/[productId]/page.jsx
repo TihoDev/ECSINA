@@ -1,23 +1,27 @@
-import useProduct from "@/hooks/useProduct";
+import MainLayout from "@/components/layout/MainLayout";
+import Breadcrumb from "@/components/products/Breadcrumb";
+import ProductDetails from "@/components/products/ProductDetails";
+import FrequentlyQuestions from "@/components/products/FrequentlyQuestions";
+import RecommendedProducts from "@/components/UI/RecommendedProducts";
+import AboutProduct from "@/components/products/AboutProduct";
+import CreateComment from "@/components/products/CreateComment";
 
 export const metadata = {
-  title: "صفحه محصول | اکسین",
-  description: "صفحه محصول | اکسین",
+  title: "صفحه محصول | اکسینا",
+  description: "صفحه محصول | اکسینا",
 };
 
-const LoadingIndicator = () => (
-  <div className="flex justify-center items-center py-4">
-    <div className="w-[40px] h-[40px] rounded-full border-4 border-black border-t-transparent animate-spin"></div>
-  </div>
-);
-
-function Page({ params }) {
-  const { product: productId } = params;
-  const { product, error, isLoading } = useProduct(productId);
-
-  if (error) return <div className="text-center text-red-500">{error}</div>;
-
-  return <div></div>;
+export default function ProductPage({ params }) {
+  return (
+    <MainLayout>
+      <section className="gradient-main-background min-h-screen pb-5">
+        <Breadcrumb />
+        <ProductDetails />
+        <AboutProduct />
+        <FrequentlyQuestions />
+        <CreateComment />
+        <RecommendedProducts />
+      </section>
+    </MainLayout>
+  );
 }
-
-export default Page;

@@ -5,7 +5,7 @@ function AdminLayout({ children }) {
   const token = true;
   if (!token) redirect("/admin/login", "replace");
 
-  return <main>{children}</main>;
+  return <body>{children}</body>;
 }
 
 export default AdminLayout;

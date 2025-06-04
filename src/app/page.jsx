@@ -1,15 +1,33 @@
+import AllComments from "@/components/home/AllComments";
+import Guidance from "@/components/home/Guidance";
+import HeroBanner from "@/components/home/HeroBanner";
+import OurServices from "@/components/home/OurServices";
+import PersonalDashboardInvite from "@/components/home/PersonalDashboardInvite";
+import TemplateFeatures from "@/components/home/TemplateFeatures";
+import "./globals.css";
+import MainLayout from "@/components/layout/MainLayout";
+
 export const metadata = {
-  title: "صفحه اصلی | اکسین ",
-  description: "بوم ناب، مرجع تخصصی خرید محصولات هنری و لوازم نقاشی با کیفیت. ارائه دهنده بهترین برندهای هنری با قیمت مناسب و ارسال سریع به سراسر ایران.",
-  keywords: "بوم ناب، لوازم نقاشی، محصولات هنری، خرید آنلاین، بوم نقاشی، رنگ روغن، آبرنگ، مداد طراحی",
+  title: "صفحه اصلی | اکسینا",
+  description:
+    "سایت تخصصی ما با ارائه خدمات حرفه‌ای در زمینه نگارش پروپوزال و طراحی بوم کسب‌وکار و.. همراه شما در مسیر موفقیت است. ما با تیمی متخصص و باتجربه، آماده ارائه مشاوره و خدمات تخصصی به دانشجویان، استارتاپ‌ها و سازمان‌ها هستیم.",
+  keywords: "",
   openGraph: {
-    title: "بوم ناب | فروشگاه تخصصی لوازم نقاشی و هنری",
-    description: "بوم ناب، مرجع تخصصی خرید محصولات هنری و لوازم نقاشی با کیفیت. ارائه دهنده بهترین برندهای هنری با قیمت مناسب و ارسال سریع به سراسر ایران.",
+    title: "Ecsina",
     type: "website",
     locale: "fa_IR",
   },
 };
 
 export default function Home() {
-  return <div className="overflow-x-hidden"></div>;
+  return (
+    <MainLayout>
+      <HeroBanner />
+      <OurServices />
+      <TemplateFeatures />
+      <PersonalDashboardInvite />
+      <AllComments />
+      <Guidance />
+    </MainLayout>
+  );
 }
