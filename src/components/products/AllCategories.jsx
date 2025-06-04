@@ -1,5 +1,14 @@
+"use client";
+import useCategories from "@/hooks/useCategories";
 import Category from "../UI/Category";
 
+const icons = [
+  "assets/icons/Status1.svg",
+  "assets/icons/Computer.svg",
+  "assets/icons/Document.svg",
+  "assets/icons/Status2.svg",
+  "assets/icons/Status3.svg",
+];
 const allCategorries = [
   {
     title: "بیزنس مدل",
@@ -39,9 +48,23 @@ const allCategorries = [
 ];
 
 const Categories = () => {
+  const { categories: data, error, isLoading } = useCategories();
+
+  if (error) return <div>error...</div>;
+  const allCategories = data?.categories?.map((category, index) => ({
+    ...category,
+    icon: icons[index % icons.length],
+  }));
+
+  if (isLoading)
+    return (
+      <div className="flex items-center justify-center text-2xl mt-5 ">
+        در حال بارگذاری...
+      </div>
+    );
   return (
     <div className=" mt-10 md:mt-16 flex items-center flex-wrap  justify-center  gap-4 md:gap-8">
-      {allCategorries.map((category) => (
+      {allCategories?.map((category) => (
         <Category key={category.id} category={category} />
       ))}
     </div>
