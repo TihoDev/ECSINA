@@ -42,7 +42,7 @@ const SideNav = () => {
               >
                 <Link className="flex items-center gap-x-2" href={item.link}>
                   <Image alt="" src={item.icon} width={20} height={20} />
-                  <Paragraph>{item.title}</Paragraph>
+                  <p>{item.title}</p>
                 </Link>
               </li>
             );
@@ -55,7 +55,7 @@ const SideNav = () => {
         className="flex btn items-center self-start mr-8 mb-4  bg-transparent shadow-none border-none  gap-x-2 cursor-pointer"
       >
         <Image alt="" src={"/icons/Logout.svg"} width={20} height={20} />
-        <Paragraph className="font-xl font-normal">خروج از حساب</Paragraph>
+        <p className="font-xl font-normal">خروج از حساب</p>
       </button>
 
       <dialog id="logout" className="modal">
@@ -73,9 +73,9 @@ const SideNav = () => {
             method="dialog"
             className="modal-backdrop relative flex flex-col"
           >
-            <Paragraph className="text-title">
+            <p className="text-title">
               آیا مطمئن هستید که می‌خواهید از حساب کاربری خود خارج شوید؟
-            </Paragraph>
+            </p>
             <div className="w-full flex gap-3 mt-12">
               <button className=" bg-transparent   w-1/2 p-3 rounded-[20px] text-border border-2 border-border">
                 بازگشت
