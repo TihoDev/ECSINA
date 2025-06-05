@@ -20,7 +20,7 @@ const AboutPage = () => {
     <MainLayout>
       <section className="flex flex-col  items-center my-5   min-w-screen">
         <div className="container my-8 p-5 py-12 relative shadow-2xl  md:shadow-none  rounded-lg">
-          <div className="z-20 top-20 left-10 absolute">
+          <div className="z-20 top-20 left-10 w-40 absolute">
             <Image src={"/assets/icons/Star.svg"} alt="Star" width={20} height={20} />
           </div>
           <div className="z-20 absolute">
