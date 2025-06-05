@@ -155,7 +155,7 @@ const AllComments = () => {
 
             <ul className="flex items-center gap-2">
               {[...Array(slider.current.track.details.slides.length).keys()].map((idx) => (
-                <li key={idx}>
+                <li key={Math.floor(Math.round() * 1000)}>
                   <button
                     onClick={() => slider.current.moveToIdx(idx)}
                     className={` w-1.5 h-1.5 md:w-2.5 md:h-2.5 rounded-full transition-all ${currentSlide === idx ? "bg-primary-15" : "bg-gray-300"}`}
