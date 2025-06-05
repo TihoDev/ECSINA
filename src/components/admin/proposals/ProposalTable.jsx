@@ -1,7 +1,6 @@
 import React from "react";
 import LinkButton from "@/components/ui/LinkButton";
 import Image from "next/image";
-import Paragraph from "../ui/Paragraph";
 
 function ProposalTable({ data: proposalData }) {
   const deleteProposalHandler = async () => {
@@ -26,7 +25,7 @@ function ProposalTable({ data: proposalData }) {
             proposalData.map((item) => (
               <tr key={item.id} className="overflow-x-hidden py-2 whitespace-nowrap text-center font-normal hover:bg-[#E8E8E8] bg-[#F5F4F5] transition-colors">
                 <td className="text-start">
-                  <Paragraph>{item.title}</Paragraph>
+                  <p>{item.title}</p>
                 </td>
                 <td className="text-justify ">لورم ایپسوم لورم ایپسوم لورم ایپسوم لورم ایپسوم</td>
                 <td className="text-start">

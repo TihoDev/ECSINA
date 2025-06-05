@@ -1,5 +1,5 @@
 import axios from "axios";
-import { API_ENDPOINTS } from "@/constants/baseUrl";
+import { API_CONFIG, API_ENDPOINTS } from "@/constants/baseUrl";
 import { handleAxiosError } from "@/utils/axiosHelpers";
 
 export const getAllCategories = async () => {

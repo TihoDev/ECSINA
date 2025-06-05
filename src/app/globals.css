@@ -101,13 +101,15 @@ body {
   --color-secondary-18: #475467;
   --color-secondary-19: #464935;
   --color-secondary-20: #19002b;
+  --color-secondary-21: #3e243c;
+  --color-secondary-22: #a4afb1;
 
   /* Main Theme Colors */
   --color-main-0: #0029bc;
   --color-main-1: #0029bc;
   --color-main-2: #0e80b6;
   --color-main-3: #e5ebff;
-  --color-main-4: #FF5252;
+  --color-main-4: #ff5252;
 
   /* Gradient */
 
@@ -124,15 +126,13 @@ body {
     #001971 49.55%,
     #0029bc 137.91%
   );
-
   --gradient-main-background: linear-gradient(
-      53.92deg,
-      rgba(249, 252, 233, 0.8) 2.53%,
-      rgba(245, 247, 235, 0.8) 52.16%,
-      #f1f1ec 105.15%
-    ),
-    linear-gradient(359.22deg, rgba(251, 252, 250, 0) -7.38%, #fbfcfa 100.86%);
-
+    180deg,
+    #fcfdff 0%,
+    #fdfef8 30%,
+    #fbfdf2 80%,
+    #fbfdf2 100%
+  );
   --gradient-invite-cart: linear-gradient(
       96.69deg,
       rgba(255, 255, 255, 0.3) -2.13%,
