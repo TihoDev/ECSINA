@@ -211,7 +211,9 @@ body {
   .box-gradient {
     background: linear-gradient(-245.07deg, rgba(229, 235, 255, 0.36) 0%, #dfe6fd 63.94%, #ced8f8 100%);
   }
-  .box-gradient_hover
+  .gradient_about {
+    background: linear-gradient(to bottom, #ffff 0%, #f5f7ebcc 80%, rgba(249, 252, 233, 0.8) 100%);
+  }
   /* shadow */
   .shadow-product-cart {
     box-shadow: var(--shadow-product-cart);
