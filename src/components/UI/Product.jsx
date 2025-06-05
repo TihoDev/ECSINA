@@ -8,7 +8,7 @@ const Product = ({ product }) => {
         {/* Image section */}
         <div className="relative w-full  aspect-[4/3]">
           <Image
-            src={product.image}
+            src={product.main_image || "/assets/images/Product.png"}
             alt={product.title || "Product Image"}
             fill
             quality={90}
@@ -23,7 +23,7 @@ const Product = ({ product }) => {
           </h4>
 
           <p className="text-black text-[10px] md:text-base font-normal max-w-[85%]">
-            {product.description}
+            {product.body}
           </p>
           {/* Button */}
           <button className="relative w-8 h-8 mr-[88%] md:mr-[85%]  mb-2 md:w-10 md:h-10 shadow-invite-cart rounded-2xl ">
