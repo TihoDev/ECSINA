@@ -25,15 +25,14 @@ const featurList = [
 const AboutPage = () => {
   return (
     <MainLayout>
-      <section className="my-5  gradient_about   min-w-screen">
-        <div className="container my-8 p-5 py-12 relative shadow-2xl  md:shadow-none  rounded-lg">
-          <div className="z-20  w-[10px] md:w-[35px] md:h-[35px] h-[10px] left-36   absolute">
+      <section className="my-5  flex flex-col items-center justify-center gradient_about   min-w-screen">
+        <div className="container mx-8 my-12 p-5 py-12 relative shadow-2xl  md:shadow-none  rounded-lg">
+          <div className="z-20  w-[20px] md:w-[35px] md:h-[35px] h-[20px] left-36   absolute">
             <Image src={"/assets/icons/Star.svg"} alt="Star" fill />
           </div>
-          <div className="z-20 absolute w-[10px] md:w-[35px] md:h-[35px] h-[10px] right-[130px] top-[130px]">
+          <div className="z-20 absolute w-[20px] md:w-[35px] md:h-[35px] h-[20px] right-[130px] top-[130px]">
             <Image src={"/assets/icons/Star.svg"} alt="Star" fill />
           </div>
-          {/* <Image src={"/assets/icons/MainLogo.svg"} alt="Main Logo" width={600} height={550} className="z-20" /> */}
           <h1 className="text-black  text-center text-2xl md:text-4xl mb-12 font-bold pt-8">درباره اکسینا</h1>
           <div className="text-balance px-8 md:px-2">
             <h2 className="font-extralight text-base md:text-xl text-center">اکسین، سکویی برای هوشمندسازی تولید اسناد کسب‌وکار</h2>
@@ -43,10 +42,15 @@ const AboutPage = () => {
             </Typography>
           </div>
         </div>
-        <div className="mt-24 md:mt-48 pb-36 container">
-          <div className="h-72 my-24 relative flex flex-col justify-center items-center">
-            <h1 className="font-bold text-4xl">اکسین چطور کار می‌کند؟</h1>
-            <p className="text-2xl text-center mx-24 my-8">در حال حاضر، اکسین به‌عنوان یک مرجع کامل، قالب‌های قابل‌ویرایش را در اختیار کاربران قرار می‌دهد. ویژگی‌های اصلی پلتفرم شامل:</p>
+        <div className="mt-24 md:mt-56 pb-36 container ">
+          <div className="h-auto my-24 relative flex flex-col z-40 justify-center items-center">
+            <div className="w-80 h-72 md:w-[750px] md:h-[580px] opacity-30 z-0 absolute top-[-120px] md:top-[-300px]">
+              <Image src={"/assets/icons/MainLogo.svg"} alt="Main Logo" fill className="z-0" />
+            </div>
+            <h1 className="font-bold text-2xl md:text-4xl z-50">اکسین چطور کار می‌کند؟</h1>
+            <p className="text-lg md:text-2xl text-center md:mx-24 my-8 z-50">
+              در حال حاضر، اکسین به‌عنوان یک مرجع کامل، قالب‌های قابل‌ویرایش را در اختیار کاربران قرار می‌دهد. ویژگی‌های اصلی پلتفرم شامل:
+            </p>
           </div>
           <div className="grid gap-5 md:gap-10 grid-cols-1 lg:grid-cols-2  my-6 px-4 sm:px-8">
             {featurList.map((item) => (

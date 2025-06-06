@@ -28,7 +28,6 @@ const Footer = () => {
 
   if (error) return <div>error...</div>;
   const allCategories = data?.categories;
-  console.log(allCategories, data);
   return (
     <footer className="mt-auto">
       {/* Top */}
