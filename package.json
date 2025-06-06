@@ -26,8 +26,11 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "css-loader": "^7.1.2",
     "daisyui": "^5.0.0",
     "eslint": "^9",
-    "eslint-config-next": "15.1.7"
+    "eslint-config-next": "15.1.7",
+    "postcss-loader": "^8.1.1",
+    "style-loader": "^4.0.0"
   }
 }

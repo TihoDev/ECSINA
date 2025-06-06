@@ -9,11 +9,11 @@ import { PiTelegramLogo } from "react-icons/pi";
 import useCategories from "@/hooks/useCategories";
 
 const icons = [
-  { id: 1, icon: <SlSocialLinkedin size={25} />, href: "/" },
-  { id: 2, icon: <BsInstagram size={25} />, href: "/" },
-  { id: 3, icon: <RiWhatsappLine size={25} />, href: "/" },
-  { id: 4, icon: <PiTelegramLogo size={25} />, href: "/" },
-  { id: 5, icon: <FiYoutube size={25} />, href: "/" },
+  { icon: <SlSocialLinkedin size={20} />, href: "/" },
+  { icon: <BsInstagram size={20} />, href: "/" },
+  { icon: <RiWhatsappLine size={20} />, href: "/" },
+  { icon: <PiTelegramLogo size={20} />, href: "/" },
+  { icon: <FiYoutube size={20} />, href: "/" },
 ];
 
 const navigationLinks = [
@@ -32,94 +32,64 @@ const Footer = () => {
   return (
     <footer className="mt-auto">
       {/* Top */}
-      <div className="container mt-2">
-        {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 mb-4 md:mb-10 ">
-          <Image
-            src={"/assets/icons/Logo.svg"}
-            alt="Logo"
-            width={50}
-            height={50}
-          />
-          <span className="w-[1px]  h-16 bg-secondary-13"></span>
-          <div className="text-black flex flex-col items-start gap-1">
-            <span className="text-xl font-bold">اکسینا</span>
-            <span className="text-xs font-[100]">
-              همراهـــــــــــــیِ نوین
-            </span>
-            <span className="text-sm font-light">اسناد تجاری</span>
+      <div className="pt-16 flex  justify-center md:justify-start md:gap-4  items-center pr-1 md:pr-16 pb-8">
+        <div className="max-w-md flex flex-col items-start ">
+          <Link href="/" className="flex items-center gap-2 mb-4 md:mb-10 ">
+            <Image src={"/assets/icons/Logo.svg"} alt="Logo" width={50} height={50} />
+            <span className="w-[1px]  h-16 bg-secondary-13"></span>
+            <div className="text-black flex flex-col items-start gap-1">
+              <span className="text-xl font-bold">اکسینا</span>
+              <span className="text-xs font-[100]">همراهـــــــــــــیِ نوین</span>
+              <span className="text-sm font-light">اسناد تجاری</span>
+            </div>
+          </Link>
+          <p className="text-[10px] md:text-sm leading-6 mx-8 md:mx-0 font-light md:font-medium text-secondary-18">
+            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی
+            مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و م
+          </p>
+          {/* Icons */}
+          <div className="flex items-center gap-2 mt-5 md:mt-8">
+            {icons.map((item) => (
+              <Link
+                key={item.icon}
+                href={item.href}
+                className="flex items-center justify-center p-3 border-1 border-primary-7 text-primary-7 hover:text-white  rounded-lg hover:bg-primary-7  transition-all duration-300"
+              >
+                {item.icon}
+              </Link>
+            ))}
           </div>
-        </Link>
+        </div>
 
-        {/* Other */}
-        <div className="flex items-start gap-5 md:gap-20 mb-8 md:mb-16">
-          <div className="max-w-md flex flex-col justify-between ">
-            <p className="text-xs leading-6 font-medium text-secondary-18 ">
-              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
-              استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله
-              در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد
-              نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد،
-              کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان
-              جامعه و م
-            </p>
-            {/* Icons */}
-            <div className="flex items-center gap-2 mt-5 md:mt-8">
-              {icons.map((item) => (
-                <Link
-                  key={item.id}
-                  href={item.href}
-                  className="flex items-center justify-center p-2 border-1 border-primary-7 text-primary-7 hover:text-white  rounded-lg hover:bg-primary-7  transition-all duration-300"
-                >
-                  {item.icon}
+
+        <div className="flex flex-col-reverse md:flex-row gap-2 items-start md:gap-10 -mt-22 md:mt-0">
+          <div>
+            <p className=" text-xs md:text-base font-medium text-secondary-18 mb-2 text-nowrap">دسترسی سریع</p>
+            <ul className="flex flex-col items-start gap-2">
+              {navigationLinks.map((link) => (
+                <Link key={link.id} href={link.href} className="text-[10px] md:text-sm text-secondary-18 font-medium transition-all duration-300 hover:text-primary-6">
+                  {link.title}
                 </Link>
               ))}
-            </div>
+            </ul>
           </div>
+          <div>
+            <p className=" text-xs md:text-base font-medium text-secondary-18 mb-2 text-nowrap">دسته بندی محصولات</p>
+            <ul className="flex flex-col items-start gap-2">
+              {categories.map((link) => (
+                <Link key={link.id} href={link.href} className="text-[10px] md:text-sm text-secondary-18 font-medium transition-all duration-300 hover:text-primary-6">
+                  {link.title}
+                </Link>
+              ))}
+            </ul>
 
-          <div className="flex flex-col-reverse md:flex-row gap-2 items-start md:gap-10 -mt-22 md:mt-0">
-            <div>
-              <p className=" text-base md:text-xl font-medium text-secondary-18 mb-2 text-nowrap">
-                دسترسی سریع
-              </p>
-              <ul className="flex flex-col items-start gap-2">
-                {navigationLinks.map((link) => (
-                  <li key={link.id}>
-                    <Link
-                      href={link.href}
-                      className="text-xs md:text-base text-secondary-18 font-medium transition-all duration-300 hover:text-primary-6"
-                    >
-                      {link.title}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <p className=" text-base md:text-xl font-medium text-secondary-18 mb-2 text-nowrap">
-                دسته بندی محصولات
-              </p>
-              <ul className="flex flex-col items-start gap-2">
-                {allCategories?.map((category) => (
-                  <li key={category.id}>
-                    <Link
-                      href={category.slug}
-                      className="text-xs md:text-base text-secondary-18 font-medium transition-all duration-300 hover:text-primary-6"
-                    >
-                      {category.title}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
           </div>
         </div>
       </div>
 
       {/* Boottm */}
       <div className="bg-primary-7 rounded-t-sm md:rounded-t-2xl w-full flex items-center justify-center py-3 md:py-5">
-        <p className="font-medium text-xs md:text-base text-white">
-          © تمامی حقوق مادی و معنوی برای شرکت اکسینا محفوظ است.{" "}
-        </p>
+        <p className="font-medium text-[10px] md:text-sm text-white">© تمامی حقوق مادی و معنوی برای شرکت اکسینا محفوظ است. </p>
       </div>
     </footer>
   );

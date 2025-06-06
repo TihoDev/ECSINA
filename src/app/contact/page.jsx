@@ -54,7 +54,7 @@ const ContactPage = () => {
 
 function ContactForm() {
   return (
-    <form className="flex flex-col w-full justify-between p-6 gap-6 col-span-1 shadow-xl  rounded-lg">
+    <form className="flex flex-col w-full justify-between p-2 md:p-6 gap-6 col-span-1 shadow-xl  rounded-lg">
       <div className=" w-full grid gap-1 md:gap-2.5 grid-cols-2">
         <InputField type="text" title={"شماره تماس"} id={"phone"} required />
         <InputField type="text" title={"نام و نام‌خانوادگی"} id={"name"} required />
@@ -70,7 +70,7 @@ function ContactForm() {
         <label
           htmlFor={"message"}
           className="absolute text-sm text-main-1 duration-150 transform -translate-y-3
-      scale-75 top-4 z-10 origin-[0] right-4 
+      scale-75 top-4 z-10 origin-[0] right-2 
       peer-placeholder-shown:scale-100
       peer-placeholder-shown:translate-y-0
       peer-focus:scale-90

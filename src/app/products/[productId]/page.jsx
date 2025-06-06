@@ -15,7 +15,7 @@ export default function ProductPage({ params }) {
   return (
     <MainLayout>
       <section className="gradient-main-background min-h-screen pb-5">
-        <Breadcrumb />
+        {/* <Breadcrumb /> */}
         <ProductDetails />
         <AboutProduct />
         <FrequentlyQuestions />
