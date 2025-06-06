@@ -191,7 +191,7 @@ body {
     background: var(--gradient-cart-icon);
   }
   .gradient-main-background {
-    background: var(--gradient-main-background);
+    background:linear-gradient(to bottom, #ffff 0%, #f5f7ebcc 80%, rgba(249, 252, 233, 0.8) 100%);
   }
   .gradient-invite-cart {
     background: var(--gradient-invite-cart);
