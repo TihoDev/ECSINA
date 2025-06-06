@@ -33,7 +33,7 @@ const Footer = () => {
   return (
     <footer className="mt-auto">
       {/* Top */}
-      <div className="pt-16 flex  justify-center md:justify-start md:gap-4 md:items-baseline items-center pr-1 md:pr-16 pb-8">
+      <div className="pt-16 flex  justify-center md:justify-start md:gap-4  items-center pr-1 md:pr-16 pb-8">
         <div className="max-w-md flex flex-col items-start ">
           <Link href="/" className="flex items-center gap-2 mb-4 md:mb-10 ">
             <Image src={"/assets/icons/Logo.svg"} alt="Logo" width={50} height={50} />

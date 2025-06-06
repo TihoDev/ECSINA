@@ -44,7 +44,10 @@ const AboutPage = () => {
           </div>
         </div>
         <div className="mt-24 md:mt-48 pb-36 container">
-          <div></div>
+          <div className="h-72 my-24 relative flex flex-col justify-center items-center">
+            <h1 className="font-bold text-4xl">اکسین چطور کار می‌کند؟</h1>
+            <p className="text-2xl text-center mx-24 my-8">در حال حاضر، اکسین به‌عنوان یک مرجع کامل، قالب‌های قابل‌ویرایش را در اختیار کاربران قرار می‌دهد. ویژگی‌های اصلی پلتفرم شامل:</p>
+          </div>
           <div className="grid gap-5 md:gap-10 grid-cols-1 lg:grid-cols-2  my-6 px-4 sm:px-8">
             {featurList.map((item) => (
               <div
