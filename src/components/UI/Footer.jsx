@@ -28,7 +28,7 @@ const Footer = () => {
 
   if (error) return <div>error...</div>;
   const allCategories = data?.categories;
-
+  console.log(allCategories, data);
   return (
     <footer className="mt-auto">
       {/* Top */}
@@ -61,7 +61,6 @@ const Footer = () => {
           </div>
         </div>
 
-
         <div className="flex flex-col-reverse md:flex-row gap-2 items-start md:gap-10 -mt-22 md:mt-0">
           <div>
             <p className=" text-xs md:text-base font-medium text-secondary-18 mb-2 text-nowrap">دسترسی سریع</p>
@@ -74,15 +73,14 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <p className=" text-xs md:text-base font-medium text-secondary-18 mb-2 text-nowrap">دسته بندی محصولات</p>
-            <ul className="flex flex-col items-start gap-2">
-              {categories.map((link) => (
+            {/* <p className=" text-xs md:text-base font-medium text-secondary-18 mb-2 text-nowrap">دسته بندی محصولات</p> */}
+            {/* <ul className="flex flex-col items-start gap-2">
+              {allCategories.map((link) => (
                 <Link key={link.id} href={link.href} className="text-[10px] md:text-sm text-secondary-18 font-medium transition-all duration-300 hover:text-primary-6">
                   {link.title}
                 </Link>
               ))}
-            </ul>
-
+            </ul> */}
           </div>
         </div>
       </div>
