@@ -58,8 +58,10 @@ const SideNav = () => {
               <Image src={"/icons/x.svg"} width={15} height={15} alt="x" />
             </button>
           </h1>
+
           <form method="dialog" className="modal-backdrop relative flex flex-col">
             <p className="text-title">آیا مطمئن هستید که می‌خواهید از حساب کاربری خود خارج شوید؟</p>
+
             <div className="w-full flex gap-3 mt-12">
               <button className=" bg-transparent   w-1/2 p-3 rounded-[20px] text-border border-2 border-border">بازگشت</button>
               <button onClick={() => logOutHandler()} className="bg-danger hover:bg-danger-dark w-1/2 p-3 rounded-[20px] text-white">

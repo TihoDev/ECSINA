@@ -29,7 +29,7 @@ const CreateComment = () => {
 
         {/* TEXT AREA */}
         <div>
-          <div class="bg-blue-50 rounded-xl p-4 text-right mt-4 md:mt-8 ">
+          <div className="bg-blue-50 rounded-xl p-4 text-right mt-4 md:mt-8 ">
             <textarea
               className="w-full p-2 md:p-5 bg-transparent border-none focus:outline-none resize-none text-base md:text-xl placeholder-primary-7"
               rows="5"

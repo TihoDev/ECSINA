@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import Image from "next/image";
 import { SlSocialLinkedin } from "react-icons/sl";
@@ -5,6 +6,7 @@ import { FiYoutube } from "react-icons/fi";
 import { BsInstagram } from "react-icons/bs";
 import { RiWhatsappLine } from "react-icons/ri";
 import { PiTelegramLogo } from "react-icons/pi";
+import useCategories from "@/hooks/useCategories";
 
 const icons = [
   { icon: <SlSocialLinkedin size={20} />, href: "/" },
@@ -21,15 +23,12 @@ const navigationLinks = [
   { id: 4, title: "تماس با ما", href: "/contact" },
 ];
 
-const categories = [
-  { id: 1, title: "بوم ناب", href: "/" },
-  { id: 2, title: "بوم کسب و کار", href: "/" },
-  { id: 3, title: "پروپوزال ها", href: "/" },
-  { id: 4, title: "بیزینس پلن", href: "/" },
-  { id: 5, title: "بیزینس مدل", href: "/" },
-];
-
 const Footer = () => {
+  const { categories: data, error, isLoading } = useCategories();
+
+  if (error) return <div>error...</div>;
+  const allCategories = data?.categories;
+
   return (
     <footer className="mt-auto">
       {/* Top */}
@@ -62,6 +61,7 @@ const Footer = () => {
           </div>
         </div>
 
+
         <div className="flex flex-col-reverse md:flex-row gap-2 items-start md:gap-10 -mt-22 md:mt-0">
           <div>
             <p className=" text-xs md:text-base font-medium text-secondary-18 mb-2 text-nowrap">دسترسی سریع</p>
@@ -82,6 +82,7 @@ const Footer = () => {
                 </Link>
               ))}
             </ul>
+
           </div>
         </div>
       </div>

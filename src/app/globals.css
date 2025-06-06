@@ -101,6 +101,8 @@ body {
   --color-secondary-18: #475467;
   --color-secondary-19: #464935;
   --color-secondary-20: #19002b;
+  --color-secondary-21: #3e243c;
+  --color-secondary-22: #a4afb1;
 
   /* Main Theme Colors */
   --color-main-0: #0029bc;
@@ -112,6 +114,7 @@ body {
   /* Gradient */
 
   --gradient-landing: linear-gradient(0.53deg, rgba(246, 255, 194, 0.36) 7.05%, rgba(174, 194, 255, 0.32) 49.64%, rgba(2, 57, 255, 0.32) 99.51%);
+
 
   --gradient-cart-icon: linear-gradient(139.85deg, #000826 -15.13%, #001971 49.55%, #0029bc 137.91%);
 

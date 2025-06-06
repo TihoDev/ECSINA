@@ -1,26 +1,27 @@
-import { getAllCategories } from "@/services/Categories/getAllCategories";
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect } from "react";
+import { getAllCategories } from "@/services/categories/getAllCategories";
 
 const useCategories = () => {
   const [categories, setCategories] = useState([]);
   const [error, setError] = useState(null);
-  const [isLoading, setIsLoading] = useState(false);
-
-  const fetchCategories = useCallback(async () => {
-    setIsLoading(true);
-    try {
-      const { data } = await getAllCategories();
-      setCategories(data);
-      setError(null);
-    } catch (err) {
-      setError(err);
-    }
-    setIsLoading(false);
-  }, []);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    const fetchCategories = async () => {
+      try {
+        const { data } = await getAllCategories();
+
+        setCategories(data);
+        setError(null);
+      } catch (err) {
+        setError(err);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
     fetchCategories();
-  }, [fetchCategories]);
+  }, []);
 
   return { categories, error, isLoading };
 };

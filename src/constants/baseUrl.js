@@ -10,10 +10,10 @@ export const API_CONFIG = {
 
 export const API_ENDPOINTS = {
   PRODUCTS: {
-    ALL: `${BASE_URL}/${API_VERSION}/products`,
-    SHOW: (id) => `${BASE_URL}/${API_VERSION}/products/show/${id}`,
+    ALL: `${BASE_URL}/${API_VERSION}/Product`,
+    SHOW: (id) => `${BASE_URL}/${API_VERSION}/Product/${id}`,
   },
   CATEGORIES: {
-    ALL: `${BASE_URL}/${API_VERSION}/category`,
+    ALL: `${BASE_URL}/${API_VERSION}/Category`,
   },
 };
