@@ -5,6 +5,7 @@ import OurServices from "@/components/home/OurServices";
 import PersonalDashboardInvite from "@/components/home/PersonalDashboardInvite";
 import TemplateFeatures from "@/components/home/TemplateFeatures";
 import "./globals.css";
+import "keen-slider/keen-slider.min.css";
 import MainLayout from "@/components/layout/MainLayout";
 
 export const metadata = {
