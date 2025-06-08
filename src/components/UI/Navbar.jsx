@@ -38,7 +38,7 @@ const Navbar = () => {
             ))}
           </ul>
         </div>
-        <Link href="/auth">
+        <Link href="/">
           <Button icon={"/assets/icons/Arrow.svg"}>ثبت نام</Button>
         </Link>
       </nav>
