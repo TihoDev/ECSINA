@@ -2,8 +2,10 @@ import MainLayout from "@/components/layout/MainLayout";
 import AllCategories from "@/components/products/AllCategories";
 import SearchInput from "@/components/UI/SearchInput";
 import AllProducts from "@/components/products/AllProducts";
+import { useState } from "react";
 
-export default function Page() {
+export default function ProductsPage() {
+  const [] = useState(false);
   return (
     <MainLayout>
       <section className="gradient-main-background mt-4 md:mt-16 ">
