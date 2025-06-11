@@ -2,10 +2,9 @@ import MainLayout from "@/components/layout/MainLayout";
 import AllCategories from "@/components/products/AllCategories";
 import SearchInput from "@/components/UI/SearchInput";
 import AllProducts from "@/components/products/AllProducts";
-import { useState } from "react";
+import GuideButton from "./GuideButton";
 
 export default function ProductsPage() {
-  const [] = useState(false);
   return (
     <MainLayout>
       <section className="gradient-main-background mt-4 md:mt-16 ">
@@ -13,9 +12,7 @@ export default function ProductsPage() {
           {/* Header */}
           <div className="flex items-center justify-between gap-6">
             <SearchInput placeholder={"جست و جو ..."} />
-            <button className="bg-primary-7 rounded-xl md:rounded-2xl text-white text-nowrap py-3 px-5 md:py-5  lg:px-11 text-xs lg:text-2xl font-semibold cursor-pointer hover:bg-primary-8 transition-all duration-200 ">
-              راهنمای دانلود قالب
-            </button>
+            <GuideButton />
           </div>
           {/* Categories */}
           <div className=" mt-16 md:mt-30">
