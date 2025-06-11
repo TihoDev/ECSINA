@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Dialog, DialogPanel, DialogTitle } from "@headlessui/react";
 import { IoCloseSharp } from "react-icons/io5";
 
-function GuideButton() {
+function GuideModal() {
   const [isOpen, setIsOpen] = useState(false);
   function open() {
     setIsOpen(true);
@@ -53,7 +53,7 @@ function GuideButton() {
                     <span className="font-bold text-xl">پوشش کامل تیترهای مهم اسناد تجاری:</span> در طراحی این قالب‌ها تلاش شده تا تمام سرفصل‌های ضروری در اسناد تجاری گنجانده شود.
                   </p>
                   <p className="text-lg font-semibold">
-                    <span className="font-bold text-xl">به‌روزرسانی مداوم و اضافه شدن قالب‌های جدید:</span>
+                    <h1 className="inline font-bold text-xl">به‌روزرسانی مداوم و اضافه شدن قالب‌های جدید:</h1>
                     قالب‌ها به‌صورت مرتب به‌روز می‌شوند و در آینده دسته‌بندی‌های جدیدی نیز به این مجموعه اضافه خواهد شد. پیشنهاد می‌کنیم هر از چند گاهی به این صفحه سر بزنید تا از آخرین به‌روزرسانی‌ها
                     مطلع شوید.
                   </p>
@@ -67,4 +67,4 @@ function GuideButton() {
   );
 }
 
-export default GuideButton;
+export default GuideModal;
