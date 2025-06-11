@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { Button, Dialog, DialogPanel, DialogTitle } from "@headlessui/react";
+import { Dialog, DialogPanel, DialogTitle } from "@headlessui/react";
 import { IoCloseSharp } from "react-icons/io5";
 
 function GuideButton() {
