@@ -1,9 +1,18 @@
+"use client";
 import React from "react";
+import { useForm } from "react-hook-form";
 
 function SignupForm() {
-  return <form>
-    
-  </form>;
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm();
+
+  const inputesFueild = [{ name: "", type: "" }];
+
+  return <form></form>;
 }
 
 const CustomInput = ({ name, id }) => {
