@@ -11,8 +11,12 @@ function SignupForm() {
   } = useForm();
 
   const inputesFueild = [{ name: "", type: "" }];
+  const onSubmit = (data) => console.log(data);
 
-  return <form></form>;
+  return <form onSubmit={handleSubmit(onSubmit)}>
+
+    
+  </form>;
 }
 
 const CustomInput = ({ name, id }) => {
