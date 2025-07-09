@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react";
 
-function layout() {
+function UserLayout({ children }) {
   return (
-    <div>
-      
-    </div>
-  )
+    <body lang="fa" dir="rtl">
+      {children}
+    </body>
+  );
 }
 
-export default layout
+export default UserLayout;

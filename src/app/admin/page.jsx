@@ -1,7 +1,7 @@
 import { redirect } from "next/navigation";
 
-const page = () => {
+const AdminPage = () => {
   return redirect("/admin/proposal", "push");
 };
 
-export default page;
+export default AdminPage;
