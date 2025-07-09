@@ -23,38 +23,18 @@ const PhoneLoginForm = ({ onSuccess }) => {
       <div className="flex flex-row justify-between max-h-[30px]">
         <button className="cursor-pointer flex flex-row-reverse gap-1 items-center">
           <p className="text-[#2E334266] text-[16px]">ورود با دسترسی سریع</p>
-          <Image
-            src="/icons/login.svg"
-            width={24}
-            height={24}
-            alt="Login"
-          ></Image>
+          <Image src="/icons/login.svg" width={24} height={24} alt="Login"></Image>
         </button>
 
         <button className="cursor-pointer">
-          <Image
-            width={42}
-            height={42}
-            src="/icons/loginClose.svg"
-            alt="Close"
-          />
+          <Image width={42} height={42} src="/icons/loginClose.svg" alt="Close" />
         </button>
       </div>
-      <Image
-        src="/icons/exinIconWithoutHandsPurple.svg"
-        width={70}
-        height={140}
-        alt="Exin"
-        className="self-center"
-      ></Image>
+      <Image src="/icons/exinIconWithoutHandsPurple.svg" width={70} height={140} alt="Exin" className="self-center"></Image>
       <p className="text-black font-normal text-[20px]">
         {" "}
         برای ورود به
-        <span className="text-[#71416D] text-[20px] font-semibold">
-          {" "}
-          اکسینا{" "}
-        </span>{" "}
-        شماره تلفن خود را وارد کنید .
+        <span className="text-[#71416D] text-[20px] font-semibold"> اکسینا </span> شماره تلفن خود را وارد کنید .
       </p>
       <p className=" flex items-center rounded-[4px] bg-gradient-to-r from-[#3E243C] via-[#71416D] via-[45.5%] to-[#A45F9E] max-w-[300px] max-h-[42px] p-3 justify-center text-center text-white font-normal text-[14px]">
         کد تایید به تلفن همراه شما ارسال خواهد شد.
@@ -71,13 +51,7 @@ const PhoneLoginForm = ({ onSuccess }) => {
           })}
           error={errors.phoneNumber?.message}
         ></AuthInput>
-        <Button
-          type="submit"
-          className={
-            "w-[280px] flex justify-center h-[70px] [&>*]:text-2xl justify-self-center"
-          }
-          text="ارسال کد"
-        ></Button>
+        <Button type="submit" className={"w-[280px] flex justify-center h-[70px] [&>*]:text-2xl justify-self-center"} text="ارسال کد"></Button>
       </form>
     </AuthCardLayout>
   );

@@ -17,7 +17,6 @@ function InputField({ title, value, id, className, type, boxClassName, required 
       peer-placeholder-shown:translate-y-0
       peer-focus:scale-75
       peer-focus:-translate-y-3
-
       "
       >
         {required && <span className="text-main-4 px-1 mt-2 text-sm">*</span>}
