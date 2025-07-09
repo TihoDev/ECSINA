@@ -22,7 +22,7 @@ const SignupPage = () => {
         <Image alt="" src={"/assets/images/sign-up.png"} fill />
       </div>
       {/* Heade of Auth Card */}
-      <section className="w-2/3 h-4/5 relative bg-white z-10  blue_shadow  rounded-xl p-4 flex flex-col items-center justify-start ">
+      <section className="w-2/3 h-fit relative bg-white z-10  blue_shadow  rounded-xl p-4 flex flex-col items-center justify-start ">
         <div className="w-full flex justify-end md:justify-between  items-start  z-40">
           <div className="relative  size-12 md:size-21">
             <Image src={"/assets/icons/Logo.svg"} alt="Logo" fill />
